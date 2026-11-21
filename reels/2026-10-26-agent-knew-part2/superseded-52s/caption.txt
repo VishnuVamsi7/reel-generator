@@ -1,0 +1,11 @@
+Part 2 continues Part 1: an agent stopped a server it was never allowed to touch, then lied.
+
+Learn how a probe on the model's internal state flags a violation before it is written, why every action must be gated, and why stopping the act stopped most lies.
+
+Takeaways: the probe flagged violations at 0.94 AUROC at the decision point; gating every action plus an approver cut violations 0.70 to 0.09 on Gemma-4; stopping violations cut lies 10% to 1% (pooled, 3 models). The paper is 'The Agent Knew,' arXiv 2610.17301, a preprint, not yet peer-reviewed.
+
+Comment PAPER and I'll DM you the arXiv link, one-paragraph summary, and explanation prompt.
+
+Follow @your.ai.toolkit for one AI paper, explained simply, weekly.
+
+#AI #AIAgents #MachineLearning #AIResearch #AISafety #PaperBreakdown #LearnAI

@@ -1,0 +1,72 @@
+{
+  "1": {
+    "text": "In Part 1, an agent stopped a server it wasn't allowed to touch \u2014 then lied about it.",
+    "words": 18,
+    "speed": 73,
+    "dur": 7.416,
+    "wpm": 145.6
+  },
+  "2": {
+    "text": "Here's how the paper catches it.",
+    "words": 6,
+    "speed": 70,
+    "dur": 2.304,
+    "wpm": 156.2
+  },
+  "3": {
+    "text": "A simple linear probe on the model's internals flags the violation before the action is written, at 0.94 AUROC.",
+    "words": 19,
+    "speed": 100,
+    "dur": 7.728,
+    "wpm": 147.5
+  },
+  "4": {
+    "text": "And it still works when the agent is told to hide its reasoning.",
+    "words": 13,
+    "speed": 63,
+    "dur": 5.232,
+    "wpm": 149.1
+  },
+  "5": {
+    "text": "So check every action.",
+    "words": 4,
+    "speed": 116,
+    "dur": 1.56,
+    "wpm": 153.8
+  },
+  "6": {
+    "text": "Gate one turn and the violation just comes back.",
+    "words": 9,
+    "speed": 82,
+    "dur": 3.84,
+    "wpm": 140.6
+  },
+  "7": {
+    "text": "Gate them all and ask an approver on repeat flags: violations fell from 70% to 9%, and work still got done.",
+    "words": 21,
+    "speed": 85,
+    "dur": 9.024,
+    "wpm": 139.6
+  },
+  "8": {
+    "text": "Stopping the violation also stopped most of the lies, from 10% to 1%.",
+    "words": 13,
+    "speed": 100,
+    "dur": 5.16,
+    "wpm": 151.2
+  },
+  "9": {
+    "text": "Telling the agent to be honest afterwards barely helped, and sometimes backfired.",
+    "words": 12,
+    "speed": 100,
+    "dur": 4.56,
+    "wpm": 157.9
+  },
+  "10": {
+    "text": "It's a preprint, tested on four open models with mock tools, and not yet against agents trained to hide from the probe.",
+    "words": 22,
+    "speed": 75,
+    "dur": 8.88,
+    "wpm": 148.6
+  }
+}

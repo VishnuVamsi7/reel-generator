@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Storyboard Canvas — TEMPLATE — your.ai.toolkit</title>
+<style>
+  /* Page design system: navy #0B1F3A, teal #14B8A6, white. Plain HTML/CSS/JS, no framework, no network. */
+  :root { --navy:#0B1F3A; --navy2:#12294d; --navy3:#0a1a2e; --teal:#14B8A6; --teal-dim:#0e8a7d; --white:#f4f7fa; --muted:#8fa3b8; --amber:#F59E0B; --red:#e5484d; --green:#2fbf71; --card:#10263f; --line:#1e3a5c; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy3); color:var(--white); font-family:"Segoe UI", system-ui, -apple-system, sans-serif; padding:24px; }
+  a { color:var(--teal); }
+  .wrap { max-width:1560px; margin:0 auto; }
+
+  /* ---------- header ---------- */
+  header { background:linear-gradient(135deg, var(--navy), var(--navy2)); border:1px solid var(--line); border-radius:14px; padding:22px 26px; margin-bottom:18px; }
+  header .eyebrow { color:var(--teal); font-size:12px; letter-spacing:.18em; text-transform:uppercase; font-weight:700; }
+  header h1 { font-size:30px; margin:6px 0 4px; }
+  header .sub { color:var(--muted); font-size:14px; }
+  .meta { display:flex; flex-wrap:wrap; gap:10px; margin-top:16px; }
+  .chip { background:var(--navy3); border:1px solid var(--line); border-radius:999px; padding:6px 12px; font-size:13px; }
+  .chip b { color:var(--teal); font-weight:700; }
+  .status-badge { display:inline-block; border-radius:999px; padding:5px 14px; font-size:13px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; }
+  .status-draft { background:#3a2a00; color:var(--amber); border:1px solid var(--amber); }
+  .status-approved { background:#06351f; color:var(--green); border:1px solid var(--green); }
+  .status-outline { background:#1a2a44; color:var(--muted); border:1px solid var(--muted); }
+  .warn-strip { margin-top:14px; background:#2a1503; border:1px solid var(--amber); border-radius:8px; padding:10px 14px; font-size:13px; color:#ffd9a0; }
+  .warn-strip b { color:var(--amber); }
+
+  /* ---------- how-to ---------- */
+  details.howto { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:12px 16px; margin-bottom:18px; font-size:13.5px; line-height:1.55; color:#d7e2ee; }
+  details.howto summary { cursor:pointer; color:var(--teal); font-weight:700; font-size:14px; }
+  details.howto code { background:var(--navy3); padding:1px 6px; border-radius:4px; font-size:12.5px; }
+
+  /* ---------- timeline bar ---------- */
+  .timeline { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:14px 16px; margin-bottom:18px; }
+  .timeline h2 { font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin-bottom:10px; }
+  .tl-track { display:flex; gap:3px; height:44px; }
+  .tl-seg { border-radius:6px; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:700; min-width:34px; overflow:hidden; white-space:nowrap; background:var(--teal-dim); color:#fff; border:1px solid rgba(255,255,255,.15); }
+  .tl-seg.hook { background:#0e7490; } .tl-seg.cta { background:#5b4a9e; }
+  .tl-seg.flagged { background:var(--red); }
+  .tl-labels { display:flex; gap:3px; margin-top:6px; font-size:11px; color:var(--muted); }
+  .tl-labels span { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; text-align:center; }
+
+  /* ---------- sections (canvas group frames, borrowed from PAI groups-compose) ---------- */
+  .section { border:1.5px solid var(--teal-dim); border-radius:14px; padding:16px 16px 8px; margin-bottom:20px; background:rgba(20,184,166,.04); }
+  .section > h2 { font-size:15px; letter-spacing:.12em; text-transform:uppercase; color:var(--teal); margin-bottom:12px; }
+  .section > h2 span { color:var(--muted); font-size:12px; letter-spacing:0; text-transform:none; font-weight:400; }
+  .beats { display:flex; gap:14px; overflow-x:auto; padding-bottom:10px; }
+
+  /* ---------- beat card (one canvas shot node) ---------- */
+  .beat { flex:0 0 340px; background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px; display:flex; flex-direction:column; gap:10px; }
+  .beat.flagged { border:2px solid var(--red); }
+  .beat-head { display:flex; justify-content:space-between; align-items:flex-start; gap:8px; }
+  .beat-head h3 { font-size:16px; line-height:1.25; }
+  .beat-head .num { background:var(--teal); color:#04241f; font-weight:800; border-radius:8px; padding:3px 9px; font-size:13px; white-space:nowrap; }
+  .beat-time { font-size:12.5px; color:var(--muted); }
+  .beat-time b { color:var(--white); }
+  .flag-banner { background:#3d0a0c; border:1px solid var(--red); color:#ffb3b6; border-radius:8px; padding:8px 10px; font-size:12.5px; font-weight:700; }
+  .frames { display:flex; gap:8px; }
+  .frame { flex:1; }
+  .frame .tag { font-size:10.5px; letter-spacing:.12em; color:var(--muted); text-transform:uppercase; margin-bottom:4px; display:flex; justify-content:space-between; }
+  .frame .tag b { color:var(--teal); }
+  .frame .mock { aspect-ratio:9/16; max-height:190px; width:100%; border-radius:8px; border:1px solid var(--line); background:linear-gradient(160deg, #16345c 0%, #0B1F3A 55%, #0a2e2a 100%); display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:10px; gap:6px; overflow:hidden; }
+  .frame .mock .mock-label { font-size:10px; letter-spacing:.14em; color:var(--teal); text-transform:uppercase; font-weight:700; }
+  .frame .mock .mock-desc { font-size:12px; line-height:1.45; color:#dbe7f3; }
+  .frame img { width:100%; aspect-ratio:9/16; max-height:190px; object-fit:cover; border-radius:8px; border:1px solid var(--line); display:block; }
+  .camera { background:var(--navy3); border:1px solid var(--line); border-radius:8px; padding:9px 11px; font-size:12.5px; line-height:1.5; }
+  .camera .cam-title { color:var(--teal); font-weight:700; font-size:11px; letter-spacing:.12em; text-transform:uppercase; margin-bottom:3px; }
+  .camera .cam-diagram { font-family:ui-monospace, monospace; color:#cfe3f5; margin:4px 0; font-size:12px; }
+  .vo { font-size:13px; line-height:1.55; background:rgba(20,184,166,.08); border-left:3px solid var(--teal); border-radius:0 8px 8px 0; padding:8px 10px; }
+  .vo .lbl, .overlay .lbl, .treat .lbl, .assets .lbl, .char .lbl { font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); font-weight:700; margin-bottom:3px; }
+  .char { font-size:12.5px; line-height:1.55; background:rgba(245,158,11,.08); border-left:3px solid var(--amber); border-radius:0 8px 8px 0; padding:8px 10px; }
+  .char b { color:var(--amber); }
+  .overlay { font-size:13px; line-height:1.5; }
+  .overlay .words { color:#fff; font-weight:600; }
+  .treat { font-size:12.5px; color:#c7d5e4; line-height:1.5; }
+  .treat b { color:var(--white); }
+  .assets { font-size:12px; color:var(--muted); line-height:1.6; }
+  .assets code { color:#a9c6e2; background:var(--navy3); padding:1px 5px; border-radius:4px; font-size:11.5px; }
+  .beat-foot { display:flex; justify-content:space-between; align-items:center; margin-top:auto; padding-top:6px; border-top:1px solid var(--line); }
+  .beat-note { font-size:12px; color:var(--amber); font-style:italic; line-height:1.45; }
+
+  /* ---------- gate + notes ---------- */
+  .bottom { display:flex; gap:18px; flex-wrap:wrap; }
+  .panel { flex:1 1 420px; background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px 18px; }
+  .panel h2 { font-size:14px; letter-spacing:.12em; text-transform:uppercase; color:var(--teal); margin-bottom:10px; }
+  .panel ul { list-style:none; font-size:13.5px; line-height:1.9; }
+  .panel li::before { content:"☐ "; color:var(--muted); }
+  .panel li.done::before { content:"☑ "; color:var(--green); }
+  .panel .note-item { border-left:3px solid var(--amber); padding:6px 10px; margin-bottom:8px; font-size:13.5px; line-height:1.5; background:var(--navy3); border-radius:0 8px 8px 0; }
+  .panel .note-item b { color:var(--amber); }
+  footer { margin-top:18px; font-size:12px; color:var(--muted); text-align:center; line-height:1.6; }
+</style>
+</head>
+<body>
+<div class="wrap" id="app"><!-- rendered by JS from the CANVAS data block below --></div>
+
+<!-- ============================================================================
+  CANVAS DATA — EDIT THIS BLOCK ONLY.
+  This JSON is the source of truth for the whole board (borrowed from PAI-Pro:
+  canvas state is just a file on disk; the viewer renders it, nothing else
+  owns it). To make a new reel's canvas: copy this file, edit this block.
+  - beats: one shot node per beat, in timeline order. Start/end times are
+    computed from durations — enter duration only.
+  - startFrame / endFrame: "desc" is the director's written mock of what the
+    frame looks like. "img" is optional: a relative path to a real mockup
+    image (drop it in the reel folder). If "img" is set, the image is shown;
+    otherwise the description renders as a designed placeholder.
+  - camera.move: push-in | pull-back | pan | orbit | drift | cut | static.
+    "static" or identical start/end descriptions get flagged NO MOTION.
+  - character: Kit's track for the beat — position (left / center-left /
+    center / center-right / right), move (how he travels), points (what he
+    points at), holds (which card he brings into the center, or "— none —"),
+    expression (neutral / excited / thinking). Kit is the foreground host:
+    he walks/slides, points, holds cards, and never stands frozen (idle bob
+    + blink run underneath every pose). The character track is part of the
+    canvas the director fills in — every beat has one.
+  - status per beat and overall: draft | approved | outline.
+  - Do NOT edit the HTML/JS below this block.
+============================================================================= -->
+<script type="application/json" id="canvas-data">
+{
+  "reel": {
+    "name": "Reasoning effort, Part 1 \u2014 More thinking loses solved tasks",
+    "date": "2026-10-28",
+    "keyword": "PAPER",
+    "pillar": "Explained (25%)",
+    "format": "9:16 vertical \u00b7 720x1280",
+    "status": "draft",
+    "scriptStatus": "PROPOSAL \u2014 86 words / 38.81s at Helio speed 95 (133.0 wpm, test render). Figures 1 PENDING from Vishnu. Awaiting Gate 1.",
+    "voice": "Helio (single pass, fixed speed 95)"
+  },
+  "beats": [
+    {
+      "id": 1,
+      "name": "Hook",
+      "section": "Hook",
+      "duration": 5.9,
+      "voiceover": "Turn your AI's thinking to max, and it solves more. Right? Not always.",
+      "overlay": "Max thinking = more solved? \u00b7 Not always",
+      "startFrame": {
+        "desc": "Kit walks in from the left; wide shot of Fig 1 (gained vs lost bars) dim behind him, bars just fading in.",
+        "img": ""
+      },
+      "endFrame": {
+        "desc": "Kit stops center-left, pointing up at Fig 1's bars now lit; camera has pushed in to a medium shot of the figure.",
+        "img": ""
+      },
+      "camera": {
+        "move": "push-in",
+        "from": "Wide on Fig 1",
+        "to": "Medium on Fig 1's bars",
+        "direction": "Forward, slightly down",
+        "distance": "Wide \u2192 medium",
+        "duration": "5.9s"
+      },
+      "character": {
+        "position": "center-left",
+        "move": "walks in from the left, stops center-left",
+        "points": "up at Fig 1's bars",
+        "holds": "\u2014 none \u2014",
+        "expression": "excited"
+      },
+      "treatment": "Paper figure (Fig 1) animated in Remotion \u2014 pan/zoom + bar reveals; Kit foreground",
+      "source": "Paper figure supplied by Vishnu (PENDING) + Remotion",
+      "assets": [
+        "Fig 1 \u2014 PENDING \u2014 figure not yet received from Vishnu"
+      ],
+      "status": "draft",
+      "notes": "Hook completes at ~5.9s \u2014 past the 3s ideal; the first line lands ~4.5s. Flagged for Gate 1. The figure IS the hook here, so the slow burn is the trade-off."
+    },
+    {
+      "id": 2,
+      "name": "Every model loses tasks",
+      "section": "Body",
+      "duration": 7.7,
+      "voiceover": "On Terminal-Bench, every model tested lost tasks at max effort that it had already solved at low.",
+      "overlay": "Every model lost solved tasks at max effort",
+      "startFrame": {
+        "desc": "Kit at center-left; Fig 1's eight model rows visible, red 'lost' bars still dim.",
+        "img": ""
+      },
+      "endFrame": {
+        "desc": "Kit has slid to center; the red 'lost' bars have grown one by one across all eight rows.",
+        "img": ""
+      },
+      "camera": {
+        "move": "pan",
+        "from": "Left side of Fig 1 (first models)",
+        "to": "Right side of Fig 1 (last models)",
+        "direction": "Left \u2192 right across the rows",
+        "distance": "Across the full figure width",
+        "duration": "7.7s"
+      },
+      "character": {
+        "position": "center",
+        "move": "slides from center-left to center",
+        "points": "at the red 'lost' bars as they grow",
+        "holds": "\u2014 none \u2014",
+        "expression": "thinking"
+      },
+      "treatment": "Paper figure (Fig 1) animated in Remotion \u2014 bars grow row by row",
+      "source": "Paper figure supplied by Vishnu (PENDING) + Remotion",
+      "assets": [
+        "Fig 1 \u2014 PENDING \u2014 figure not yet received from Vishnu"
+      ],
+      "status": "draft",
+      "notes": "The 'every model' claim is the paper's \u00a73.1 Terminal-Bench result (all 8 models, nonempty regression set)."
+    },
+    {
+      "id": 3,
+      "name": "GPT-5.6-sol: 76 \u2192 73",
+      "section": "Body",
+      "duration": 9.0,
+      "voiceover": "GPT-5.6-sol, high to extra-high: it loses eight tasks, gains five. Solved count falls from 76 to 73, out of 89.",
+      "overlay": "76 \u2192 73 \u00b7 loses 8, gains 5",
+      "startFrame": {
+        "desc": "Tight on Fig 1's GPT-5.6-sol row; the gained/lost bars are small and unlabeled.",
+        "img": ""
+      },
+      "endFrame": {
+        "desc": "Zoomed tight on the row: green 'gained 5' bar and red 'lost 8' bar grown, amber '76 \u2192 73' overlay landed.",
+        "img": ""
+      },
+      "camera": {
+        "move": "push-in",
+        "from": "Medium on Fig 1",
+        "to": "Tight on the GPT-5.6-sol row",
+        "direction": "Forward into the row",
+        "distance": "Medium \u2192 tight",
+        "duration": "9.0s"
+      },
+      "character": {
+        "position": "right",
+        "move": "slides to the right side",
+        "points": "at the red 'lost 8' bar, then the amber '76 \u2192 73'",
+        "holds": "\u2014 none \u2014",
+        "expression": "excited"
+      },
+      "treatment": "Paper figure (Fig 1) animated in Remotion \u2014 zoom + bar growth + amber overlay",
+      "source": "Paper figure supplied by Vishnu (PENDING) + Remotion",
+      "assets": [
+        "Fig 1 \u2014 PENDING \u2014 figure not yet received from Vishnu"
+      ],
+      "status": "draft",
+      "notes": "'xhigh' (paper) is spoken as 'extra-high'. Overlay shows the exact 76 \u2192 73 of 89."
+    },
+    {
+      "id": 4,
+      "name": "GPQA: +16 hides 5",
+      "section": "Body",
+      "duration": 8.6,
+      "voiceover": "Same story on GPQA: low to medium looks like plus 16, but hides five questions the higher setting failed.",
+      "overlay": "+16 net \u00b7 5 hidden losses",
+      "startFrame": {
+        "desc": "Kit center, thinking; a designed number card slides in with amber '+16 net' on it. (GPQA example is \u00a73.1 text \u2014 no figure covers it.)",
+        "img": ""
+      },
+      "endFrame": {
+        "desc": "The amber '+16 net' card has slid aside and a red '5 hidden losses' card has revealed underneath it; Kit points at the red card.",
+        "img": ""
+      },
+      "camera": {
+        "move": "drift",
+        "from": "Medium on the amber card",
+        "to": "Medium on both cards, red revealed",
+        "direction": "Slight right drift",
+        "distance": "Medium \u2192 medium",
+        "duration": "8.6s"
+      },
+      "character": {
+        "position": "center",
+        "move": "slides to center, stays",
+        "points": "at the red '5 hidden losses' card as it reveals",
+        "holds": "\u2014 none \u2014",
+        "expression": "thinking \u2192 concerned"
+      },
+      "treatment": "Designed number card (paper's \u00a73.1 numbers) over moving background",
+      "source": "Remotion card + LTX text-free ambient (laptop GPU)",
+      "assets": [],
+      "status": "draft",
+      "notes": "Designed card, not a paper figure \u2014 the numbers are the paper's own (\u00a73.1). No invented UI."
+    },
+    {
+      "id": 5,
+      "name": "More thinking takes answers away",
+      "section": "Body",
+      "duration": 5.0,
+      "voiceover": "More thinking doesn't just add answers. Sometimes it takes them away.",
+      "overlay": "More thinking can take answers away",
+      "startFrame": {
+        "desc": "Kit center, thinking, over Fig 1 full panel, dim.",
+        "img": ""
+      },
+      "endFrame": {
+        "desc": "Kit center, the full Fig 1 panel drifts back across the frame behind him, bars fully grown.",
+        "img": ""
+      },
+      "camera": {
+        "move": "drift",
+        "from": "Medium on Fig 1",
+        "to": "Wide drift back across Fig 1",
+        "direction": "Back, slow drift",
+        "distance": "Medium \u2192 wide",
+        "duration": "5.0s"
+      },
+      "character": {
+        "position": "center",
+        "move": "slides to center, stays",
+        "points": "\u2014 none \u2014 (open-palm present at the figure)",
+        "holds": "\u2014 none \u2014",
+        "expression": "thinking"
+      },
+      "treatment": "Paper figure (Fig 1) animated in Remotion \u2014 slow drift-back",
+      "source": "Paper figure supplied by Vishnu (PENDING) + Remotion",
+      "assets": [
+        "Fig 1 \u2014 PENDING \u2014 figure not yet received from Vishnu"
+      ],
+      "status": "draft",
+      "notes": "Payoff beat: the figure returns in full as the summary lands."
+    },
+    {
+      "id": 6,
+      "name": "CTA \u2014 Part 2",
+      "section": "CTA",
+      "duration": 2.7,
+      "voiceover": "Part 2: what it costs you.",
+      "overlay": "Part 2 \u00b7 what it costs you",
+      "startFrame": {
+        "desc": "Kit center, thumbs up, as the end card begins; tight on the page wordmark over the drifting background.",
+        "img": ""
+      },
+      "endFrame": {
+        "desc": "Kit points at the full end card \u2014 wordmark, 'Part 2 \u00b7 what it costs you' \u2014 over the drifting background.",
+        "img": ""
+      },
+      "camera": {
+        "move": "pull-back",
+        "from": "Tight on the wordmark",
+        "to": "Full end card",
+        "direction": "Back",
+        "distance": "Close \u2192 medium-wide",
+        "duration": "2.7s"
+      },
+      "character": {
+        "position": "center",
+        "move": "slides to center, stays",
+        "points": "at the 'Part 2' end card",
+        "holds": "\u2014 none \u2014",
+        "expression": "excited (thumbs up; animations land early)"
+      },
+      "treatment": "LTX ambient + end card",
+      "source": "LTX text-free ambient clip (laptop GPU) + Remotion end card",
+      "assets": [],
+      "status": "draft",
+      "notes": "CTA beat is short (2.7s) \u2014 animations must land in the first second."
+    }
+  ],
+  "notes": [
+    {
+      "author": "Director",
+      "text": "Phase A (2026-10-28): script 86 words, Helio speed 95 (133.0 wpm, 38.81s in the test render \u2014 in band, under 40s). Fig 1 PENDING from Vishnu; the canvas cannot go to Gate 1 until the figure arrives."
+    },
+    {
+      "author": "Director",
+      "text": "Beat 4 is a designed number card, not a paper figure \u2014 the GPQA example is \u00a73.1 text only. Numbers are the paper's own."
+    },
+    {
+      "author": "Director",
+      "text": "Palette: navy/teal + amber accent (#F59E0B). Amber only on hook text, key numbers (76 \u2192 73, +16), and the CTA. Red is reserved for 'lost' bars and the hidden-losses card."
+    },
+    {
+      "author": "Director",
+      "text": "Citation: Sun et al., arXiv:2610.34491 (preprint, Oct 2026). The citation line goes on the end card and in the description."
+    }
+  ],
+  "gate1": [
+    {
+      "label": "Script approved by Vishnu (verbatim, 86 words)",
+      "done": false
+    },
+    {
+      "label": "Fig 1 received from Vishnu as an image",
+      "done": false
+    },
+    {
+      "label": "Storyboard canvas approved (frames + camera lines)",
+      "done": false
+    },
+    {
+      "label": "Producer cost plan attached (per-shot source + cost) \u2014 in phase-a-report.md",
+      "done": false
+    },
+    {
+      "label": "Every beat has a moving frame (no NO MOTION flags)",
+      "done": true
+    }
+  ]
+}
+</script>
+
+<script>
+(function () {
+  "use strict";
+  var data = JSON.parse(document.getElementById("canvas-data").textContent);
+  var app = document.getElementById("app");
+
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+  function words(str) { return (str || "").trim().split(/\s+/).filter(Boolean).length; }
+  function fmt(t) { return t.toFixed(1) + "s"; }
+
+  // Motion check: a beat fails when its start/end frames are identical
+  // OR the camera never moves. Pixel change is not motion — the frame must travel.
+  function motionFlag(b) {
+    var sameFrames = (b.startFrame.desc || "").trim().toLowerCase() === (b.endFrame.desc || "").trim().toLowerCase();
+    var staticCam = /static|none/i.test(b.camera.move || "");
+    if (sameFrames && staticCam) return "Start and end frames are identical AND the camera is static.";
+    if (sameFrames) return "Start and end frames are identical — the frame never changes.";
+    if (staticCam) return "Camera is static — the frame never moves.";
+    return null;
+  }
+
+  // Cumulative time windows from durations.
+  var t = 0;
+  data.beats.forEach(function (b) { b._start = t; t += b.duration; b._end = t; });
+  var total = t;
+  var totalWords = data.beats.reduce(function (n, b) { return n + words(b.voiceover); }, 0);
+  var flagged = data.beats.filter(function (b) { return motionFlag(b); }).length;
+  var approved = data.beats.filter(function (b) { return b.status === "approved"; }).length;
+
+  var statusClass = data.reel.status === "approved" ? "status-approved" : (data.reel.status === "outline" ? "status-outline" : "status-draft");
+
+  var html = "";
+  html += '<header>';
+  html += '<div class="eyebrow">your.ai.toolkit — Storyboard Canvas</div>';
+  html += '<h1>' + esc(data.reel.name) + '</h1>';
+  html += '<div class="sub">' + esc(data.reel.scriptStatus) + '</div>';
+  html += '<div class="meta">';
+  html += '<span class="chip">Date <b>' + esc(data.reel.date) + '</b></span>';
+  html += '<span class="chip">Keyword <b>' + esc(data.reel.keyword) + '</b></span>';
+  html += '<span class="chip">Pillar <b>' + esc(data.reel.pillar) + '</b></span>';
+  html += '<span class="chip">Format <b>' + esc(data.reel.format) + '</b></span>';
+  html += '<span class="chip">Voiceover <b>' + totalWords + ' words · ~' + fmt(total) + '</b></span>';
+  html += '<span class="chip">Beats <b>' + data.beats.length + '</b> · Approved <b>' + approved + '/' + data.beats.length + '</b></span>';
+  html += '<span class="status-badge ' + statusClass + '">' + esc(data.reel.status) + '</span>';
+  html += '</div>';
+  if (flagged > 0) {
+    html += '<div class="warn-strip"><b>⚠ ' + flagged + ' beat' + (flagged > 1 ? 's' : '') + ' flagged NO MOTION.</b> A beat whose start and end frames are identical, or whose camera never moves, reads as a still photo. Redesign before Gate 1 — motion must move the frame.</div>';
+  }
+  html += '</header>';
+
+  html += '<details class="howto"><summary>How to use this canvas</summary>'
+    + '<p>One file, no build step, no server: open it in a browser. The JSON block at the top of the file (<code>canvas-data</code>) is the source of truth — edit it and reload. '
+    + 'Each beat is one shot node: two frame mocks (start / end), one camera line, the voiceover line attached to the beat, overlay words, treatment, source, and assets — plus Kit\'s character track (where he stands, how he moves, what he points at, what card he holds, his expression). '
+    + 'Beats sit in timeline order inside visible section frames (Hook / Body / CTA). Nothing generates until this canvas is <b>approved</b> at Gate 1 — that is the draft gate: a draft canvas never advances to generation. '
+    + 'To use a real mockup image instead of a written frame description, put the image in the reel folder and set the beat\'s <code>startFrame.img</code> / <code>endFrame.img</code> to its relative path.</p></details>';
+
+  // Timeline bar (PAI Timeline concept: shot_id order, durations to scale).
+  html += '<div class="timeline"><h2>Timeline — shot order (durations to scale)</h2><div class="tl-track">';
+  data.beats.forEach(function (b) {
+    var w = Math.max(4, (b.duration / total) * 100);
+    var cls = "tl-seg" + (b.section === "Hook" ? " hook" : "") + (b.section === "CTA" ? " cta" : "") + (motionFlag(b) ? " flagged" : "");
+    html += '<div class="' + cls + '" style="flex:0 0 ' + w.toFixed(1) + '%" title="Beat ' + b.id + ' — ' + esc(b.name) + ' (' + fmt(b.duration) + ')">' + b.id + '</div>';
+  });
+  html += '</div><div class="tl-labels">';
+  data.beats.forEach(function (b) {
+    var w = Math.max(4, (b.duration / total) * 100);
+    html += '<span style="flex:0 0 ' + w.toFixed(1) + '%">' + fmt(b.duration) + '</span>';
+  });
+  html += '</div></div>';
+
+  // Sections in first-appearance order.
+  var sections = [];
+  data.beats.forEach(function (b) { if (sections.indexOf(b.section) === -1) sections.push(b.section); });
+  sections.forEach(function (section) {
+    var secBeats = data.beats.filter(function (b) { return b.section === section; });
+    var secDur = secBeats.reduce(function (n, b) { return n + b.duration; }, 0);
+    html += '<section class="section"><h2>' + esc(section) + ' <span>— ' + secBeats.length + ' beat' + (secBeats.length > 1 ? 's' : '') + ' · ' + fmt(secDur) + '</span></h2><div class="beats">';
+    secBeats.forEach(function (b) {
+      var flag = motionFlag(b);
+      var bStatus = b.status === "approved" ? "status-approved" : (b.status === "outline" ? "status-outline" : "status-draft");
+      html += '<article class="beat' + (flag ? ' flagged' : '') + '">';
+      html += '<div class="beat-head"><h3>' + esc(b.name) + '</h3><span class="num">BEAT ' + b.id + '</span></div>';
+      html += '<div class="beat-time"><b>' + fmt(b._start) + ' – ' + fmt(b._end) + '</b> · ' + fmt(b.duration) + ' · shot ' + b.id + '</div>';
+      if (flag) html += '<div class="flag-banner">⚠ NO MOTION — ' + esc(flag) + '</div>';
+      html += '<div class="frames">';
+      ["startFrame", "endFrame"].forEach(function (key, i) {
+        var f = b[key];
+        html += '<div class="frame"><div class="tag"><span>' + (i === 0 ? "Start frame" : "End frame") + '</span><b>' + (i === 0 ? "t=" + fmt(b._start) : "t=" + fmt(b._end)) + '</b></div>';
+        if (f.img) html += '<img src="' + esc(f.img) + '" alt="' + esc(f.desc) + '">';
+        else html += '<div class="mock"><span class="mock-label">Frame mock</span><span class="mock-desc">' + esc(f.desc) + '</span></div>';
+        html += '</div>';
+      });
+      html += '</div>';
+      var cam = b.camera;
+      html += '<div class="camera"><div class="cam-title">Camera — ' + esc(cam.move) + '</div>'
+        + '<div class="cam-diagram">' + esc(cam.from) + ' &nbsp;──►&nbsp; ' + esc(cam.to) + '</div>'
+        + 'Direction: ' + esc(cam.direction) + ' · Distance: ' + esc(cam.distance) + ' · Move duration: ' + esc(cam.duration) + '</div>';
+      if (b.character) {
+        var ch = b.character;
+        html += '<div class="char"><div class="lbl">Kit — character track</div>'
+          + '<b>' + esc(ch.position || "") + '</b> · ' + esc(ch.move || "")
+          + '<br>Points: ' + esc(ch.points || "—") + ' · Holds: ' + esc(ch.holds || "—")
+          + '<br>Expression: <b>' + esc(ch.expression || "") + '</b></div>';
+      }
+      html += '<div class="vo"><div class="lbl">Voiceover (' + words(b.voiceover) + ' words)</div>“' + esc(b.voiceover) + '”</div>';
+      html += '<div class="overlay"><div class="lbl">On-screen words</div><span class="words">' + esc(b.overlay) + '</span></div>';
+      html += '<div class="treat"><div class="lbl">Treatment · Source</div><b>' + esc(b.treatment) + '</b> — ' + esc(b.source) + '</div>';
+      html += '<div class="assets"><div class="lbl">Attached assets</div>' + (b.assets && b.assets.length ? b.assets.map(function (a) { return '<code>' + esc(a) + '</code>'; }).join(" ") : '— none yet —') + '</div>';
+      if (b.notes) html += '<div class="beat-note">' + esc(b.notes) + '</div>';
+      html += '<div class="beat-foot"><span class="status-badge ' + bStatus + '">' + esc(b.status) + '</span><span class="beat-time">shot ' + b.id + '</span></div>';
+      html += '</article>';
+    });
+    html += '</div></section>';
+  });
+
+  html += '<div class="bottom">';
+  html += '<div class="panel"><h2>Gate 1 checklist</h2><ul>';
+  (data.gate1 || []).forEach(function (g) { html += '<li class="' + (g.done ? 'done' : '') + '">' + esc(g.label) + '</li>'; });
+  html += '</ul></div>';
+  html += '<div class="panel"><h2>Director notes</h2>';
+  (data.notes || []).forEach(function (n) { html += '<div class="note-item"><b>' + esc(n.author) + ':</b> ' + esc(n.text) + '</div>'; });
+  html += '</div></div>';
+
+  html += '<footer>Storyboard canvas — your.ai.toolkit · Concepts borrowed from PAI-Pro (canvas nodes + edges, file-on-disk state, groups, timeline by shot_id, draft gate) and OpenMontage STORYBOARD.md (per-frame metadata, status outline → built → animated). Implemented here from scratch in plain HTML/CSS/JS — no PAI-Pro or OpenMontage code. Nothing generates until this canvas is approved.</footer>';
+
+  app.innerHTML = html;
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+[
+ {
+  "name": "Hook",
+  "start": 0.0,
+  "end": 4.4
+ },
+ {
+  "name": "Open-book exam",
+  "start": 4.4,
+  "end": 11.56
+ },
+ {
+  "name": "Search documents first",
+  "start": 11.56,
+  "end": 17.26
+ },
+ {
+  "name": "Answers with sources",
+  "start": 17.26,
+  "end": 23.3
+ },
+ {
+  "name": "No RAG vs with RAG",
+  "start": 23.3,
+  "end": 29.8
+ },
+ {
+  "name": "Company chatbots",
+  "start": 29.8,
+  "end": 33.58
+ },
+ {
+  "name": "CTA",
+  "start": 33.58,
+  "end": 39.19
+ }
+]

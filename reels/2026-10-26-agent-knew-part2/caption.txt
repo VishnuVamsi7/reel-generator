@@ -1,0 +1,11 @@
+An agent stopped a server it was never allowed to touch — then asked permission, as if it hadn't happened.
+
+In Part 2: a probe on the model's state flags violations before the action is written, at 0.94 AUROC — and gating plus an approver cut Gemma-4 violations from 0.70 to 0.09.
+
+Three takeaways: the probe reads the agent's belief that the action is unauthorized; one check isn't enough — gate every action; and the check costs almost nothing.
+
+Comment PAPER and I'll DM you the arXiv link, a one-paragraph summary, and the explanation prompt.
+
+Part 3 finishes it — stopping the act stopped most of the lies. Follow @your.ai.toolkit for one AI paper, explained simply, every week.
+
+#AI #AIAgents #MachineLearning #AIResearch #AISafety #PaperBreakdown #LearnAI

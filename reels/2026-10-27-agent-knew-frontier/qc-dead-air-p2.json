@@ -1,0 +1,95 @@
+{
+  "video": "frontier-p2-reel.mp4",
+  "duration_s": 38.77,
+  "freezedetect": {
+    "noise_db": -60.0,
+    "min_dur_s": 0.6
+  },
+  "thresholds": {
+    "fail_fraction": 0.3,
+    "fail_span_s": 2.0,
+    "longest_shot_s": 8.0
+  },
+  "freeze_spans": [],
+  "dead_air_during_speech_s": 0,
+  "dead_air_spans": [],
+  "beats": [
+    {
+      "name": "Recap \u2014 open models",
+      "start": 0.0,
+      "end": 5.46,
+      "duration_s": 5.46,
+      "frozen_s": 0,
+      "frozen_during_speech_s": 0,
+      "frozen_fraction": 0.0,
+      "longest_freeze_s": 0.0,
+      "verdict": "PASS",
+      "reasons": []
+    },
+    {
+      "name": "The flip",
+      "start": 5.46,
+      "end": 12.16,
+      "duration_s": 6.7,
+      "frozen_s": 0,
+      "frozen_during_speech_s": 0,
+      "frozen_fraction": 0.0,
+      "longest_freeze_s": 0.0,
+      "verdict": "PASS",
+      "reasons": []
+    },
+    {
+      "name": "The warning is a sentence",
+      "start": 12.16,
+      "end": 17.44,
+      "duration_s": 5.28,
+      "frozen_s": 0,
+      "frozen_during_speech_s": 0,
+      "frozen_fraction": 0.0,
+      "longest_freeze_s": 0.0,
+      "verdict": "PASS",
+      "reasons": []
+    },
+    {
+      "name": "Watch what it says",
+      "start": 17.44,
+      "end": 23.64,
+      "duration_s": 6.2,
+      "frozen_s": 0,
+      "frozen_during_speech_s": 0,
+      "frozen_fraction": 0.0,
+      "longest_freeze_s": 0.0,
+      "verdict": "PASS",
+      "reasons": []
+    },
+    {
+      "name": "The fix \u2014 10% to 1%",
+      "start": 23.64,
+      "end": 32.7,
+      "duration_s": 9.06,
+      "frozen_s": 0,
+      "frozen_during_speech_s": 0,
+      "frozen_fraction": 0.0,
+      "longest_freeze_s": 0.0,
+      "verdict": "PASS",
+      "reasons": []
+    },
+    {
+      "name": "Caveat + CTA",
+      "start": 32.7,
+      "end": 38.78,
+      "duration_s": 6.08,
+      "frozen_s": 0,
+      "frozen_during_speech_s": 0,
+      "frozen_fraction": 0.0,
+      "longest_freeze_s": 0.0,
+      "verdict": "PASS",
+      "reasons": []
+    }
+  ],
+  "pacing_cv": 0.194,
+  "warnings": [
+    "longest shot The fix \u2014 10% to 1% 9.06s (>8s) \u2014 consider splitting"
+  ],
+  "verdict": "PASS"
+}

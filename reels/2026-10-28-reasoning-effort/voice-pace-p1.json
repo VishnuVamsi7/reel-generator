@@ -1,0 +1,87 @@
+{
+  "part": "p1",
+  "audio": "voice-test-p1-95.mp3",
+  "transcript": "Turn your AI's thinking to max, and it solves more. Right? Not always. On Terminal Bench, every model tested lost tasks at max effort that it had already solved at low. GPT 5 .6 Sol, high to extra high, it loses 8 tasks, gains 5. Solved count falls from 76 to 73 out of 89. Lane Story on GPQA, low to medium looks like plus 16, but hides 5 questions the higher setting failed. More thinking doesn't just add answers. Sometimes it takes them away. Part 2, what it costs you.",
+  "sentences": [
+    {
+      "sentence": "Turn your AI's thinking to max, and it solves more.",
+      "words": 10,
+      "start": 0.0,
+      "end": 3.42,
+      "wpm": 175.4,
+      "matched": 10
+    },
+    {
+      "sentence": "Right?",
+      "words": 1,
+      "start": 3.76,
+      "end": 3.9,
+      "wpm": 428.6,
+      "matched": 1
+    },
+    {
+      "sentence": "Not always.",
+      "words": 2,
+      "start": 4.48,
+      "end": 5.08,
+      "wpm": 200.0,
+      "matched": 2
+    },
+    {
+      "sentence": "On Terminal-Bench, every model tested lost tasks at max effort that it had already solved at low.",
+      "words": 17,
+      "start": null,
+      "end": null,
+      "wpm": null,
+      "matched": 1
+    },
+    {
+      "sentence": "GPT-5.6-sol, high to extra-high: it loses eight tasks, gains five.",
+      "words": 10,
+      "start": null,
+      "end": null,
+      "wpm": null,
+      "matched": 0
+    },
+    {
+      "sentence": "Solved count falls from 76 to 73, out of 89.",
+      "words": 10,
+      "start": 10.38,
+      "end": 22.6,
+      "wpm": 49.1,
+      "matched": 10
+    },
+    {
+      "sentence": "Same story on GPQA: low to medium looks like plus 16, but hides five questions the higher setting failed.",
+      "words": 19,
+      "start": null,
+      "end": null,
+      "wpm": null,
+      "matched": 0
+    },
+    {
+      "sentence": "More thinking doesn't just add answers.",
+      "words": 6,
+      "start": 31.88,
+      "end": 33.86,
+      "wpm": 181.8,
+      "matched": 6
+    },
+    {
+      "sentence": "Sometimes it takes them away.",
+      "words": 5,
+      "start": 34.46,
+      "end": 35.9,
+      "wpm": 208.3,
+      "matched": 5
+    },
+    {
+      "sentence": "Part 2: what it costs you.",
+      "words": 6,
+      "start": 36.66,
+      "end": 38.58,
+      "wpm": 187.5,
+      "matched": 6
+    }
+  ]
+}

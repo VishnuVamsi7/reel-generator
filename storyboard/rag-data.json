@@ -1,0 +1,320 @@
+{
+  "beats": [
+    {
+      "assets": [],
+      "camera": {
+        "direction": "Forward, slightly down",
+        "distance": "Wide → close-up",
+        "duration": "4.7s",
+        "from": "Wide, desk level",
+        "move": "push-in",
+        "to": "Close-up on the open book"
+      },
+      "duration": 4.7,
+      "endFrame": {
+        "desc": "Kit stands center-left, pointing up at the letters R-A-G glowing teal on the page.",
+        "img": ""
+      },
+      "id": 1,
+      "name": "Hook",
+      "notes": "Hook completes at ~4.3s — slightly past the 3s ideal; first line lands ~3.4s. Flagged for Gate 1. The book is the visual anchor for the whole reel.",
+      "overlay": "AI = good guesser · RAG = looks it up",
+      "section": "Hook",
+      "source": "Remotion (Kit + MovingBackdrop) + LTX text-free ambient (laptop GPU)",
+      "startFrame": {
+        "desc": "Kit walks in from the left as the camera pushes in; he stops center-left, Wide shot: dark desk, a closed book, a single glowing question mark hanging over it.",
+        "img": ""
+      },
+      "status": "draft",
+      "treatment": "Kit entrance over moving background (no Veo — Kit's entrance IS the hook)",
+      "voiceover": "AI doesn't know things. It looks them up. That's RAG.",
+      "character": {
+        "position": "center-left",
+        "move": "walks in from the left, stops center-left",
+        "points": "up at the glowing question mark over the book",
+        "holds": "— none —",
+        "expression": "excited"
+      }
+    },
+    {
+      "assets": [],
+      "camera": {
+        "direction": "Right, then back",
+        "distance": "Tight → wide",
+        "duration": "8.6s",
+        "from": "Tight on the blank exam paper",
+        "move": "pan + pull-back",
+        "to": "Wide on student + open book"
+      },
+      "duration": 8.6,
+      "endFrame": {
+        "desc": "Kit holds the 'RAG = Retrieval-Augmented Generation' card up at the right as the answers flow from book to paper.",
+        "img": ""
+      },
+      "id": 2,
+      "name": "Open-book exam",
+      "notes": "Trimmed in Phase A (24 -> 15 words). No split needed. The acronym expansion reads slow (114.5 wpm in the test render) — expected, pace check should expect it.",
+      "overlay": "RAG = Retrieval-Augmented Generation · works like an open-book exam",
+      "section": "Body",
+      "source": "Remotion kinetic diagram + LTX text-free ambient (laptop GPU)",
+      "startFrame": {
+        "desc": "Kit stands at the right, thinking, as the student guesses at the blank paper. Tight on a student guessing at a blank exam paper, pencil hovering, grey and flat.",
+        "img": ""
+      },
+      "status": "draft",
+      "treatment": "Animated diagram over moving background",
+      "voiceover": "AI's a really good guesser. RAG — Retrieval-Augmented Generation — works like an open-book exam.",
+      "character": {
+        "position": "right",
+        "move": "slides from center-left to the right side",
+        "points": "left at the blank exam paper, then at the open book as it opens",
+        "holds": "the 'RAG = Retrieval-Augmented Generation' card up at the end",
+        "expression": "thinking (guesser) → excited (book opens)"
+      }
+    },
+    {
+      "assets": [
+        "svishnu.netlify.app RAG assistant recording (capture pending — browser task)"
+      ],
+      "camera": {
+        "direction": "Back, then down the stack",
+        "distance": "Tight → medium-wide",
+        "duration": "5.9s",
+        "from": "Tight on the search bar",
+        "move": "pull-back + drift down",
+        "to": "Full document stack, pages lit"
+      },
+      "duration": 5.9,
+      "endFrame": {
+        "desc": "Kit points right as the three relevant pages light up teal one by one.",
+        "img": ""
+      },
+      "id": 3,
+      "name": "Search documents first",
+      "notes": "Demo beat candidate: portfolio assistant capture PENDING (needs a live browser task — see reels/2026-10-28-rag/capture/capture-brief.md); diagram is the fallback and is not blocked.",
+      "overlay": "Search docs first → find the relevant pages",
+      "section": "Body",
+      "source": "Remotion diagram + LTX ambient; demo option: portfolio RAG assistant recording",
+      "startFrame": {
+        "desc": "Kit stands center, watching the question being typed. Tight on a question being typed into a search bar over a stack of documents.",
+        "img": ""
+      },
+      "status": "draft",
+      "treatment": "Animated diagram (documents lighting up) over moving background",
+      "voiceover": "Before answering, it searches your PDFs and notes — and finds the relevant pages.",
+      "character": {
+        "position": "center",
+        "move": "slides to center, stays",
+        "points": "right as the three relevant pages light up one by one",
+        "holds": "the search-bar card",
+        "expression": "excited"
+      }
+    },
+    {
+      "assets": [],
+      "camera": {
+        "direction": "Forward, answer scrolls up",
+        "distance": "Medium → close",
+        "duration": "6.1s",
+        "from": "Medium on the forming answer",
+        "move": "push-in + upward scroll",
+        "to": "Close on the lit citation chip"
+      },
+      "duration": 6.1,
+      "endFrame": {
+        "desc": "Kit nods at the citation chip glowing teal and checked, the answer scrolling slowly upward behind it (parallax).",
+        "img": ""
+      },
+      "id": 4,
+      "name": "Answers with sources",
+      "notes": "Voiceover softened in Phase A: 'far less' replaces 'stops making things up' (accuracy — see fact-check.md). B4 reads fast in the test render (200 wpm) — flag, re-measure on the final voiceover. The citation chip is the beat's visual anchor — it must light up visibly, not just appear.",
+      "overlay": "Answer from what it found · with sources",
+      "section": "Body",
+      "source": "Remotion kinetic card + LTX ambient",
+      "startFrame": {
+        "desc": "Kit stands at the left as the answer forms on the panel. An answer paragraph forms line by line on a dark panel, a small citation chip dim beside it.",
+        "img": ""
+      },
+      "status": "draft",
+      "treatment": "Kinetic card over moving background",
+      "voiceover": "It writes its answer from what it found — with sources, so it makes things up far less.",
+      "character": {
+        "position": "left",
+        "move": "slides to the left side",
+        "points": "at the citation chip as it lights and checks",
+        "holds": "— none —",
+        "expression": "neutral → excited (nod + thumbs up when the chip checks)"
+      }
+    },
+    {
+      "assets": [
+        "comparison_split component — built in the template port (ToolkitComparison.tsx), ready for Phase B"
+      ],
+      "camera": {
+        "direction": "Left to right across the split",
+        "distance": "Across the full frame",
+        "duration": "6.3s",
+        "from": "Left side (guessing, grey)",
+        "move": "pan left → right",
+        "to": "Right side (grounded, teal)"
+      },
+      "duration": 6.3,
+      "endFrame": {
+        "desc": "Kit has slid to the teal right side, excited, thumbs up, as document cards feed a grounded answer with sources.",
+        "img": ""
+      },
+      "id": 5,
+      "name": "No RAG vs with RAG",
+      "notes": "The contrast IS the beat: grey/still vs teal/moving. If the left side looks as alive as the right, the contrast is lost.",
+      "overlay": "No RAG: guesses from memory · With RAG: answers from your files",
+      "section": "Body",
+      "source": "comparison_split component (from the template port) + LTX ambient",
+      "startFrame": {
+        "desc": "Kit stands on the grey left side, thinking, as the guessing answer fades in. Split screen: left side grey and still — a guessing answer fading in; right side dark, waiting.",
+        "img": ""
+      },
+      "status": "draft",
+      "treatment": "Comparison split over moving background",
+      "voiceover": "No RAG, it guesses from memory. With RAG, it answers from your files.",
+      "character": {
+        "position": "left → right",
+        "move": "slides left to right across the split",
+        "points": "at the grey guessing side, then at the teal grounded side",
+        "holds": "— none —",
+        "expression": "thinking (grey side) → excited + thumbs up (teal side)"
+      }
+    },
+    {
+      "assets": [
+        "svishnu.netlify.app RAG assistant recording (capture pending — browser task)"
+      ],
+      "camera": {
+        "direction": "Across, then forward",
+        "distance": "Wide → close",
+        "duration": "3.9s",
+        "from": "Wide across the chat windows",
+        "move": "drift + push-in",
+        "to": "Close on one cited answer"
+      },
+      "duration": 3.9,
+      "endFrame": {
+        "desc": "Kit holds the chat-window card up as the answer appears with source citations attached.",
+        "img": ""
+      },
+      "id": 6,
+      "name": "Company chatbots",
+      "notes": "Depends on the capture (pending — browser task). Until it exists, designed card with hand-written sample Q&A and the 'Illustrative example' label — never an invented product UI.",
+      "overlay": "Chatbots that know their own business",
+      "section": "Body",
+      "source": "Portfolio RAG assistant recording — or designed card with 'Illustrative example' label",
+      "startFrame": {
+        "desc": "Kit stands center, presenting, as the camera drifts across the chat windows. Wide drift across abstract chat windows (plain text wordmarks, no real logos) on a dark background.",
+        "img": ""
+      },
+      "status": "draft",
+      "treatment": "Screen recording (ideal) / designed card (fallback)",
+      "voiceover": "That's how companies build chatbots that know their business.",
+      "character": {
+        "position": "center",
+        "move": "slides to center, stays",
+        "points": "at the chat windows as the cited answer appears",
+        "holds": "the chat-window card (fallback) — or gestures at the recording",
+        "expression": "excited"
+      }
+    },
+    {
+      "assets": [],
+      "camera": {
+        "direction": "Back",
+        "distance": "Close → medium-wide",
+        "duration": "4.8s",
+        "from": "Tight on the wordmark",
+        "move": "pull-back",
+        "to": "Full end card"
+      },
+      "duration": 4.8,
+      "endFrame": {
+        "desc": "Kit points at the full end card — wordmark, 'Follow', and the day counter — over the drifting background.",
+        "img": ""
+      },
+      "id": 7,
+      "name": "CTA",
+      "notes": "End card must be fully readable before the reel ends — the Gmail reel's tight end card (2.8s) is the lesson. Animations land early in this beat. CTA completes ~39.8s in the test render.",
+      "overlay": "Follow · one AI idea, simply, every week",
+      "section": "CTA",
+      "source": "LTX text-free ambient clip (laptop GPU) + Remotion end card",
+      "startFrame": {
+        "desc": "Kit stands center, thumbs up, as the end card begins. Tight on the page wordmark 'your.ai.toolkit' over a drifting teal ambient background.",
+        "img": ""
+      },
+      "status": "draft",
+      "treatment": "LTX ambient + end card",
+      "voiceover": "Follow — I explain one AI idea simply every week.",
+      "character": {
+        "position": "center",
+        "move": "slides to center, stays",
+        "points": "at the 'Follow' end card",
+        "holds": "— none —",
+        "expression": "excited (thumbs up; animations land early)"
+      }
+    }
+  ],
+  "gate1": [
+    {
+      "done": false,
+      "label": "Script trimmed to 89 words (PROPOSAL — awaiting Vishnu's approval at Gate 1)"
+    },
+    {
+      "done": false,
+      "label": "Storyboard canvas approved (frames + camera lines)"
+    },
+    {
+      "done": false,
+      "label": "Producer cost plan attached (per-shot source + cost) — in phase-a-report.md"
+    },
+    {
+      "done": true,
+      "label": "Every beat has a moving frame (no NO MOTION flags)"
+    }
+  ],
+  "notes": [
+    {
+      "author": "Director",
+      "text": "Phase A (2026-10-27): script trimmed 124 -> 89 words (proposal, see script-trimmed.md). Beat 2 is now 8.6s — no split needed. Voice: Helio speed 85 (132.4 wpm, 40.32s in the test render — 0.32s over the 40s cap, flagged for Gate 1)."
+    },
+    {
+      "author": "Director",
+      "text": "Beats 3 and 6: portfolio capture PENDING (needs a live browser task — see capture-brief.md). Fallbacks already planned (diagram / designed card) — the reel is not blocked."
+    },
+    {
+      "author": "Director",
+      "text": "Beat 5 uses the comparison_split component — built in the template port, ready for Phase B."
+    },
+    {
+      "author": "Director",
+      "text": "Beats 3 and 6 want the portfolio RAG assistant recording. Until it exists, diagrams and designed cards carry those beats — no invented UI."
+    },
+    {
+      "author": "Director",
+      "text": "All 7 beats move — zero NO MOTION flags. If the Phase A trim changes a beat's frames or camera, re-check before Gate 1."
+    },
+    {
+      "author": "Director",
+      "text": "Kit hosts every beat — see the character track on each beat. He walks in during the hook (movement in frame 1), slides between sides, points at what matters, and holds the cards up. He never stands frozen: idle bob + blink run underneath every pose."
+    },
+    {
+      "author": "Director",
+      "text": "Palette: navy/teal + amber accent (#F59E0B / #FF7A1A). Warm accent only on hook text, key numbers, the CTA, and Kit's orange-accent sneakers. His grey hoodie (no logo) keeps him grounded; the amber text and his sneakers are the warm color in motion."
+    }
+  ],
+  "reel": {
+    "date": "2026-10-28",
+    "format": "9:16 vertical · 720x1280",
+    "keyword": "RAG",
+    "name": "What is RAG, in 60 seconds",
+    "pillar": "Explained (25%)",
+    "scriptStatus": "PROPOSAL — trimmed to 89 words / ~40.3s at speed 85 (132.4 wpm). Awaiting Vishnu's approval at Gate 1. Windows estimated from the speed-85 test render — re-time from the final voiceover in Phase B.",
+    "status": "draft",
+    "voice": "Helio (single pass, fixed speed)"
+  }
+}

@@ -1,0 +1,7 @@
+AI agents can act — click, send, change things — so what happens when one tries something it was never allowed to do? This paper builds a lightweight monitor that reads the agent's internal state and stops unauthorized actions before they happen. In their tests, it predicted violations with an AUROC of 0.94, and gating on it cut violations from 0.70 to 0.09 while task completion stayed at 1.00.
+
+Comment PAPER and I'll DM you the arXiv link, a one-paragraph summary, and the prompt I used to explain it.
+
+The Agent Knew — Arya Fayyazi, Mehdi Kamal, Massoud Pedram · arXiv:2610.17301 · Preprint, not yet peer-reviewed.
+
+#AI #AIAgents #AIResearch #AISafety #PaperBreakdown #LearnAI

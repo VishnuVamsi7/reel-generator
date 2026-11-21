@@ -1,0 +1,170 @@
+{
+ "38": {
+  "class_type": "CLIPLoader",
+  "inputs": {
+   "clip_name": "t5xxl_fp8_e4m3fn.safetensors",
+   "type": "ltxv",
+   "device": "default"
+  }
+ },
+ "44": {
+  "class_type": "CheckpointLoaderSimple",
+  "inputs": {
+   "ckpt_name": "ltxv-2b-0.9.8-distilled-fp8.safetensors"
+  }
+ },
+ "71": {
+  "class_type": "LTXVScheduler",
+  "inputs": {
+   "steps": 8,
+   "max_shift": 2.05,
+   "base_shift": 0.95,
+   "stretch": true,
+   "terminal": 0.1,
+   "latent": [
+    "95",
+    2
+   ]
+  }
+ },
+ "73": {
+  "class_type": "KSamplerSelect",
+  "inputs": {
+   "sampler_name": "euler"
+  }
+ },
+ "78": {
+  "class_type": "LoadImage",
+  "inputs": {
+   "image": "pic1-day2.png"
+  }
+ },
+ "8": {
+  "class_type": "VAEDecode",
+  "inputs": {
+   "samples": [
+    "72",
+    0
+   ],
+   "vae": [
+    "44",
+    2
+   ]
+  }
+ },
+ "86": {
+  "class_type": "SaveWEBM",
+  "inputs": {
+   "images": [
+    "8",
+    0
+   ],
+   "filename_prefix": "ltx-test-pic1",
+   "codec": "vp9",
+   "fps": 24,
+   "crf": 12
+  }
+ },
+ "69": {
+  "class_type": "LTXVConditioning",
+  "inputs": {
+   "positive": [
+    "95",
+    0
+   ],
+   "negative": [
+    "95",
+    1
+   ],
+   "frame_rate": 25
+  }
+ },
+ "6": {
+  "class_type": "CLIPTextEncode",
+  "inputs": {
+   "text": "Slow cinematic push-in and gentle left-to-right pan across a flat vector illustration: a solid teal grid of square blocks on the left, a pinching funnel filter in the centre, and a warped panel of gapped, tilted teal blocks on the right, on a deep navy blue background. The clean grid stays solid, the warped panel stays warped with its gaps, smooth subtle motion, no text, no letters, no numbers, no logos, no UI labels, no people, no faces.",
+   "clip": [
+    "38",
+    0
+   ]
+  }
+ },
+ "7": {
+  "class_type": "CLIPTextEncode",
+  "inputs": {
+   "text": "low quality, worst quality, deformed, distorted, disfigured, motion smear, motion artifacts, blurry, flickering, warping text, garbled letters, extra text, duplicated text, watermark, logo, noisy, jpeg artifacts",
+   "clip": [
+    "38",
+    0
+   ]
+  }
+ },
+ "82": {
+  "class_type": "LTXVPreprocess",
+  "inputs": {
+   "image": [
+    "78",
+    0
+   ],
+   "img_compression": 40
+  }
+ },
+ "95": {
+  "class_type": "LTXVImgToVideo",
+  "inputs": {
+   "positive": [
+    "6",
+    0
+   ],
+   "negative": [
+    "7",
+    0
+   ],
+   "vae": [
+    "44",
+    2
+   ],
+   "image": [
+    "82",
+    0
+   ],
+   "width": 768,
+   "height": 1280,
+   "length": 193,
+   "batch_size": 1,
+   "strength": 1.0
+  }
+ },
+ "72": {
+  "class_type": "SamplerCustom",
+  "inputs": {
+   "model": [
+    "44",
+    0
+   ],
+   "add_noise": true,
+   "noise_seed": 987654321,
+   "cfg": 3,
+   "positive": [
+    "69",
+    0
+   ],
+   "negative": [
+    "69",
+    1
+   ],
+   "sampler": [
+    "73",
+    0
+   ],
+   "sigmas": [
+    "71",
+    0
+   ],
+   "latent_image": [
+    "95",
+    2
+   ]
+  }
+ }
+}

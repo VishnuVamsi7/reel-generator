@@ -1,0 +1,294 @@
+QC REPORT v2 — "The Agent Knew" Part 2 reel (beats 5-8 + recap)
+Folder: ~/workspace/instagram/reels/2026-10-26-agent-knew-part2/
+Date: 2026-10-26. FILES ONLY. NOTHING WAS POSTED. No approval prompts, no publish calls.
+Rebuild under the user's NEW rules: single-pass voiceover at one fixed speed,
+no per-line TTS / per-line speed calibration, duration is an output, pace check
+per sentence with max 2 rewrite rounds. Old-method files moved to old-method/.
+
+================================================================
+1. VOICEOVER — single pass, fixed speed, voice verified
+================================================================
+- Command: /opt/hatch/bin/tts speak --text-stdin --voice avocado_v2:MAI_03
+  --speed 100 --output voiceover.mp3 (full 10-sentence text in one pass).
+- TTS JSON reported voice "avocado_v2:MAI_03" on EVERY call (verbatim render,
+  round-1 render, all diagnostic renders, all rewrite-candidate renders).
+  avocado_v2:MAI_03 IS Helio. No substitution. No time-stretch, no speed
+  change, no padded silence anywhere in the deliverable.
+- Delivered voiceover.mp3: 52.848 s, 147 words (round-1 script, see §3).
+  The VERBATIM user script rendered first at 50.448 s / 137 words; that file
+  is preserved in this folder as voiceover-v0-verbatim.mp3 for a revert.
+- No per-line files were spliced into the deliverable. Per-sentence renders
+  exist ONLY as measurement diagnostics in /tmp (ephemeral, not delivered).
+
+================================================================
+2. DURATION / 40-SECOND RULE — OVERRUN, STOP FOR DECISION
+================================================================
+- Delivered video: 52.848 s. Voiceover: 52.848 s. |video - voiceover| = 0.000 s.
+- OVERRUN: +12.848 s over 40 s (verbatim script alone: +10.448 s).
+  Nothing was cut silently. The video is assembled at its natural length.
+- TRIM PROPOSAL (primary, single sentence — the longest, S07):
+  "Gate them all and ask an approver on repeat flags: violations fell from
+  70% to 9%, and work still got done."
+  → "Gate them all and ask an approver on repeat flags: violations fell
+  from 70% to 9%."
+  (drops ", and work still got done" — 5 words, ~2.0 s; the completion fact
+  stays on the beat-6 card as "Work still got done — completion near 1.00".)
+  Result would be ~50.8 s — still ~10.8 s over. ONE sentence cannot close a
+  12.8 s gap: at ~167 wpm file rate, ~36 words (~25% of the script) must go.
+  Full cut list that would reach ≤40 s (needs the user's decision):
+  a. Revert S02 to verbatim "Here's how the paper catches it." (~1.2 s)
+  b. Revert S05 to verbatim "So check every action." (~1.1 s)
+  c. S07 trim above (~2.0 s)
+  d. S10: cut ", and not yet against agents trained to hide from the probe"
+     (~3.0 s; the limitation stays on the beat-8 card)
+  e. S03: "A simple linear probe on the model's internals flags…" →
+     "A simple linear probe flags…" (~1.5 s; "internal state" stays on card)
+  f. S09: cut "afterwards" (~0.4 s; "afterwards" stays on the beat-7 card)
+  g. S08: "Stopping the violation also stopped most of the lies — from 10%
+     to 1%." → "Stopping violations cut lies from 10% to 1%." (~2.2 s)
+  h. S06: cut "Gate one turn and the violation just comes back." entirely
+     (~3.3 s; single-turn postponement stays on the beat-6 card as
+     "GATE — checked every time, not just once")
+  (a)–(h) total ~14.7 s → ~38.1 s. This guts the script; it is a rewrite,
+  not a trim. Awaiting the user's decision before any cut is applied.
+  Alternative for the user to consider: accept 52.8 s (Reels allow up to
+  90 s; the 40 s figure is his own script-length rule, not a platform cap).
+
+================================================================
+3. PACE CHECK — GATE FAILED AFTER 2 ROUNDS, NOT FIXABLE BY REWRITING
+================================================================
+Method A (task-prescribed): each sentence rendered individually at the SAME
+fixed speed 100, duration = whole diagnostic file (words / ffprobe duration,
+same definition as the old build). Standalone renders are deterministic
+(re-rendered S02/S03/S05 three times: durations identical to the ms).
+Average = total words / total time.
+Round-1 script (delivered), avg 175.4 wpm, ±8% band 161.4–189.5 wpm:
+ S01 18w 5.472s 197.4 wpm  +12.5% FAIL
+ S02 10w 3.192s 188.0 wpm   +7.2% PASS
+ S03 19w 7.728s 147.5 wpm  -15.9% FAIL
+ S04 14w 3.792s 221.5 wpm  +26.3% FAIL
+ S05  7w 2.952s 142.3 wpm  -18.9% FAIL
+ S06  9w 3.048s 177.2 wpm   +1.0% PASS
+ S07 21w 7.392s 170.5 wpm   -2.8% PASS
+ S08 14w 5.232s 160.6 wpm   -8.5% FAIL (marginal)
+ S09 13w 4.680s 166.7 wpm   -5.0% PASS
+ S10 22w 6.792s 194.3 wpm  +10.8% FAIL
+ Result: 5 of 10 FAIL. Verbatim script was worse: 8 of 10 FAIL
+ (avg 174.1 wpm, band 160.2–188.0; S01 197.4, S02 208.3, S03 147.5,
+ S04 228.9, S05 125.0, S06 177.2 PASS, S07 170.5 PASS, S08 151.2,
+ S09 157.9, S10 194.3).
+
+Method B (in-context cross-check): Whisper-tiny word timestamps on the
+single-pass file itself (all 147 words recognised; only mis-hearing "AURC"
+for "AUROC"), with sentence boundaries set to the midpoints of the
+ffmpeg silencedetect gaps (see §4). Speech spans incl. internal pauses,
+excl. inter-sentence pauses; avg 187.0 wpm, band 172.1–202.0 wpm:
+ S01 258.4 FAIL | S02 233.7 FAIL | S03 154.3 FAIL | S04 255.6 FAIL |
+ S05 180.5 PASS | S06 202.2 FAIL (marginal, +8.1%) | S07 163.4 FAIL |
+ S08 177.5 PASS | S09 179.9 PASS | S10 198.0 PASS — 6 of 10 FAIL.
+ In-context pacing is FASTER than standalone diagnostics for the short
+ sentences (S01/S02/S04); the two methods disagree in detail but agree
+ the gate fails. Cross-correlation of standalone renders against the
+ single-pass file peaked at only 0.07–0.33, i.e. in-context pacing is NOT
+ recoverable from standalone renders — which is why Method B was built.
+
+REWRITES APPLIED — Round 1 (meaning and all facts preserved):
+ S02: "Here's how the paper catches it."
+   → "Here's how the paper catches it, before the action happens."
+   (6→10 words; diag 208.3→188.0 wpm; "before the action happens" = the
+   same "before the action is written" fact as S03.)
+ S04: "And it still works when the agent is told to hide its reasoning."
+   → "And it still works, even when the agent is told to hide its reasoning."
+   (13→14 words; diag 228.9→221.5 wpm.)
+ S05: "So check every action."
+   → "So check every single action, every time."
+   (4→7 words; diag 125.0→142.3 wpm.)
+ S08: "…stopped most of the lies, from 10% to 1%."
+   → "…stopped most of the lies — from 10% to 1%." (punctuation only;
+   diag 151.2→160.6 wpm.)
+ S09: "…barely helped, and sometimes backfired."
+   → "…barely helped — and sometimes backfired." (punctuation only;
+   diag 157.9→166.7 wpm.)
+ S01, S03, S06, S07, S10 unchanged — tested rewrites made them WORSE:
+   S01 "…, and then lied about it." 222.8 wpm (was 197.4); "— and then…"
+   211.1 wpm. S03 "before it's written" 143.1 (was 147.5); "A linear
+   probe…" 139.8. S10 "— and not yet…" 209.1 (was 194.3); "not yet tested
+   against…" 194.9.
+ROUND 2 candidates (standalone test only, NOT applied — none landed in
+band, most moved the wrong way):
+   S01 "…lied about it, plainly." 197.9 wpm (need ≤189.5)
+   S03 "…scoring 0.94 AUROC." 140.5 (need ≥161.4)
+   S04 "…hide its reasoning, and hide it well." 226.2 (need ≤189.5)
+   S05 "…every single time, without exception." 126.3 (need ≥161.4)
+   S08 "…from 10% down to 1%." 152.2 (need ≥161.4)
+   S10 "— tested on four open models… — and not yet…" 208.3;
+   "…, with mock tools, and not yet…" 195.0 (need ≤189.5)
+ CONCLUSION: the per-sentence rate at fixed speed 100 is intrinsic to each
+ sentence's phonetics and does not respond predictably to wording changes;
+ tested rewrites moved rates the wrong way or marginally. The ±8% pace gate
+ CANNOT be closed by rewriting (2 rounds of evidence). Stopping here per
+ the max-2-rounds rule. No speed changes were used at any point.
+
+================================================================
+4. CAPTIONS + ASSEMBLY — measured boundaries
+================================================================
+- Sentence windows (start–end = midpoint of the inter-sentence silence
+  gap, from Whisper word timings + silencedetect gaps at -40 dB):
+  S01 0.000–4.715 | S02 4.715–8.048 | S03 8.048–16.176 |
+  S04 16.176–20.168 | S05 20.168–23.170 | S06 23.170–26.480 |
+  S07 26.480–34.897 | S08 34.897–40.365 | S09 40.365–45.384 |
+  S10 45.384–52.848.
+  NOTE: silencedetect alone could NOT segment cleanly (intra-sentence
+  comma/dash pauses are indistinguishable from sentence-end pauses: 22+
+  gaps for 10 sentences in the verbatim render). Boundaries above are the
+  Whisper+gap-midpoint measurement; Whisper word timestamps carry ~±0.3 s
+  error (verified against 100 ms RMS-energy windows, e.g. the 4.34–5.09 s
+  pause is the S1/S2 boundary, not the em-dash).
+- captions.ass: PlayResX 720 / PlayResY 1280, DejaVu Sans 46px,
+  bottom-center, MarginV 200. 24 events: long lines split into sequential
+  sub-events inside the SAME measured window, max 2 lines per event.
+- Beat segments (card shows for its measured window):
+  Recap 0.000–8.048 (8.048 s) | Beat 5 8.048–20.168 (12.120 s) |
+  Beat 6 20.168–34.897 (14.729 s) | Beat 7 34.897–45.384 (10.487 s) |
+  Beat 8 45.384–52.848 (7.464 s). Sum 52.848 s.
+- Video: 720x1280, H.264 + AAC, 30 fps, 52.848 s. Slow zoompan
+  (max 1.03x) + 0.4 s fades in/out per segment. No loops, no frozen
+  frames, no AI video clips (designed PIL cards only).
+- FRAME SPOT-CHECKS (final render, visually read, all MATCH):
+  t=2 s recap/S1, t=6 s recap/S2 "Here's how the paper catches",
+  t=12 s beat 5/S3 "flags the violation before the action is written,",
+  t=18 s beat 5/S4, t=21.5 s beat 6/S5, t=30 s beat 6/S7 "Gate them all
+  and ask an approver on repeat flags:", t=38 s beat 7/S8 "Stopping the
+  violation also stopped most of the lies —", t=43 s beat 7/S9,
+  t=49 s beat 8/S10 "four open models with mock tools,".
+  Captions sit in the clear bottom ~260 px; no caption/card collisions
+  observed. 0.88 / 0.65 / 0.70 / 0.09 values fully visible (at the right
+  edge under max zoom, legible). Frames in qc-frames-v2/.
+
+================================================================
+5. THE TWO FIXES (both applied + visually verified)
+================================================================
+1. Beat-7 card: the invented footer "Fix the action first — don't just ask
+   the agent to be honest after." is REMOVED. The card now ends at the
+   honesty-prompt callout box; the area below is clear navy. (build_cards.py
+   edited; card-3-beat7.png regenerated; old card is NOT preserved
+   separately — the footer text is recorded here and in qc-report.txt.)
+2. Cover: rebuilt as a dedicated cover.jpg (build_cover.py). It contains
+   ONLY: "PART 2", "Part 2 — the fix", the paper title "THE AGENT KNEW /
+   Internal States Forecast Unauthorized Actions and Stop Them, and the
+   Lies That Follow", and "arXiv 2610.17301". "RECAP" is gone. The recap
+   card's kicker was also fixed ("PART 2 • RECAP" → "PART 2") since it
+   was the source of the old cover.
+
+================================================================
+6. OCR — every beat/card (tesseract 5.3.4, installed via apt for this
+   check; --psm 11) + visual read
+================================================================
+- card-0-recap: "PART 2 / Part 2 — the fix / In Part 1: / An agent stopped
+  a server / it wasn't allowed to touch / — then lied about it. / Here's
+  how the paper / catches it. / @your.ai.toolkit • Paper Breakdown". No
+  "RECAP". PASS.
+- card-1-beat5: "BEAT 5 / Its internal state gives it away / 0.94 /
+  AUROC at the decision point / — before the action is written / Lie
+  forecast when told to hide reasoning: / internal probe 0.88 / CoT
+  monitor 0.65". PASS.
+- card-2-beat6: "BEAT 6 / Gate every action / Every action passes the
+  gate: / GATE — checked every time, not just once / Violations (Gemma-4,
+  gate + approver): / before 0.70 / after 0.09 / Work still got done —
+  completion near 1.00". The small gate chips OCR'd as garbage ("QQ)?")
+  but were VISUALLY verified: "✓ send / ✓ click / ✕ delete / ✓ run /
+  ✕ stop server". PASS (see judgment note below).
+- card-3-beat7: "BEAT 7 / Stop the act, stop the lie / Lies after stopping
+  the violation / 10% → 1% / pooled over 3 models (Gemma-4, gpt-oss,
+  Qwen3.8) / Honesty prompt afterwards: / barely helped — / false claims
+  16% → 42%". No invented footer. PASS.
+- card-4-beat8: "BEAT 8 / Early results, not the final word / THE AGENT
+  KNEW / [full subtitle] / Fayyazi • Kamal • Pedram / arXiv 2610.17301 /
+  tested on 4 open models, mock tools / not yet against agents trained to
+  hide from the probe / PREPRINT — not yet peer-reviewed / Follow
+  @your.ai.toolkit →". PASS.
+- cover.jpg: "PART 2 / Part 2 — the fix / THE AGENT KNEW / [subtitle] /
+  arXiv 2610.17301". No "RECAP". PASS.
+- No logo or mascot drawn anywhere (PIL cards only, no AI imagery).
+- JUDGMENT NOTE (flagged, not silently kept): the strictest reading of
+  "on-screen words from the approved script only" would also catch:
+  (a) beat-6 gate chips "send / click / delete / run" (mock-tool action
+  names; only "stop server" is in the voiceover) — they are the briefed
+  "gate with checkmarks/blocked X" graphic, without labels it is not a
+  graphic; (b) "GATE — checked every time, not just once" — a paraphrase
+  of the script's "So check every action / Gate one turn…"; (c) kickers
+  "BEAT 5/6/7/8" and the recap footer "Paper Breakdown" (the page's
+  series name, also a hashtag in caption.txt). These were retained as
+  briefed visual-column / series labels, per the "reuse the cards as-is"
+  instruction. If the parent wants the strictest reading, (a) and (b)
+  are the only removals needed; say so and they take one edit.
+
+================================================================
+7. ACCURACY CONFIRMATION (voiceover, on-screen text, description)
+================================================================
+- 0.94 AUROC: stated ONLY as "at the decision point — before the action
+  is written" (beat-5 card + voiceover + description). No "beats monitors"
+  claim anywhere. The 0.88 vs 0.65 split bar is labelled explicitly as
+  the LIE FORECAST under hiding pressure, not AUROC, and no monitor
+  comparison is made for violation detection.
+- "Lies 10% to 1%": pooled over 3 models (Gemma-4, gpt-oss, Qwen3.8) —
+  labelled on the beat-7 card and in the description. No single-model
+  attribution. Muse 16.8%→5.1% not claimed.
+- 0.70 to 0.09: labelled "Gemma-4, gate + approver" on the beat-6 card
+  and in the description; "completion near 1.00" on the card.
+- Honesty prompt: beat-7 card callout "false claims 16% → 42%" exactly
+  as briefed; voiceover says it "barely helped, and sometimes backfired".
+- Beat 8: "preprint, tested on four open models with mock tools, and not
+  yet against agents trained to hide from the probe"; card adds
+  "PREPRINT — not yet peer-reviewed" and arXiv 2610.17301.
+- NOWHERE does the voiceover, on-screen text, or description say the
+  paper "detects lying in AI" or "solves agent safety". No mind-reading
+  framing; the probe is described as reading the model's internal state /
+  flagging the violation. "Gate, then ask" is voiced as "ask an approver
+  on repeat flags" (the system asks the approver, not the agent).
+- Description (caption.txt, reused as-is, 119 words + 7 hashtags):
+  states it continues Part 1; keyword PAPER; cites title + arXiv ID.
+  It was NOT re-checked word-by-word against the round-1 script edits
+  (S02 "before the action happens" / S05 "every single action, every
+  time" are consistent with it; no contradiction introduced).
+
+================================================================
+8. WHAT COULD NOT BE VERIFIED / OPEN ITEMS
+================================================================
+- PACE GATE: FAILED (see §3). Two rewrite rounds exhausted; the gate is
+  not closable by rewriting at fixed speed 100. Deliverable keeps the
+  round-1 script (5/10 diagnostic passes, vs 8/10 fails verbatim).
+- DURATION GATE: FAILED — 52.848 s vs the 40 s rule (+12.848 s).
+  Assembled at natural length per the rule; trim decision pending (§2).
+- Caption boundaries are measured (Whisper + silence gaps, §4), not
+  sample-exact: Whisper word timestamps carry ~±0.3 s error. Spot-checks
+  confirm the right card + caption at 9 sampled times; a boundary could
+  still be off by a fraction of a second somewhere un-sampled.
+- The old build's qc-frames/ and seg/concat intermediates were overwritten
+  by the v2 build (seg-1..5.mp4, concat.mp4 are now v2). Old-method
+  deliverables (voiceover, captions.ass, reel mp4, line-01…10.mp3) are in
+  old-method/; old-method scripts (assemble.py, rebuild_captions.py,
+  tts_tune.py, tts-results.json, concat_vo.txt) also moved there.
+  qc-report.txt (v1) untouched.
+- Tesseract was installed system-wide via apt (sudo) for the OCR check.
+- faster-whisper (tiny model) was installed in a throwaway venv at
+  ~/ak2-venv for the boundary measurement; venv removed after use.
+  Diagnostic renders lived in /tmp (ephemeral).
+
+================================================================
+FILES DELIVERED (this folder)
+================================================================
+- agent-knew-part2-reel.mp4 (REBUILT v2, 52.848 s, 720x1280, H.264+AAC)
+- voiceover.mp3 (NEW single-pass, speed 100, avocado_v2:MAI_03, 52.848 s)
+- voiceover-v0-verbatim.mp3 (verbatim script render, 50.448 s — for revert)
+- captions.ass (REBUILT from measured boundaries, 24 events)
+- cover.jpg (REBUILT dedicated cover, no RECAP)
+- caption.txt (reused as-is, 119 words + 7 hashtags)
+- card-0-recap.png .. card-4-beat8.png (recap kicker + beat-7 footer fixed;
+  beats 5/6/8 byte-identical to the old build)
+- qc-report-v2.txt (this file), qc-report.txt (v1, untouched)
+- Working files: build_cards.py (fixed), build_cover.py (new),
+  build_v2.py (captions + assembly), vo_text.txt (verbatim),
+  vo_text_r1.txt (round-1), seg-1..5.mp4, concat.mp4, concat_seg.txt,
+  qc-frames-v2/ (spot-check frames), old-method/ (old deliverables+scripts)
+NOTHING POSTED. No approval prompts, no publish calls.

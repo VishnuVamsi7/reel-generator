@@ -1,0 +1,8 @@
+AI agents can try actions they were never given permission for — and this paper shows how to stop them first.
+Here's what you'll learn: how a lightweight monitor reads an agent's internal state to catch unauthorized intent, and the result from their tests.
+Three quick takeaways: the monitor predicted violations before the action (AUROC 0.94); gating cut violations from 0.70 to 0.09; task completion stayed at 1.00.
+The paper is 'The Agent Knew' by Arya Fayyazi, Mehdi Kamal, and Massoud Pedram — arXiv 2610.17301. A preprint, not yet peer-reviewed.
+Comment PAPER and I'll DM you the arXiv link, a one-paragraph summary, and the prompt I used to explain it.
+Follow @your.ai.toolkit for one AI paper, explained simply, every week.
+
+#AI #AIAgents #MachineLearning #AIResearch #AISafety #PaperBreakdown #LearnAI

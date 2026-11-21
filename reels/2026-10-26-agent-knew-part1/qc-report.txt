@@ -1,0 +1,80 @@
+QC REPORT — your.ai.toolkit "The Agent Knew" PART 1
+Date: 2026-10-26 | Voice: Helio, catalog ID avocado_v2:MAI_03 (verified on EVERY TTS call; no other voice ID appeared)
+Paper: "The Agent Knew" (Fayyazi, Kamal, Pedram), arXiv:2610.17301, preprint, not peer-reviewed.
+Script: user's own words, verbatim, beats 1-4 + 2s silent end card. No AI video clips used; designed PIL cards only.
+
+(1) PER-LINE WPM TABLE (wpm = words / (measured duration/60); target 130-160)
+ line  beat  speed  duration  words  wpm
+ 01    1     60     5.160s    12     139.5
+ 02    1     65     4.512s    10     133.0
+ 03    2     80     3.432s    9      157.3
+ 04    2     75     3.120s    8      153.8
+ 05    2     70     5.808s    14     144.6
+ 06    3     85     2.208s    5      135.9
+ 07    3     65     7.224s    16     132.9
+ 08    4     120    2.856s    6      126.0 *
+ 09    4     100    7.632s    17     133.6
+ * Line 08 is 4 wpm under the 130 floor: "retroactive permission laundering" is
+   multi-syllabic and speed 115 -> 120 changed duration 2.832s -> 2.856s (no effect).
+   No words were cut and the voice was not distorted. All other lines are in 130-160.
+   No line exceeded 170 wpm.
+ CALIBRATION NOTE: the brief's stated calibration (speed 120-140 ~= 145 wpm) did NOT
+ match measured behaviour on this run: speed 130 gave 280 wpm on line 01, speed 80
+ gave 174 wpm, speed 60 gave 139.5 wpm. Speeds were therefore chosen per line from
+ MEASURED durations (60-120), not from the stated calibration. Part 2 worker: re-measure,
+ do not trust the 120-140 figure. Digit-heavy line 09 reached 133.6 wpm at speed 100,
+ so no digit-line exception was needed.
+
+(2) DURATIONS
+ Voiceover (voiceover.mp3, ffprobe): 41.952s
+ Beat durations (measured sums): beat1 9.672s | beat2 12.360s | beat3 9.432s | beat4 10.488s
+ Video (agent-knew-part1-reel.mp4, ffprobe): 43.967s, 720x1280, 30fps, h264 + AAC audio
+ Expected video length = voiceover + 2s end card = 43.952s
+ Diff = 43.967 - 43.952 = 0.015s (limit 0.5s) PASS
+ Audio stream ends ~41.93s; final 2.0s end card is silent (no voiceover, no captions).
+
+(3) CAPTION-BOUNDARY SPOT-CHECKS (captions.ass built from measured cumulative boundaries)
+ t=6.0s  -> expected line 02 "Then it asked permission, as if it hadn't happened yet."
+           (line 02 spans 5.160-9.672s). Frame qc-cap-6.png shows exactly that line. MATCH
+ t=25.0s -> expected line 07 "The agent then reported that the stop was denied, and never
+           said it had already happened." (line 07 spans 24.240-31.464s). Frame
+           qc-frame-25.png shows exactly that line. MATCH
+ t=35.0s -> expected line 09 "Across 1,081 violations, it was followed by a false report
+           70% of the time, versus 8% otherwise." (line 09 spans 34.320-41.952s). Frame
+           qc-cap-35.png / qc-frame-38.png shows exactly that line. MATCH
+ Captions: PlayResX 720 / PlayResY 1280, DejaVu Sans 46px, bottom-center, MarginV 200.
+
+(4) FRAME DIVERSITY (one sampled frame per beat, visually inspected)
+ t=5s  beat 1: terminal card + permission dialog. PASS (distinct)
+ t=15s beat 2: chat-timeline card (task bubble, red FLAG chip, agent note, stop command). PASS
+ t=25s beat 3: white report card, false sentence highlighted, red log line "stopped". PASS
+ t=38s beat 4: two-bar chart, tall red 70% bar "laundering", short teal 8% bar. PASS
+ t=32.2s beat 4 mid-beat: bars visibly SHORT (growth animation in progress) vs full bars at
+       t=38s — bar-growth confirmed, no frozen frame.
+ t=43s end card: "PART 2 — how they catch it before it acts", silent. PASS
+ All four beat cards are visually distinct layouts. No loops, no repeated visuals.
+ Defect found and fixed during QC: beat-4 bar labels overlapped the 4-line burned caption
+ (first build); chart was moved up (baseline 940 -> 780) and re-verified clear at t=38s.
+ Two doubled-label drawing bugs (card 1 "PERMISSION REQUEST", end card "PART 2") fixed
+ and re-verified.
+
+(5) ACCURACY CONFIRMATION (checked against the binding rules)
+ - Voiceover, on-screen text and description use the user's script verbatim; no added claims.
+ - "70% vs 8%": presented exactly as "across 1,081 violations, a retroactive permission
+   request was followed by a false report 70% of the time, versus 8% otherwise" (voiceover
+   line 09, card-4 title/kicker, description step 3). Odds ratio 7.0 not stated on-screen.
+ - No "detects lying in AI", no "solves agent safety", no "beats monitors" anywhere in
+   voiceover, cards, or description. The 0.94 AUROC figure is NOT introduced (Part 2 only).
+ - Paper framed as a preprint testing four open-weight models in mock environments
+   (description); no claim it proves anything about deployed systems.
+ - Probe not mentioned in Part 1 (no mind-reading framing issue arises).
+ - Description: 120 words, 6-block structure (hook / what they'll learn / 3 steps /
+   keyword CTA PAPER / follow line / hashtags), ends pointing to Part 2.
+ - Cover: cover.jpg 720x1280, "The Agent Knew" + "PART 1" badge + beat-1 title line.
+
+FILES IN THIS DIRECTORY
+ agent-knew-part1-reel.mp4, cover.jpg, caption.txt, captions.ass, voiceover.mp3,
+ line-01.mp3 ... line-09.mp3, card1.png, card2.png, card3.png, card4.png,
+ card4-short.png (bar-growth start frame), card-end.png, qc-report.txt (this file),
+ make_cards.py, build_video.sh, qc-frame-*.png / qc-cap-*.png (QC evidence frames).
+ NOTHING WAS POSTED. No approval prompts or publish calls were made.

@@ -1,0 +1,450 @@
+{
+ "duration": 40.58,
+ "words": [
+  {
+   "word": "Nobody",
+   "start": 0.0,
+   "end": 0.48
+  },
+  {
+   "word": "told",
+   "start": 0.48,
+   "end": 0.86
+  },
+  {
+   "word": "the",
+   "start": 0.86,
+   "end": 1.08
+  },
+  {
+   "word": "agents",
+   "start": 1.08,
+   "end": 1.44
+  },
+  {
+   "word": "to",
+   "start": 1.44,
+   "end": 1.7
+  },
+  {
+   "word": "break",
+   "start": 1.7,
+   "end": 1.9
+  },
+  {
+   "word": "the",
+   "start": 1.9,
+   "end": 2.14
+  },
+  {
+   "word": "rules.",
+   "start": 2.14,
+   "end": 2.6
+  },
+  {
+   "word": "Two",
+   "start": 3.32,
+   "end": 3.58
+  },
+  {
+   "word": "helpful",
+   "start": 3.58,
+   "end": 4.0
+  },
+  {
+   "word": "agents",
+   "start": 4.0,
+   "end": 4.48
+  },
+  {
+   "word": "shared",
+   "start": 4.48,
+   "end": 4.82
+  },
+  {
+   "word": "one",
+   "start": 4.82,
+   "end": 5.2
+  },
+  {
+   "word": "workspace,",
+   "start": 5.2,
+   "end": 5.8
+  },
+  {
+   "word": "and",
+   "start": 6.34,
+   "end": 6.54
+  },
+  {
+   "word": "every",
+   "start": 6.54,
+   "end": 6.9
+  },
+  {
+   "word": "change",
+   "start": 6.9,
+   "end": 7.28
+  },
+  {
+   "word": "to",
+   "start": 7.28,
+   "end": 7.54
+  },
+  {
+   "word": "someone",
+   "start": 7.54,
+   "end": 7.84
+  },
+  {
+   "word": "else's",
+   "start": 7.84,
+   "end": 8.28
+  },
+  {
+   "word": "files",
+   "start": 8.28,
+   "end": 8.62
+  },
+  {
+   "word": "had",
+   "start": 8.62,
+   "end": 9.02
+  },
+  {
+   "word": "to",
+   "start": 9.02,
+   "end": 9.16
+  },
+  {
+   "word": "pass",
+   "start": 9.16,
+   "end": 9.42
+  },
+  {
+   "word": "a",
+   "start": 9.42,
+   "end": 9.6
+  },
+  {
+   "word": "reviewer",
+   "start": 9.6,
+   "end": 10.08
+  },
+  {
+   "word": "first.",
+   "start": 10.08,
+   "end": 10.42
+  },
+  {
+   "word": "Then",
+   "start": 11.32,
+   "end": 11.56
+  },
+  {
+   "word": "the",
+   "start": 11.56,
+   "end": 11.68
+  },
+  {
+   "word": "reviewer",
+   "start": 11.68,
+   "end": 12.16
+  },
+  {
+   "word": "went",
+   "start": 12.16,
+   "end": 12.36
+  },
+  {
+   "word": "dark,",
+   "start": 12.36,
+   "end": 12.78
+  },
+  {
+   "word": "so",
+   "start": 13.48,
+   "end": 13.72
+  },
+  {
+   "word": "the",
+   "start": 13.72,
+   "end": 13.86
+  },
+  {
+   "word": "agents",
+   "start": 13.86,
+   "end": 14.22
+  },
+  {
+   "word": "helped",
+   "start": 14.22,
+   "end": 14.58
+  },
+  {
+   "word": "each",
+   "start": 14.58,
+   "end": 14.9
+  },
+  {
+   "word": "other",
+   "start": 14.9,
+   "end": 15.14
+  },
+  {
+   "word": "inside",
+   "start": 15.14,
+   "end": 15.54
+  },
+  {
+   "word": "their",
+   "start": 15.54,
+   "end": 15.88
+  },
+  {
+   "word": "permissions",
+   "start": 15.88,
+   "end": 16.38
+  },
+  {
+   "word": "around",
+   "start": 16.38,
+   "end": 17.08
+  },
+  {
+   "word": "the",
+   "start": 17.08,
+   "end": 17.3
+  },
+  {
+   "word": "checkpoint.",
+   "start": 17.3,
+   "end": 17.68
+  },
+  {
+   "word": "It",
+   "start": 18.26,
+   "end": 18.9
+  },
+  {
+   "word": "happened",
+   "start": 18.9,
+   "end": 19.22
+  },
+  {
+   "word": "to",
+   "start": 19.22,
+   "end": 19.34
+  },
+  {
+   "word": "nearly",
+   "start": 19.34,
+   "end": 19.68
+  },
+  {
+   "word": "six",
+   "start": 19.68,
+   "end": 20.1
+  },
+  {
+   "word": "in",
+   "start": 20.1,
+   "end": 20.38
+  },
+  {
+   "word": "ten",
+   "start": 20.38,
+   "end": 20.68
+  },
+  {
+   "word": "tests",
+   "start": 20.68,
+   "end": 21.3
+  },
+  {
+   "word": "and",
+   "start": 21.3,
+   "end": 21.94
+  },
+  {
+   "word": "95",
+   "start": 21.94,
+   "end": 22.54
+  },
+  {
+   "word": "and",
+   "start": 22.54,
+   "end": 22.82
+  },
+  {
+   "word": "100",
+   "start": 22.82,
+   "end": 23.24
+  },
+  {
+   "word": "on",
+   "start": 23.24,
+   "end": 23.5
+  },
+  {
+   "word": "real",
+   "start": 23.5,
+   "end": 23.7
+  },
+  {
+   "word": "code.",
+   "start": 23.7,
+   "end": 24.32
+  },
+  {
+   "word": "Helpful",
+   "start": 25.2,
+   "end": 25.72
+  },
+  {
+   "word": "and",
+   "start": 25.72,
+   "end": 26.4
+  },
+  {
+   "word": "harmful.",
+   "start": 26.4,
+   "end": 26.82
+  },
+  {
+   "word": "On",
+   "start": 27.61,
+   "end": 28.0
+  },
+  {
+   "word": "trap",
+   "start": 28.0,
+   "end": 28.3
+  },
+  {
+   "word": "tasks,",
+   "start": 28.3,
+   "end": 28.9
+  },
+  {
+   "word": "over",
+   "start": 29.42,
+   "end": 29.58
+  },
+  {
+   "word": "four",
+   "start": 29.58,
+   "end": 29.98
+  },
+  {
+   "word": "in",
+   "start": 29.98,
+   "end": 30.16
+  },
+  {
+   "word": "ten",
+   "start": 30.16,
+   "end": 30.46
+  },
+  {
+   "word": "favors",
+   "start": 30.46,
+   "end": 30.94
+  },
+  {
+   "word": "hurt",
+   "start": 30.94,
+   "end": 31.36
+  },
+  {
+   "word": "an",
+   "start": 31.36,
+   "end": 31.6
+  },
+  {
+   "word": "absent",
+   "start": 31.6,
+   "end": 31.94
+  },
+  {
+   "word": "team,",
+   "start": 31.94,
+   "end": 32.54
+  },
+  {
+   "word": "though",
+   "start": 33.12,
+   "end": 33.32
+  },
+  {
+   "word": "a",
+   "start": 33.32,
+   "end": 33.44
+  },
+  {
+   "word": "safe",
+   "start": 33.44,
+   "end": 33.68
+  },
+  {
+   "word": "way",
+   "start": 33.68,
+   "end": 33.98
+  },
+  {
+   "word": "existed.",
+   "start": 33.98,
+   "end": 34.54
+  },
+  {
+   "word": "Cooperation",
+   "start": 35.44,
+   "end": 36.18
+  },
+  {
+   "word": "can",
+   "start": 36.18,
+   "end": 36.52
+  },
+  {
+   "word": "dodge",
+   "start": 36.52,
+   "end": 36.9
+  },
+  {
+   "word": "the",
+   "start": 36.9,
+   "end": 37.1
+  },
+  {
+   "word": "guardrails.",
+   "start": 37.1,
+   "end": 37.84
+  },
+  {
+   "word": "Follow",
+   "start": 38.48,
+   "end": 39.0
+  },
+  {
+   "word": "for",
+   "start": 39.0,
+   "end": 39.24
+  },
+  {
+   "word": "the",
+   "start": 39.24,
+   "end": 39.36
+  },
+  {
+   "word": "next",
+   "start": 39.36,
+   "end": 39.64
+  },
+  {
+   "word": "paper.",
+   "start": 39.64,
+   "end": 40.06
+  }
+ ]
+}

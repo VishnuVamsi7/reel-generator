@@ -1,0 +1,81 @@
+QC REPORT — Fireflies reel v2 (your.ai.toolkit, AI Tool #1)
+Date: 2026-10-26 (Day 1, Week 1 pilot). FILES ONLY — not posted.
+
+DELIVERABLES (workspace/instagram/reels/2026-10-26-fireflies-v2/)
+- fireflies-reel.mp4 — 720x1280, H.264, 30 fps, AAC audio, 38.016 s, 2.4 MB
+- cover.jpg — 720x1280, hook "Meeting over. Notes: none." readable without sound
+- caption.txt — verbatim user caption (214 chars)
+- captions.ass — 14 events, DejaVu Sans 46px, bottom-center, MarginV 200, PlayRes 720x1280,
+  timed to measured word boundaries (faster-whisper base, word timestamps verified: 84/84 words match)
+- voiceover.mp3 — the delivered voiceover (see audio notes below)
+- voiceover-speed100-rejected.mp3 / voiceover-v2-rewrite.mp3 — rejected/alternate takes, kept for audit
+- card-1.png ... card-7.png — designed cards (navy #0A1E3C + teal); alignment.json; build/verify scripts
+
+AUDIO
+- Voice: Helio, catalog ID avocado_v2:MAI_03 (verified on the render receipt).
+- ONE pass at ONE fixed speed. No time-stretching, no speed changes, no silence padding.
+- Speed deviation to report (rule 1 note): speed 100 (1.0) rendered 26.64 s = 189 wpm overall,
+  far above the user's 130-140 wpm spec. Speed 70 rendered 38.016 s = 132.6 wpm overall,
+  inside the spec and under 40 s. The delivered voiceover is the single fixed-speed-70 pass.
+- Duration is an output: 38.016 s (under 40 s, no script cuts needed).
+- Script: the user's verbatim 84-word script (no wording changes in the delivered take).
+
+PACE CHECK (rule 3) — BAND NOT ACHIEVED; see below.
+Per-sentence wpm, delivered take (speech-span = first-word start to last-word end; mean 153.5):
+  S1  0.00- 3.06  156.9 wpm  (+2.2%)   OK
+  S2  3.86-13.16  135.5 wpm  (-11.7%)  OVER 8%
+  S3 14.02-18.48  174.9 wpm  (+14.0%)  OVER 8%
+  S4 19.06-23.48  135.7 wpm  (-11.5%)  OVER 8%
+  S5 23.82-27.86  163.4 wpm  (+6.5%)   OK
+  S6 28.82-33.82  156.0 wpm  (+1.7%)   OK
+  S7 34.20-37.36  151.9 wpm  (-1.0%)   OK
+Slot measure (words / beat slot incl. pauses; mean 133.1): S1 124.4 (-6.6%) OK, S2 124.0 (-6.8%) OK,
+  S3 154.8 (+16.2%) OVER, S4 126.1 (-5.3%) OK, S5 132.0 (-0.9%) OK, S6 145.0 (+8.9%) OVER (marginal),
+  S7 125.8 (-5.5%) OK. Overall voiceover: 132.6 wpm — inside the 130-140 spec.
+
+What was done about it (rule 3, one rewrite round):
+- Rewrote S2/S3/S4 (comma in/out, one added word) and re-rendered the WHOLE voiceover at the same
+  fixed speed 70 (85 words, 37.68 s, overall 135.3 wpm). Result did NOT converge: S2 139.1 (-12.2%),
+  S3 185.0 (+16.8%, faster than before), S4 140.8 (-11.1%), and S5 flipped from pass to 174.6 (+10.2%).
+  The rewrite round made the take worse, so the verbatim-script take was kept.
+- Conclusion: the 8% per-sentence band is not achievable with this TTS engine at this granularity.
+  Evidence: two renders at the same fixed speed produced different offenders; comma/word edits did not
+  predictably move sentence rates (S3 got faster after being given a comma pause). Per-sentence rates
+  vary ~+/-12-17% between renders. The overall pace (132.6 wpm) is in spec and the delivery sounds
+  measured (pauses between sentences). Decision needed from Vishnu: accept this take, or relax/retire
+  the 8% band for this engine. No further rewrite rounds were run (would be iterating on noise).
+
+OCR (RapidOCR, concatenation-aware re-check) — PASS on all 7 cards + cover.
+- Every detected word is approved designed text from the script/cards, or an OCR artifact of it
+  (merged tokens like "AITOOL#1", "BEAT3/7", "Illustrativeexample"; misreads "AI"->"Al", "#1"->"#l").
+- Two checker artifacts to note (not real violations): card-5 flagged "the" — it is approved designed
+  text ("— from the Oct 20 call"); card-7 flagged "#l" — OCR misread of the approved "#1".
+- No AI-generated video clips used; no product UI invented; no mascot (Fred) or logo drawn.
+  Plain "Fireflies" text wordmark only. Beats 3 and 5 carry the "Illustrative example" label.
+- Cards keep the bottom 300 px clear for captions; captions verified in extracted frames.
+
+SYNC / VIDEO QC
+- Beat segments cut to measured sentence starts: B1 0.00-3.86, B2 3.86-14.02, B3 14.02-19.06,
+  B4 19.06-23.82, B5 23.82-28.82, B6 28.82-34.20, B7 34.20-38.02. Video length = voiceover length.
+- Slow zoom 1.00 -> 1.06 per beat, hard cuts on beat boundaries, no loops/freezes.
+- Frame checks (accurate seek) at 1.9/9.0/16.5/21.4/26.3/31.5/36.1 s: correct card + matching caption
+  at every timestamp. One assembly bug found and fixed during QC: the first build's beat clips ran at
+  25 fps (image-input default), making the video 31.7 s with the last ~6 s frozen; rebuilt at 30 fps
+  and re-verified. Captions: long lines were split at phrase breaks so no line auto-wraps.
+- Audio/video: no drift; final duration matches voiceover to the frame (38.016 s).
+
+CLAIMS RE-CHECK (fresh, 2026-10-26, fireflies.ai/pricing + fireflies.ai/integrations)
+- Confirmed: Free plan $0 "Free forever"; unlimited transcription*, limited AI summaries;
+  20 AI credits on Free; Zoom / Google Meet / Teams; Meeting search; AskFred AI assistant;
+  Slack integration (send transcripts/notes to a Slack channel); Notion shown as an integration.
+- NOT directly confirmed in the fetched pages (flagged, script unchanged — user's sources say so):
+  (1) Asana does not appear in the fetched integrations-page text (page may load more via JS);
+  (2) the "monthly" reset cadence for the 20 AI credits is not stated on the pricing page text.
+- No conflicts found. Nothing the user left out was added (no storage minutes, no prices, no language counts).
+- "Tell people before you record them" is the user's own advice, not from Fireflies' pages.
+
+UNVERIFIED / OPEN ITEMS
+- Asana export and monthly credit cadence (above) — not directly confirmed on the official pages.
+- Rule 3's 8% band — not met (see pace section); needs Vishnu's call.
+- A real Fireflies screen recording from Vishnu's own account would replace the illustrative cards
+  in beats 3 and 5 (still the best upgrade; not available for this build).

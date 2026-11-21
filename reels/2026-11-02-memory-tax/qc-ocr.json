@@ -1,0 +1,338 @@
+{
+ "video": "memory-tax-reel.mp4",
+ "frames": [
+  {
+   "beat": 1,
+   "name": "Hook \u2014 two paths",
+   "tag": "start",
+   "time_s": 0.15,
+   "file": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b1-start.jpg",
+   "reads": [
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b1-start.jpg",
+     "text": "Remembers",
+     "score": 0.987
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b1-start.jpg",
+     "text": "everything?",
+     "score": 0.988
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b1-start.jpg",
+     "text": "Your Al agent remembers",
+     "score": 0.971
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b1-start.jpg",
+     "text": "everything.",
+     "score": 0.997
+    }
+   ],
+   "flagged": []
+  },
+  {
+   "beat": 1,
+   "name": "Hook \u2014 two paths",
+   "tag": "mid",
+   "time_s": 5.17,
+   "file": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b1-mid.jpg",
+   "reads": [
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b1-mid.jpg",
+     "text": "Remembers",
+     "score": 0.995
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b1-mid.jpg",
+     "text": "everything?",
+     "score": 0.992
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b1-mid.jpg",
+     "text": "When it rewrites your history",
+     "score": 0.938
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b1-mid.jpg",
+     "text": "into neat memory,",
+     "score": 0.975
+    }
+   ],
+   "flagged": []
+  },
+  {
+   "beat": 1,
+   "name": "Hook \u2014 two paths",
+   "tag": "end",
+   "time_s": 10.19,
+   "file": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b1-end.jpg",
+   "reads": [
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b1-end.jpg",
+     "text": "Remembers",
+     "score": 0.994
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b1-end.jpg",
+     "text": "everything?",
+     "score": 0.982
+    }
+   ],
+   "flagged": []
+  },
+  {
+   "beat": 2,
+   "name": "Result \u2014 bars fall",
+   "tag": "start",
+   "time_s": 10.49,
+   "file": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b2-start.jpg",
+   "reads": [
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b2-start.jpg",
+     "text": "81.4%",
+     "score": 0.911
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b2-start.jpg",
+     "text": "LongMemEval-s\u00b7Qwen3.6-27B",
+     "score": 0.97
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b2-start.jpg",
+     "text": "RAG,2rounds",
+     "score": 0.966
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b2-start.jpg",
+     "text": "In one long-memory test,plain",
+     "score": 0.956
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b2-start.jpg",
+     "text": "retrieval scored eighty-one",
+     "score": 0.98
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b2-start.jpg",
+     "text": "percent,",
+     "score": 0.992
+    }
+   ],
+   "flagged": []
+  },
+  {
+   "beat": 2,
+   "name": "Result \u2014 bars fall",
+   "tag": "mid",
+   "time_s": 14.79,
+   "file": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b2-mid.jpg",
+   "reads": [
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b2-mid.jpg",
+     "text": "81.4%",
+     "score": 0.999
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b2-mid.jpg",
+     "text": "LongMemEval-s\u00b7Qwen3.6-27B",
+     "score": 0.974
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b2-mid.jpg",
+     "text": "RAG,2rounds",
+     "score": 0.96
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b2-mid.jpg",
+     "text": "In one long-memory test,plain",
+     "score": 0.966
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b2-mid.jpg",
+     "text": "retrieval scored eighty-one",
+     "score": 0.985
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b2-mid.jpg",
+     "text": "percent,",
+     "score": 0.993
+    }
+   ],
+   "flagged": []
+  },
+  {
+   "beat": 2,
+   "name": "Result \u2014 bars fall",
+   "tag": "end",
+   "time_s": 19.09,
+   "file": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b2-end.jpg",
+   "reads": [
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b2-end.jpg",
+     "text": "81.4%",
+     "score": 0.999
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b2-end.jpg",
+     "text": "LongMemEval-s\u00b7Qwen3.6-27B",
+     "score": 0.97
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b2-end.jpg",
+     "text": "RAG,2rounds",
+     "score": 0.958
+    }
+   ],
+   "flagged": []
+  },
+  {
+   "beat": 3,
+   "name": "Payoff \u2014 the scale tips",
+   "tag": "start",
+   "time_s": 19.39,
+   "file": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b3-start.jpg",
+   "reads": [
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b3-start.jpg",
+     "text": "Memory tax",
+     "score": 0.961
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b3-start.jpg",
+     "text": "That is the memorytax.",
+     "score": 0.936
+    }
+   ],
+   "flagged": []
+  },
+  {
+   "beat": 3,
+   "name": "Payoff \u2014 the scale tips",
+   "tag": "mid",
+   "time_s": 22.31,
+   "file": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b3-mid.jpg",
+   "reads": [
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b3-mid.jpg",
+     "text": "Memory tax",
+     "score": 0.934
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b3-mid.jpg",
+     "text": "Rewriting helps sometimes,",
+     "score": 0.972
+    }
+   ],
+   "flagged": []
+  },
+  {
+   "beat": 3,
+   "name": "Payoff \u2014 the scale tips",
+   "tag": "end",
+   "time_s": 25.23,
+   "file": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b3-end.jpg",
+   "reads": [
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b3-end.jpg",
+     "text": "Memory tax",
+     "score": 0.963
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b3-end.jpg",
+     "text": "\u53e3",
+     "score": 0.886
+    }
+   ],
+   "flagged": [
+    {
+     "token": "\u53e3",
+     "norm": "\u53e3",
+     "score": 0.886,
+     "ocr_text": "\u53e3"
+    }
+   ]
+  },
+  {
+   "beat": 4,
+   "name": "Fix + CTA \u2014 return to the source",
+   "tag": "start",
+   "time_s": 25.53,
+   "file": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b4-start.jpg",
+   "reads": [
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b4-start.jpg",
+     "text": "Keep the source",
+     "score": 0.988
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b4-start.jpg",
+     "text": "\u221a",
+     "score": 0.547
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b4-start.jpg",
+     "text": "The fix is simple:",
+     "score": 0.957
+    }
+   ],
+   "flagged": []
+  },
+  {
+   "beat": 4,
+   "name": "Fix + CTA \u2014 return to the source",
+   "tag": "mid",
+   "time_s": 31.11,
+   "file": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b4-mid.jpg",
+   "reads": [
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b4-mid.jpg",
+     "text": "Keep the source",
+     "score": 0.97
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b4-mid.jpg",
+     "text": "So keep a way back to the raw",
+     "score": 0.952
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b4-mid.jpg",
+     "text": "history.",
+     "score": 0.99
+    }
+   ],
+   "flagged": []
+  },
+  {
+   "beat": 4,
+   "name": "Fix + CTA \u2014 return to the source",
+   "tag": "end",
+   "time_s": 36.69,
+   "file": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b4-end.jpg",
+   "reads": [
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b4-end.jpg",
+     "text": "Keep the source",
+     "score": 0.952
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-11-02-memory-tax/qc-frames/b4-end.jpg",
+     "text": "Follow for a new AI paper every day",
+     "score": 0.953
+    }
+   ],
+   "flagged": []
+  }
+ ],
+ "flagged": [
+  {
+   "token": "\u53e3",
+   "norm": "\u53e3",
+   "score": 0.886,
+   "ocr_text": "\u53e3",
+   "beat": 3,
+   "tag": "end",
+   "time_s": 25.23
+  }
+ ]
+}

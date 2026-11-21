@@ -1,0 +1,279 @@
+[
+ {
+  "file": "/tmp/qc-day2/frames-final/final-0.5.png",
+  "reads": [
+   {
+    "text": "Clean in. Warped out.",
+    "score": 0.994
+   },
+   {
+    "text": "The tool worked.",
+    "score": 0.984
+   }
+  ]
+ },
+ {
+  "file": "/tmp/qc-day2/frames-final/final-10.5.png",
+  "reads": [
+   {
+    "text": "Clean in. Warped out.",
+    "score": 0.976
+   },
+   {
+    "text": "four thousand seven",
+    "score": 0.995
+   },
+   {
+    "text": "hundred seventy-two.",
+    "score": 0.998
+   }
+  ]
+ },
+ {
+  "file": "/tmp/qc-day2/frames-final/final-11.5.png",
+  "reads": [
+   {
+    "text": "Approved anyway.",
+    "score": 0.986
+   },
+   {
+    "text": "The checker saw",
+    "score": 0.999
+   },
+   {
+    "text": "only that printout,",
+    "score": 0.999
+   }
+  ]
+ },
+ {
+  "file": "/tmp/qc-day2/frames-final/final-17.0.png",
+  "reads": [
+   {
+    "text": "Approved anyway.",
+    "score": 0.971
+   },
+   {
+    "text": "In one fixed-answer test,",
+    "score": 0.999
+   }
+  ]
+ },
+ {
+  "file": "/tmp/qc-day2/frames-final/final-23.9.png",
+  "reads": [
+   {
+    "text": "Approved anyway.",
+    "score": 0.971
+   },
+   {
+    "text": "all ninety verdicts flipped",
+    "score": 0.996
+   },
+   {
+    "text": "from accept to reject.",
+    "score": 1.0
+   }
+  ]
+ },
+ {
+  "file": "/tmp/qc-day2/frames-final/final-25.0.png",
+  "reads": [
+   {
+    "text": "Rewrite the printout to",
+    "score": 0.979
+   },
+   {
+    "text": "state its limits and caps,",
+    "score": 0.994
+   },
+   {
+    "text": "Say what's left out.",
+    "score": 0.996
+   },
+   {
+    "text": "Follow for a paper a day.",
+    "score": 0.969
+   }
+  ]
+ },
+ {
+  "file": "/tmp/qc-day2/frames-final/final-31.0.png",
+  "reads": [
+   {
+    "text": "and how to handle them, and",
+    "score": 0.992
+   },
+   {
+    "text": "the checker catches the error.",
+    "score": 0.99
+   },
+   {
+    "text": "Say what's left out.",
+    "score": 0.996
+   },
+   {
+    "text": "Follow for a paper a day.",
+    "score": 0.968
+   }
+  ]
+ },
+ {
+  "file": "/tmp/qc-day2/frames-final/final-37.5.png",
+  "reads": [
+   {
+    "text": "Follow for the next paper.",
+    "score": 1.0
+   },
+   {
+    "text": "Say what's left out.",
+    "score": 0.996
+   },
+   {
+    "text": "Follow for a paper a day.",
+    "score": 0.977
+   }
+  ]
+ },
+ {
+  "file": "/tmp/qc-day2/frames-final/final-38.2.png",
+  "reads": [
+   {
+    "text": "X",
+    "score": 0.743
+   },
+   {
+    "text": "Say what's left out.",
+    "score": 0.997
+   },
+   {
+    "text": "Follow for a paper a day.",
+    "score": 0.98
+   }
+  ]
+ },
+ {
+  "file": "/tmp/qc-day2/frames-final/final-5.0.png",
+  "reads": [
+   {
+    "text": "Clean in. Warped out.",
+    "score": 0.986
+   },
+   {
+    "text": "\u7528X\uff1a",
+    "score": 0.511
+   },
+   {
+    "text": "It said found twenty documents,",
+    "score": 0.999
+   }
+  ]
+ },
+ {
+  "file": "/tmp/qc-day2/frames-visual/visual-0.5.png",
+  "reads": [
+   {
+    "text": "X",
+    "score": 0.77
+   }
+  ]
+ },
+ {
+  "file": "/tmp/qc-day2/frames-visual/visual-10.5.png",
+  "reads": []
+ },
+ {
+  "file": "/tmp/qc-day2/frames-visual/visual-11.5.png",
+  "reads": [
+   {
+    "text": "\u56fd",
+    "score": 0.754
+   }
+  ]
+ },
+ {
+  "file": "/tmp/qc-day2/frames-visual/visual-17.0.png",
+  "reads": [
+   {
+    "text": "\u56fd",
+    "score": 0.748
+   }
+  ]
+ },
+ {
+  "file": "/tmp/qc-day2/frames-visual/visual-23.9.png",
+  "reads": []
+ },
+ {
+  "file": "/tmp/qc-day2/frames-visual/visual-25.0.png",
+  "reads": [
+   {
+    "text": "8",
+    "score": 0.54
+   }
+  ]
+ },
+ {
+  "file": "/tmp/qc-day2/frames-visual/visual-31.0.png",
+  "reads": []
+ },
+ {
+  "file": "/tmp/qc-day2/frames-visual/visual-37.5.png",
+  "reads": []
+ },
+ {
+  "file": "/tmp/qc-day2/frames-visual/visual-5.0.png",
+  "reads": []
+ },
+ {
+  "file": "/home/hatch/workspace/instagram/reels/2026-11-04-who-verifies-tools/pic1.png",
+  "reads": [
+   {
+    "text": "X",
+    "score": 0.767
+   }
+  ]
+ },
+ {
+  "file": "/home/hatch/workspace/instagram/reels/2026-11-04-who-verifies-tools/pic2.png",
+  "reads": [
+   {
+    "text": "\u56fd",
+    "score": 0.685
+   }
+  ]
+ },
+ {
+  "file": "/home/hatch/workspace/instagram/reels/2026-11-04-who-verifies-tools/pic3.png",
+  "reads": []
+ },
+ {
+  "file": "/home/hatch/workspace/instagram/reels/2026-11-04-who-verifies-tools/who-verifies-tools-reel-cover.jpg",
+  "reads": [
+   {
+    "text": "Who Verifies",
+    "score": 0.98
+   },
+   {
+    "text": "the Tools?",
+    "score": 0.997
+   },
+   {
+    "text": "William Jeffries",
+    "score": 0.974
+   },
+   {
+    "text": "arXiv:2610.32110",
+    "score": 0.978
+   },
+   {
+    "text": "Preprint, not peer-reviewed",
+    "score": 0.997
+   },
+   {
+    "text": "Day 2 of five papers",
+    "score": 0.989
+   }
+  ]
+ }
+]

@@ -1,0 +1,198 @@
+{
+  "reel": {
+    "name": "Memory Tax \u2014 Paper Breakdown, Day 1",
+    "date": "2026-11-02",
+    "keyword": "PAPER",
+    "pillar": "Explained",
+    "format": "9:16 vertical \u00b7 720x1280",
+    "status": "draft",
+    "scriptStatus": "Script APPROVED verbatim by Vishnu 2026-11-02 01:34 CST \u2014 83 words",
+    "voice": "Helio (avocado_v2:MAI_03), single pass, fixed speed 85 \u2014 final 36.84s / 135.2 wpm, measured"
+  },
+  "beats": [
+    {
+      "id": 1,
+      "name": "Hook \u2014 two paths",
+      "section": "Hook",
+      "duration": 10.34,
+      "voiceover": "Your AI agent remembers everything. Or does it? When it rewrites your history into neat memory, it can quietly drop the detail you needed.",
+      "overlay": "Remembers everything?",
+      "startFrame": {
+        "desc": "Pic 1 full frame: diamond node top-centre, intact teal stack left, gapped slate stack right, navy background.",
+        "img": "../reels/2026-11-02-memory-tax/pic1.png"
+      },
+      "endFrame": {
+        "desc": "Pic 1 pushed in and panned left: intact teal stack fills the frame, gapped right stack sliding out of frame.",
+        "img": "../reels/2026-11-02-memory-tax/pic1.png"
+      },
+      "camera": {
+        "move": "push-in + pan-left",
+        "from": "Full Pic 1, scale 1.00, centred",
+        "to": "Scale 1.22, panned to the intact left stack",
+        "direction": "Forward and left",
+        "distance": "Full frame to close on left stack",
+        "duration": "10.34s"
+      },
+      "character": {
+        "position": "\u2014 none \u2014 (image-led build)",
+        "move": "No Kit in this build; the camera move is the host motion",
+        "points": "\u2014 none \u2014",
+        "holds": "\u2014 none \u2014",
+        "expression": "\u2014"
+      },
+      "treatment": "Kinetic Remotion: full-frame push-in + pan, parallax overlay layer moving opposite to the camera",
+      "source": "Remotion, $0 \u2014 approved Pic 1",
+      "assets": [
+        "pic1.png"
+      ],
+      "status": "draft",
+      "notes": "Overlay changes once at the 'Or does it?' turn. Frame itself travels the whole beat \u2014 not a slow zoom alone: scale + pan + parallax overlay."
+    },
+    {
+      "id": 2,
+      "name": "Result \u2014 bars fall",
+      "section": "Body",
+      "duration": 8.9,
+      "voiceover": "In one long-memory test, plain retrieval scored eighty-one percent, beating every fancy memory system in that test.",
+      "overlay": "81.4% \u2014 LongMemEval-s \u00b7 Qwen3.6-27B \u00b7 RAG, 2 rounds",
+      "startFrame": {
+        "desc": "Pic 2 pushed in on the left: tallest teal bar dominates, shorter bars cropped right.",
+        "img": "../reels/2026-11-02-memory-tax/pic2.png"
+      },
+      "endFrame": {
+        "desc": "Pic 2 pulled back and panned right: all five descending bars visible, dots falling above the shorter bars.",
+        "img": "../reels/2026-11-02-memory-tax/pic2.png"
+      },
+      "camera": {
+        "move": "pull-back + pan-right",
+        "from": "Scale 1.22, panned to tallest bar",
+        "to": "Scale 1.00, full bars frame",
+        "direction": "Back and right across the bars",
+        "distance": "Close on tallest bar to full chart",
+        "duration": "8.90s"
+      },
+      "character": {
+        "position": "\u2014 none \u2014 (image-led build)",
+        "move": "No Kit in this build; the camera move is the host motion",
+        "points": "\u2014 none \u2014",
+        "holds": "\u2014 none \u2014",
+        "expression": "\u2014"
+      },
+      "treatment": "Kinetic Remotion: full-frame pull-back + pan, 81.4% overlay pops at 'eighty-one percent'",
+      "source": "Remotion, $0 \u2014 approved Pic 2",
+      "assets": [
+        "pic2.png"
+      ],
+      "status": "draft",
+      "notes": "Cut (not morph) from Pic 1 to Pic 2 \u2014 different compositions; a morph would smear stacks into bars. The camera travel inside the beat is the motion."
+    },
+    {
+      "id": 3,
+      "name": "Payoff \u2014 the scale tips",
+      "section": "Body",
+      "duration": 6.14,
+      "voiceover": "That is the memory tax. Rewriting helps sometimes, but it costs you evidence.",
+      "overlay": "Memory tax",
+      "startFrame": {
+        "desc": "Pic 3 pushed in on the scale: bright small pan left, larger grey pan right, beam level.",
+        "img": "../reels/2026-11-02-memory-tax/pic3.png"
+      },
+      "endFrame": {
+        "desc": "Pic 3 panned to the right pan: grey cluster low, beam tipped, amber arrow entering frame bottom-right.",
+        "img": "../reels/2026-11-02-memory-tax/pic3.png"
+      },
+      "camera": {
+        "move": "push-in + pan-right",
+        "from": "Full Pic 3, scale 1.00, centred on scale",
+        "to": "Scale 1.20, panned to the tipping right pan",
+        "direction": "Forward and right, following the tip",
+        "distance": "Full scale to close on tipping pan",
+        "duration": "6.14s"
+      },
+      "character": {
+        "position": "\u2014 none \u2014 (image-led build)",
+        "move": "No Kit in this build; the camera move is the host motion",
+        "points": "\u2014 none \u2014",
+        "holds": "\u2014 none \u2014",
+        "expression": "\u2014"
+      },
+      "treatment": "Kinetic Remotion: full-frame push-in + pan, 'Memory tax' overlay on the tipping pan",
+      "source": "Remotion, $0 \u2014 approved Pic 3",
+      "assets": [
+        "pic3.png"
+      ],
+      "status": "draft",
+      "notes": "Sub-beat 3a of Beat 3. Same image as 3b, different camera window and overlay \u2014 that is the split that stops the 18.7s beat sitting static."
+    },
+    {
+      "id": 4,
+      "name": "Fix + CTA \u2014 return to the source",
+      "section": "CTA",
+      "duration": 11.46,
+      "voiceover": "The fix is simple: let memory organise, but never delete the source. So keep a way back to the raw history. Follow for a new AI paper every day.",
+      "overlay": "Keep the source \u2014 Follow for a new AI paper every day",
+      "startFrame": {
+        "desc": "Pic 3 pulled back, panned down-right: amber return arrow sweeping across the lower frame.",
+        "img": "../reels/2026-11-02-memory-tax/pic3.png"
+      },
+      "endFrame": {
+        "desc": "Pic 3 pushed in on the return target: intact teal stack with organised layer on top, arrow completing its loop.",
+        "img": "../reels/2026-11-02-memory-tax/pic3.png"
+      },
+      "camera": {
+        "move": "pull-back then push-in + pan-down-right",
+        "from": "Scale 1.20 on the tipping pan",
+        "to": "Scale 1.18, panned to the intact stack and arrow loop",
+        "direction": "Back, then forward down-right along the arrow",
+        "distance": "Tipping pan to full stack",
+        "duration": "11.46s"
+      },
+      "character": {
+        "position": "\u2014 none \u2014 (image-led build)",
+        "move": "No Kit in this build; the camera move is the host motion",
+        "points": "\u2014 none \u2014",
+        "holds": "\u2014 none \u2014",
+        "expression": "\u2014"
+      },
+      "treatment": "Kinetic Remotion: full-frame camera travel along the arrow, overlay swaps from 'Keep the source' to the Follow CTA",
+      "source": "Remotion, $0 \u2014 approved Pic 3",
+      "assets": [
+        "pic3.png"
+      ],
+      "status": "draft",
+      "notes": "Sub-beat 3b of Beat 3. Overlay swap + camera travel, not a held still. CTA is the approved script's final sentence, verbatim."
+    }
+  ],
+  "notes": [
+    {
+      "author": "Director",
+      "text": "Image-led build per the Phase B task: the 3 approved Claude keyframes are the visuals, animated kinetically in Remotion. No Kit character is rendered in this build, so the character track is marked none on every beat rather than promising a host the video does not contain."
+    },
+    {
+      "author": "Director",
+      "text": "Beat-to-beat transitions are cuts, not morphs: Pic 1 (stacks), Pic 2 (bars), Pic 3 (scale) are different compositions, and a first-last morph would smear one into the other. Motion lives inside each beat (full-frame scale + pan + parallax overlay). The Kling/Higgsfield first-last upgrade, if Vishnu approves it separately, is a different visual route and is NOT this build."
+    },
+    {
+      "author": "Director",
+      "text": "Beat windows RE-TIMED from the final voiceover's measured word timestamps (voiceover-final-words.json): B1 0.00-10.34, B2 10.34-19.24, B3a 19.24-25.38, B3b 25.38-36.84. Total 36.84s, 1105 frames at 30fps."
+    }
+  ],
+  "gate1": [
+    {
+      "label": "Script approved by Vishnu (verbatim, 80\u201390 words)",
+      "done": true
+    },
+    {
+      "label": "Storyboard canvas approved (frames + camera lines)",
+      "done": false
+    },
+    {
+      "label": "Producer cost plan attached (per-shot source + cost)",
+      "done": true
+    },
+    {
+      "label": "Every beat has a moving frame (no NO MOTION flags)",
+      "done": true
+    }
+  ]
+}

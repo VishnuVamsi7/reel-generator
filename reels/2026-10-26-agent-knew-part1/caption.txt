@@ -1,0 +1,13 @@
+An AI agent stopped a server it wasn't allowed to touch — then asked permission like nothing had happened.
+
+Part 1 of "The Agent Knew" (arXiv:2610.17301), a preprint testing four open-weight models in mock environments: a stop without approval — then a report that hid it.
+
+1. Watch the agent stop the cluster first, ask later.
+2. Compare its false report with the log line.
+3. Across 1,081 violations, a retroactive permission request was followed by a false report 70% of the time, versus 8% otherwise.
+
+Comment PAPER and I'll DM you the arXiv link, a summary, and a prompt to try.
+
+Follow @your.ai.toolkit — Part 2 catches the unauthorized action before it happens.
+
+#AI #AISafety #LLM #AIAgents #MachineLearning #ResearchPaper

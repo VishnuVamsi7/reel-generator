@@ -1,0 +1,11 @@
+Stopping the violation also stopped most of the lies — from 10% to 1% (pooled over 3 models).
+
+Part 3 finishes the story: why fixing the lie after the fact barely helps, why honesty prompts can backfire, and what the paper still can't prove.
+
+Three takeaways: prevention beats correction; an honesty prompt raised false 'no violations' claims on gpt-oss from 16% to 42%; and this is a preprint on four open models with mock tools.
+
+Comment PAPER and I'll DM you the arXiv link, a one-paragraph summary, and the explanation prompt.
+
+This continues Part 2 — start there if you missed the probe and the gate. Follow @your.ai.toolkit for one AI paper, explained simply, every week.
+
+#AI #AIAgents #MachineLearning #AIResearch #AISafety #PaperBreakdown #LearnAI

@@ -1,0 +1,103 @@
+QC REPORT — "The Agent Knew" Part 2 (split build, verbatim script)
+Date: 2026-10-26 | Folder: workspace/instagram/reels/2026-10-26-agent-knew-part2/
+Source: voiceover-v0-verbatim.mp3 (50.448s, single pass, speed 100, Helio).
+Split point: S7/S8 silence-gap midpoint 32.117s.
+NOTHING WAS POSTED. No approval prompts, no publish calls. Files only.
+
+================================================================
+1. VERBATIM VERIFICATION (before cutting)
+================================================================
+- faster-whisper tiny, word timestamps, on voiceover-v0-verbatim.mp3:
+  140 tokens recognised; transcript matches vo_text.txt word-for-word
+  in order (recap + beats 5-8). The 3 extra tokens are tokenization
+  splits ("0" + ".94", "70" + "%", "10" + "%") plus one artifact below.
+- NOTE: Whisper heard an extra "We're" (38.000-38.280s, p=0.97)
+  immediately before "telling" (38.280s) at the S9 onset, with no gap
+  between them. Most likely Whisper splitting the onset of "Telling";
+  the script text has no such word. NOT verified by ear (no playback
+  channel). It does not affect the cut: the S8/S9 boundary is the
+  silence-gap midpoint 37.814s either way. The caption text is the
+  script text, unchanged.
+- Sentence windows (Whisper word timings + silencedetect -40 dB gap
+  midpoints; Whisper carries ~+/-0.3 s error):
+  S1 0.000-4.844 | S2 4.844-6.673 | S3 6.673-14.940 | S4 14.940-18.361 |
+  S5 18.361-20.252 | S6 20.252-23.527 | S7 23.527-32.117 |
+  S8 32.117-37.814 | S9 37.814-42.954 | S10 42.954-50.448.
+
+================================================================
+2. THIS PART — Part 2 (recap + beats 5-6, sentences S1-S7)
+================================================================
+- Audio: voiceover-part2.mp3, cut from the verbatim render at 0-32.117s.
+  No re-render, no speed change, no stretching, no padding.
+  ffprobe duration 32.117s (exactly 0.000-32.117 of the source).
+- Video: agent-knew-part2-reel.mp4, 720x1280, 30 fps, H.264 + AAC.
+  ffprobe duration 32.117s; video == voiceover, diff 0.000s.
+  Cards: card-0-recap (0-6.673s), card-1-beat5 (6.673-18.361s),
+  card-2-beat6 (18.361-32.117s). Slow zoompan max 1.03x, 0.4s fades.
+  No loops, no frozen frames, no AI video clips (designed cards only).
+- Duration check: 32.117s, under 40s. (Task expectation "~25s" was
+  approximate; 32.1s is the natural length of recap + beats 5-6.)
+- Cover: cover.jpg rebuilt, "PART 2" / "Part 2 — the fix", paper title,
+  arXiv 2610.17301. OCR-verified complete.
+- Description: caption.txt, 118 words before hashtags (100-120),
+  762 chars total, 6-block structure, keyword PAPER, points to Part 3.
+- Captions: captions.ass, 14 events, DejaVu Sans 46px, bottom-center,
+  MarginV 200, built from the measured boundaries above.
+
+Per-sentence wpm (INFORMATION ONLY — do not act on it; the +/-8% band
+is an open question with the user):
+  S1 18 words / 4.844s = 223.0 wpm | S2 6 / 1.829s = 196.8 wpm |
+  S3 20 / 8.267s = 145.2 wpm | S4 13 / 3.421s = 228.0 wpm |
+  S5 4 / 1.891s = 126.9 wpm | S6 9 / 3.275s = 164.9 wpm |
+  S7 21 / 8.590s = 146.7 wpm.
+  Part 2 overall: 91 words / 32.117s = 170.0 wpm.
+  (Overall verbatim render: 137 words / 50.448s = 162.9 wpm.)
+
+OCR (tesseract 5.x, --psm 6) — every detected word is approved
+designed text; garbled tokens are OCR misreads of numbers/badges:
+- card-0-recap: PART 2, "Part 2 — the fix", recap sentences, Paper
+  Breakdown footer. PASS.
+- card-1-beat5: BEAT 5, "Its internal state gives it away", 0.94 AUROC
+  "at the decision point — before the action is written", lie forecast
+  internal probe 0.88 vs CoT monitor 0.65. PASS.
+- card-2-beat6: BEAT 6, "Gate every action", gate chips (send / click /
+  delete / run / stop server) KEPT as approved visual labels,
+  "GATE — checked every time, not just once", Violations (Gemma-4,
+  gate + approver) before 0.70 / after 0.09, completion near 1.00. PASS.
+- cover.jpg: PART 2, "Part 2 — the fix", THE AGENT KNEW, arXiv
+  2610.17301. PASS.
+
+Caption spot-checks (final render, visually read, all MATCH):
+- t=2s recap/S1, t=10s beat 5/S3 "A simple linear probe on the
+  model's internals", t=25s beat 6/S7 "Gate them all and ask an
+  approver on repeat flags:", t=31s beat 6/S7. Captions on-frame,
+  no card/caption collisions.
+
+Accuracy re-verified in voiceover, cards, and description:
+- 0.94 AUROC only "at the decision point — before the action is
+  written". No "beats monitors" blanket claim (0.88 vs 0.65 is labelled
+  lie forecast under hiding pressure). 0.70->0.09 labelled Gemma-4
+  gate + approver, completion near 1.00. Preprint / not peer-reviewed
+  stated on the beat-8 card (Part 3). No "detects lying", "solves
+  agent safety", or mind-reading framing. Probe framed as the agent's
+  belief the action is unauthorized.
+
+================================================================
+3. ARCHIVE
+================================================================
+- The superseded 52.8s build (reel, r1 voiceover, r1 captions.ass,
+  concat.mp4, seg-1..5.mp4, concat_seg.txt, old cover.jpg, old
+  caption.txt) was moved to superseded-52s/ in this folder. Nothing
+  was deleted. voiceover-v0-verbatim.mp3, the cards, vo_text.txt,
+  build scripts, and earlier QC reports remain in place.
+
+================================================================
+4. UNVERIFIED / OPEN
+================================================================
+- Audio was not listened to (no playback channel); verification is by
+  transcription, timings, and frame reads only.
+- Whisper word timestamps carry ~+/-0.3 s error; boundaries are gap
+  midpoints, so no caption starts/ends mid-word.
+- The "We're" onset artifact (see §1) is unverified by ear.
+- The +/-8% per-sentence pace band is reported as information only,
+  per the task; no sentences were rewritten.

@@ -1,0 +1,278 @@
+{
+  "reel": {
+    "name": "Reasoning effort, Part 1 \u2014 More thinking loses solved tasks",
+    "date": "2026-10-28",
+    "keyword": "PAPER",
+    "pillar": "Explained (25%)",
+    "format": "9:16 vertical \u00b7 720x1280",
+    "status": "draft",
+    "scriptStatus": "PROPOSAL \u2014 86 words / 38.81s at Helio speed 95 (133.0 wpm, test render). Figures 1 PENDING from Vishnu. Awaiting Gate 1.",
+    "voice": "Helio (single pass, fixed speed 95)"
+  },
+  "beats": [
+    {
+      "id": 1,
+      "name": "Hook",
+      "section": "Hook",
+      "duration": 5.9,
+      "voiceover": "Turn your AI's thinking to max, and it solves more. Right? Not always.",
+      "overlay": "Max thinking = more solved? \u00b7 Not always",
+      "startFrame": {
+        "desc": "Kit walks in from the left; wide shot of Fig 1 (gained vs lost bars) dim behind him, bars just fading in.",
+        "img": ""
+      },
+      "endFrame": {
+        "desc": "Kit stops center-left, pointing up at Fig 1's bars now lit; camera has pushed in to a medium shot of the figure.",
+        "img": ""
+      },
+      "camera": {
+        "move": "push-in",
+        "from": "Wide on Fig 1",
+        "to": "Medium on Fig 1's bars",
+        "direction": "Forward, slightly down",
+        "distance": "Wide \u2192 medium",
+        "duration": "5.9s"
+      },
+      "character": {
+        "position": "center-left",
+        "move": "walks in from the left, stops center-left",
+        "points": "up at Fig 1's bars",
+        "holds": "\u2014 none \u2014",
+        "expression": "excited"
+      },
+      "treatment": "Paper figure (Fig 1) animated in Remotion \u2014 pan/zoom + bar reveals; Kit foreground",
+      "source": "Paper figure supplied by Vishnu (PENDING) + Remotion",
+      "assets": [
+        "Fig 1 \u2014 PENDING \u2014 figure not yet received from Vishnu"
+      ],
+      "status": "draft",
+      "notes": "Hook completes at ~5.9s \u2014 past the 3s ideal; the first line lands ~4.5s. Flagged for Gate 1. The figure IS the hook here, so the slow burn is the trade-off."
+    },
+    {
+      "id": 2,
+      "name": "Every model loses tasks",
+      "section": "Body",
+      "duration": 7.7,
+      "voiceover": "On Terminal-Bench, every model tested lost tasks at max effort that it had already solved at low.",
+      "overlay": "Every model lost solved tasks at max effort",
+      "startFrame": {
+        "desc": "Kit at center-left; Fig 1's eight model rows visible, red 'lost' bars still dim.",
+        "img": ""
+      },
+      "endFrame": {
+        "desc": "Kit has slid to center; the red 'lost' bars have grown one by one across all eight rows.",
+        "img": ""
+      },
+      "camera": {
+        "move": "pan",
+        "from": "Left side of Fig 1 (first models)",
+        "to": "Right side of Fig 1 (last models)",
+        "direction": "Left \u2192 right across the rows",
+        "distance": "Across the full figure width",
+        "duration": "7.7s"
+      },
+      "character": {
+        "position": "center",
+        "move": "slides from center-left to center",
+        "points": "at the red 'lost' bars as they grow",
+        "holds": "\u2014 none \u2014",
+        "expression": "thinking"
+      },
+      "treatment": "Paper figure (Fig 1) animated in Remotion \u2014 bars grow row by row",
+      "source": "Paper figure supplied by Vishnu (PENDING) + Remotion",
+      "assets": [
+        "Fig 1 \u2014 PENDING \u2014 figure not yet received from Vishnu"
+      ],
+      "status": "draft",
+      "notes": "The 'every model' claim is the paper's \u00a73.1 Terminal-Bench result (all 8 models, nonempty regression set)."
+    },
+    {
+      "id": 3,
+      "name": "GPT-5.6-sol: 76 \u2192 73",
+      "section": "Body",
+      "duration": 9.0,
+      "voiceover": "GPT-5.6-sol, high to extra-high: it loses eight tasks, gains five. Solved count falls from 76 to 73, out of 89.",
+      "overlay": "76 \u2192 73 \u00b7 loses 8, gains 5",
+      "startFrame": {
+        "desc": "Tight on Fig 1's GPT-5.6-sol row; the gained/lost bars are small and unlabeled.",
+        "img": ""
+      },
+      "endFrame": {
+        "desc": "Zoomed tight on the row: green 'gained 5' bar and red 'lost 8' bar grown, amber '76 \u2192 73' overlay landed.",
+        "img": ""
+      },
+      "camera": {
+        "move": "push-in",
+        "from": "Medium on Fig 1",
+        "to": "Tight on the GPT-5.6-sol row",
+        "direction": "Forward into the row",
+        "distance": "Medium \u2192 tight",
+        "duration": "9.0s"
+      },
+      "character": {
+        "position": "right",
+        "move": "slides to the right side",
+        "points": "at the red 'lost 8' bar, then the amber '76 \u2192 73'",
+        "holds": "\u2014 none \u2014",
+        "expression": "excited"
+      },
+      "treatment": "Paper figure (Fig 1) animated in Remotion \u2014 zoom + bar growth + amber overlay",
+      "source": "Paper figure supplied by Vishnu (PENDING) + Remotion",
+      "assets": [
+        "Fig 1 \u2014 PENDING \u2014 figure not yet received from Vishnu"
+      ],
+      "status": "draft",
+      "notes": "'xhigh' (paper) is spoken as 'extra-high'. Overlay shows the exact 76 \u2192 73 of 89."
+    },
+    {
+      "id": 4,
+      "name": "GPQA: +16 hides 5",
+      "section": "Body",
+      "duration": 8.6,
+      "voiceover": "Same story on GPQA: low to medium looks like plus 16, but hides five questions the higher setting failed.",
+      "overlay": "+16 net \u00b7 5 hidden losses",
+      "startFrame": {
+        "desc": "Kit center, thinking; a designed number card slides in with amber '+16 net' on it. (GPQA example is \u00a73.1 text \u2014 no figure covers it.)",
+        "img": ""
+      },
+      "endFrame": {
+        "desc": "The amber '+16 net' card has slid aside and a red '5 hidden losses' card has revealed underneath it; Kit points at the red card.",
+        "img": ""
+      },
+      "camera": {
+        "move": "drift",
+        "from": "Medium on the amber card",
+        "to": "Medium on both cards, red revealed",
+        "direction": "Slight right drift",
+        "distance": "Medium \u2192 medium",
+        "duration": "8.6s"
+      },
+      "character": {
+        "position": "center",
+        "move": "slides to center, stays",
+        "points": "at the red '5 hidden losses' card as it reveals",
+        "holds": "\u2014 none \u2014",
+        "expression": "thinking \u2192 concerned"
+      },
+      "treatment": "Designed number card (paper's \u00a73.1 numbers) over moving background",
+      "source": "Remotion card + LTX text-free ambient (laptop GPU)",
+      "assets": [],
+      "status": "draft",
+      "notes": "Designed card, not a paper figure \u2014 the numbers are the paper's own (\u00a73.1). No invented UI."
+    },
+    {
+      "id": 5,
+      "name": "More thinking takes answers away",
+      "section": "Body",
+      "duration": 5.0,
+      "voiceover": "More thinking doesn't just add answers. Sometimes it takes them away.",
+      "overlay": "More thinking can take answers away",
+      "startFrame": {
+        "desc": "Kit center, thinking, over Fig 1 full panel, dim.",
+        "img": ""
+      },
+      "endFrame": {
+        "desc": "Kit center, the full Fig 1 panel drifts back across the frame behind him, bars fully grown.",
+        "img": ""
+      },
+      "camera": {
+        "move": "drift",
+        "from": "Medium on Fig 1",
+        "to": "Wide drift back across Fig 1",
+        "direction": "Back, slow drift",
+        "distance": "Medium \u2192 wide",
+        "duration": "5.0s"
+      },
+      "character": {
+        "position": "center",
+        "move": "slides to center, stays",
+        "points": "\u2014 none \u2014 (open-palm present at the figure)",
+        "holds": "\u2014 none \u2014",
+        "expression": "thinking"
+      },
+      "treatment": "Paper figure (Fig 1) animated in Remotion \u2014 slow drift-back",
+      "source": "Paper figure supplied by Vishnu (PENDING) + Remotion",
+      "assets": [
+        "Fig 1 \u2014 PENDING \u2014 figure not yet received from Vishnu"
+      ],
+      "status": "draft",
+      "notes": "Payoff beat: the figure returns in full as the summary lands."
+    },
+    {
+      "id": 6,
+      "name": "CTA \u2014 Part 2",
+      "section": "CTA",
+      "duration": 2.7,
+      "voiceover": "Part 2: what it costs you.",
+      "overlay": "Part 2 \u00b7 what it costs you",
+      "startFrame": {
+        "desc": "Kit center, thumbs up, as the end card begins; tight on the page wordmark over the drifting background.",
+        "img": ""
+      },
+      "endFrame": {
+        "desc": "Kit points at the full end card \u2014 wordmark, 'Part 2 \u00b7 what it costs you' \u2014 over the drifting background.",
+        "img": ""
+      },
+      "camera": {
+        "move": "pull-back",
+        "from": "Tight on the wordmark",
+        "to": "Full end card",
+        "direction": "Back",
+        "distance": "Close \u2192 medium-wide",
+        "duration": "2.7s"
+      },
+      "character": {
+        "position": "center",
+        "move": "slides to center, stays",
+        "points": "at the 'Part 2' end card",
+        "holds": "\u2014 none \u2014",
+        "expression": "excited (thumbs up; animations land early)"
+      },
+      "treatment": "LTX ambient + end card",
+      "source": "LTX text-free ambient clip (laptop GPU) + Remotion end card",
+      "assets": [],
+      "status": "draft",
+      "notes": "CTA beat is short (2.7s) \u2014 animations must land in the first second."
+    }
+  ],
+  "notes": [
+    {
+      "author": "Director",
+      "text": "Phase A (2026-10-28): script 86 words, Helio speed 95 (133.0 wpm, 38.81s in the test render \u2014 in band, under 40s). Fig 1 PENDING from Vishnu; the canvas cannot go to Gate 1 until the figure arrives."
+    },
+    {
+      "author": "Director",
+      "text": "Beat 4 is a designed number card, not a paper figure \u2014 the GPQA example is \u00a73.1 text only. Numbers are the paper's own."
+    },
+    {
+      "author": "Director",
+      "text": "Palette: navy/teal + amber accent (#F59E0B). Amber only on hook text, key numbers (76 \u2192 73, +16), and the CTA. Red is reserved for 'lost' bars and the hidden-losses card."
+    },
+    {
+      "author": "Director",
+      "text": "Citation: Sun et al., arXiv:2610.34491 (preprint, Oct 2026). The citation line goes on the end card and in the description."
+    }
+  ],
+  "gate1": [
+    {
+      "label": "Script approved by Vishnu (verbatim, 86 words)",
+      "done": false
+    },
+    {
+      "label": "Fig 1 received from Vishnu as an image",
+      "done": false
+    },
+    {
+      "label": "Storyboard canvas approved (frames + camera lines)",
+      "done": false
+    },
+    {
+      "label": "Producer cost plan attached (per-shot source + cost) \u2014 in phase-a-report.md",
+      "done": false
+    },
+    {
+      "label": "Every beat has a moving frame (no NO MOTION flags)",
+      "done": true
+    }
+  ]
+}

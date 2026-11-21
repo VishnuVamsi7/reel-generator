@@ -1,0 +1,130 @@
+QC REPORT — Paper Breakdown "The Agent Knew" reel v2
+Folder: ~/workspace/instagram/reels/2026-10-25-paper-agent-knew/v2/
+Date: 2026-10-25. NOTHING WAS POSTED. No approval prompts, no publish calls.
+Source: trimmed 16-line script (~103 words). v1 folder untouched (read-only).
+
+VOICE
+- Voice on every TTS call: avocado_v2:MAI_03 (= Helio, per verified catalog fact).
+  All 16 line-NN.mp3 JSON outputs reported voice "avocado_v2:MAI_03". No substitution.
+- Final per-line TTS speeds: L01 91, L02 72, L03 84, L04 107, L05 115, L06 101,
+  L07 77, L08 80, L09 73, L10 109, L11 150, L12 99, L13 179, L14 88, L15 200, L16 75.
+
+PER-LINE WPM TABLE (words / measured duration)
+Line | Text (short)                                  | Words | Dur (s) | WPM    | Speed
+01   | This paper caught an AI agent               | 6     | 2.496   | 144.2  | 91
+02   | about to do something it wasn't allowed...  | 9     | 3.696   | 146.1  | 72
+03   | before it did it.                         | 4     | 1.560   | 153.8  | 84
+04   | AI agents don't just answer questions.    | 6     | 2.400   | 150.0  | 107
+05   | They act — they click, send, change...    | 8     | 3.240   | 148.1  | 115
+06   | So researchers built a lightweight monitor| 6     | 2.424   | 148.5  | 101
+07   | that watches the agent's internal state...| 9     | 3.624   | 149.0  | 77
+08   | When it pointed to an unauthorized action,| 7     | 2.880   | 145.8  | 80
+09   | the monitor stopped it before it happened.| 7     | 2.880   | 145.8  | 73
+10   | In their tests, it predicted violations   | 6     | 2.544   | 141.5  | 109
+11   | with an AUROC of 0.94 —                   | 5     | 2.112   | 142.0  | 150
+12   | and gating on that forecast               | 5     | 2.016   | 148.8  | 99
+13   | cut violations from 0.70 to 0.09.         | 6     | 2.352   | 153.1  | 179
+14   | The paper is 'The Agent Knew,'            | 6     | 2.544   | 141.5  | 88
+15   | arXiv 2610.17301 — a preprint, not yet... | 7     | 4.176   | 100.6  | 200 (MAX)
+16   | Comment PAPER and I'll DM you the link... | 10    | 3.984   | 150.6  | 75
+TOTAL words: 103. TOTAL voiceover: 44.928 s (<= 45 s: PASS, margin 0.072 s).
+
+WPM GATE: 15 of 16 lines in 130-160 wpm; none over 170.
+EXCEPTION (documented, not fixable by speed): line 15 is 100.6 wpm even at the
+TTS maximum speed of 200 — the digit-heavy arXiv ID "2610.17301" is spoken
+slowly by the TTS engine. The line text was not altered (script is fixed).
+All other lines are in band.
+
+CAPTION BOUNDARY TABLE (from measured mp3 durations; captions.ass matches exactly)
+Line | Start (s) | End (s)   | Measured dur (s)
+01   | 0.000     | 2.496     | 2.496
+02   | 2.496     | 6.192     | 3.696
+03   | 6.192     | 7.752     | 1.560
+04   | 7.752     | 10.152    | 2.400
+05   | 10.152    | 13.392    | 3.240
+06   | 13.392    | 15.816    | 2.424
+07   | 15.816    | 19.440    | 3.624
+08   | 19.440    | 22.320    | 2.880
+09   | 22.320    | 25.200    | 2.880
+10   | 25.200    | 27.744    | 2.544
+11   | 27.744    | 29.856    | 2.112
+12   | 29.856    | 31.872    | 2.016
+13   | 31.872    | 34.224    | 2.352
+14   | 34.224    | 36.768    | 2.544
+15   | 36.768    | 40.944    | 4.176
+16   | 40.944    | 44.928    | 3.984
+Style: PlayResX 720, PlayResY 1280, DejaVu Sans 46px, bottom-center, MarginV 200
+(copied [V4+ Styles] block from v1 captions.ass). Boundaries written to
+centisecond precision (max rounding error 0.005 s vs measured durations).
+Verified visually: frame at 1.0 s shows line 01 text; frame at 35.0 s shows
+line 14 text — both match the audio position. PASS.
+
+CLIPS (Gate 1)
+- Required: ceil(44.928 / 10) = 5 clips. Delivered: 5 clips (clip-1..clip-5.mp4).
+- Each 720x1280, 10.000 s, 24 fps. No looping, freezing, or reuse.
+- Frames extracted at 5 s into each clip and visually inspected: all five are
+  distinct scenes (see qc-frames/clip-N.jpg). PASS.
+- Clip prompts (all distinct, one per script beat):
+  1. Robot hand hovering/pausing above a large glowing red button on a
+     computer screen, modern office desk.
+  2. Laptop screen with cheerful AI assistant avatar clicking buttons and
+     sending messages, envelopes flying out, bright workspace.
+  3. Guardian monitor dashboard, blue holographic waves scanning flowing data
+     signals from a small robot, futuristic control room.
+  4. Large glowing red stop-sign hologram in front of a robot hand reaching
+     toward a button, protective shield barrier.
+  5. (REGENERATED — first take showed a "COVID-19 Vaccine Efficacy Trial"
+     dashboard, off-topic; rejected file kept as clip-5-rejected-covid.mp4)
+     Clean AI research results dashboard on a large monitor in a dark modern
+     tech office, rising bar charts, large green checkmark, "Validation
+     Passed" — no people, no medical imagery.
+- No clip generation failed with integrity_check_failed; all 5 first takes
+  succeeded except clip 5's content mismatch, fixed with 1 regeneration
+  (6 videos total generated, within the 6-per-message cap).
+
+FRAME DIVERSITY (Gate 2) — PSNR between consecutive 5 s samples of final reel
+0s vs 5s:  13.68 dB
+5s vs 10s:  9.26 dB
+10s vs 15s: 10.16 dB
+15s vs 20s:  6.57 dB
+20s vs 25s: 16.18 dB
+25s vs 30s: 14.74 dB
+30s vs 35s: 12.89 dB
+35s vs 40s: 12.00 dB
+40s vs 44s: 15.80 dB
+Fail threshold: any pair > 40 dB. Highest observed: 16.18 dB. PASS — no
+near-identical consecutive frames.
+
+DURATIONS (Gate 5)
+- voiceover.mp3: 44.928 s (<= 45 s: PASS)
+- agent-knew-reel.mp4: 44.958 s, 720x1280, H.264 + AAC
+- |video - voiceover| = 0.030 s (must be within 0.5 s: PASS)
+- Video trimmed from clip ends only (5x10 s = 50.043 s concat cut to 44.928 s);
+  never extended. No frozen frames, no repeated clips.
+
+COVER
+- cover.jpg: frame from clip-1 at 5 s (robot hand over red emergency button)
+  with citation burned in via ffmpeg drawtext:
+  "The Agent Knew — arXiv:2610.17301" (DejaVu Sans 34px, white on black box,
+  bottom-center). Visually verified legible. PASS.
+
+CAPTION FILE
+- caption.txt copied VERBATIM from v1 folder (diff clean, keyword PAPER).
+
+MINOR NOTES (not gate failures)
+- Clip 4's generated scene contains incidental non-English background text
+  (Chinese "警报" warning sign, Russian "ЗАЩИТНЫЙ БАРЬЕР" = "protective
+  barrier") baked into the video by the generator. On-theme, but visible if
+  a viewer pauses. Not regenerated — it is the stop/barrier beat and the text
+  is background set dressing.
+- Line 15 wpm exception documented above (100.6 wpm at max speed 200).
+- One exec-service restart interrupted the first assembly ffmpeg run and left
+  a corrupt agent-knew-reel.mp4 (moov atom missing); the assembly was re-run
+  cleanly and the delivered file verified (44.958 s, 720x1280, AAC).
+
+FILES DELIVERED (v2 folder)
+- agent-knew-reel.mp4, cover.jpg, caption.txt, captions.ass, voiceover.mp3
+- line-01.mp3 .. line-16.mp3, clip-1.mp4 .. clip-5.mp4, qc-report.txt
+- Working files: concat-vo.txt, clips.txt, concat.mp4, citation.txt,
+  clip-5-rejected-covid.mp4, qc-frames/ (per-clip frames, final-reel samples)
+- Source v1 folder NOT modified.

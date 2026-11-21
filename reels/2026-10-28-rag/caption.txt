@@ -1,0 +1,14 @@
+AI can sound confident and still be completely wrong about your own documents.
+
+RAG, or retrieval-augmented generation, fixes that by letting AI look up facts before it answers. Instead of guessing from memory, it searches your files, pulls the relevant sections, and builds its answer only from those sources. That is why company chatbots can answer from manuals, policies, and support docs you trust.
+
+Remember it like this:
+Search your documents first.
+Pull only the relevant pages.
+Answer using those pages only.
+
+Comment **RAG** and I will DM you a plain-English explainer and a prompt that shows RAG in action.
+
+Follow for AI ideas explained simply, without the jargon, every day.
+
+#ai #rag #artificialintelligence #machinelearning #aiexplained #tech #learnai #chatbots #data

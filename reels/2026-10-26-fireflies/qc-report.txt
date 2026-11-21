@@ -1,0 +1,107 @@
+QC REPORT — "Fireflies turns meeting notes into a to-do list" (your.ai.toolkit)
+Date: 2026-10-26 | Folder: ~/workspace/instagram/reels/2026-10-26-fireflies/
+Reel: Monday Week 1 pilot, Day 1 — Tools pillar, keyword NOTES
+Source: Monday entry in workspace/instagram/week-1-scripts.md; caption.txt is the
+Monday description from the Reel Ideas and DM System doc (113 words before
+hashtags, verified by word count) + hashtags from the script.
+NOTHING WAS POSTED. No approval prompts, no publish calls. Files only.
+
+================================================================
+GATE 1 — CLIP COUNT = ceil(voiceover/10), ALL DISTINCT : PASS
+================================================================
+Voiceover total: 41.208s -> ceil(41.208/10) = 5 clips. Generated 5 clips,
+all 720x1280, 10.000s each, 0 generation failures, 0 retries, 0 loops,
+0 freezes, 0 reuses. Each clip has a distinct prompt tied to a script beat;
+shared style phrase across all five: "clean modern 3D render, dark navy and
+teal palette, soft studio lighting, photorealistic detail".
+Clip prompts:
+ 1. Overhead close-up of a messy desk covered in scattered handwritten paper
+    meeting notes and a pen, notes illegible with no readable words, slow
+    push-in (beats: hook + problem).
+ 2. A laptop on a modern desk, its screen showing colorful abstract meeting
+    audio waveforms, a small glowing teal orb floating above the keyboard,
+    slow dolly-in (beat: Fireflies joins the call).
+ 3. Laptop on a desk, screen glowing with an abstract tidy document layout of
+    soft blurred lines and a simple checklist icon, slow zoom in
+    (beat: summary + action items).
+ 4. Smartphone standing on a desk showing a simple to-do list interface with
+    round checkmark icons lighting up one by one, no readable text
+    (beat: open the summary, copy the to-do list).
+ 5. A tidy modern desk in warm golden morning light, a laptop gently closing,
+    a notebook and a coffee cup beside it, slow pull-back
+    (beat: free tier, stop taking notes).
+Assembly: each clip trimmed to 8.2416s (41.208/5, cut from clip ends only),
+concatenated in order. Video 41.208s = voiceover 41.208s, diff 0.000s.
+
+================================================================
+GATE 2 — FRAME DIVERSITY (PSNR at 5s samples, fail >= 40 dB) : PASS
+================================================================
+Consecutive 5s-apart sample pairs (dB): 2->7: 11.55 | 7->12: 8.61 |
+12->17: 13.75 | 17->22: 12.83 | 22->27: 12.95 | 27->32: 13.54 |
+32->37: 11.79 | 37->40: 12.45. Max 13.75 dB, far below the 40 dB fail
+threshold — no two samples are near-identical, no frozen or repeated frames.
+
+================================================================
+GATE 3 — CAPTION BOUNDARIES = MEASURED AUDIO BOUNDARIES : PASS
+================================================================
+16 caption lines; every boundary is a cumulative sum of ffprobe-measured
+per-line mp3 durations. Spot-checks (frames read and verified):
+ - t=7s shows "You leave a meeting with / three pages of notes" (line 4,
+   4.488-8.328s) — CORRECT.
+ - t=22s shows "with real action items — / who does what, by when."
+   (line 9, 19.752-23.256s) — CORRECT.
+ - Cover (t=2s) shows "This AI fixes that." (line 2, 1.632-3.240s) — hook
+   reads without sound. CORRECT.
+Captions burned via .ass (PlayResX 720 / PlayResY 1280, DejaVu Sans 46px,
+bottom-center, MarginV 200); text is fully on-frame in all sampled frames.
+
+================================================================
+GATE 4 — VOICE = HELIO, EVERY LINE 130-160 WPM : PASS
+================================================================
+Voice verified avocado_v2:MAI_03 (= Helio, per the verified catalog fact) on
+all 16 lines — every TTS JSON response reported "voice":"avocado_v2:MAI_03".
+Per-line table (words / measured duration / wpm / TTS speed used):
+  1  "Your meeting notes are useless."              4w  1.632s 147.1  sp108
+  2  "This AI fixes that."                          4w  1.608s 149.3  sp108
+  3  "Here's the problem."                          3w  1.248s 144.2  sp97
+  4  "You leave a meeting with three pages of notes" 9w 3.840s 140.6  sp69
+  5  "and zero idea what you're actually supposed to do." 9w 3.552s 152.0 sp76
+  6  "Fireflies fixes that."                        3w  1.272s 141.5  sp120
+  7  "It joins your call, records it, transcribes everything," 8w 3.336s 143.9 sp107
+  8  "and then turns the conversation into a summary" 8w 3.264s 147.1  sp79
+  9  "with real action items, who does what, by when." 9w 3.504s 154.1 sp90
+ 10  "No more re-reading notes."                    4w  1.656s 144.9  sp120
+ 11  "No more wait, what did we decide?"            6w  2.568s 140.2  sp97
+ 12  "You just open the summary, copy the to-do list," 9w 3.408s 158.5 sp78
+ 13  "and get on with your day."                    6w  2.424s 148.5  sp60
+ 14  "It has a free tier, so you can try it"        9w  3.696s 146.1  sp62
+ 15  "on your very next meeting."                   4w  1.512s 158.7  sp101
+ 16  "Stop taking notes. Start finishing tasks."    6w  2.688s 133.9  sp120
+Total: 101 words / 41.208s / 147.1 wpm average. Range 133.9-158.5, none over
+170, none under 130.
+Calibration note: at speed 120 the first pass ran 133.9-288.5 wpm (overall
+193 wpm — too fast). Per-line speeds 60-120 were needed to land 130-160;
+two retune rounds (lines 4 and 5 needed a second round). The speed->wpm
+relationship is per-line, not uniform — always measure, never assume.
+
+================================================================
+GATE 5 — DURATIONS WITHIN TARGET (30-45s) : PASS
+================================================================
+Final reel fireflies-reel.mp4: 720x1280, 41.208s, video + audio.
+Voiceover 41.208s. Diff 0.000s. Cover.jpg built from the t=2s frame.
+
+================================================================
+DEVIATIONS / NOTES
+================================================================
+- The script's suggested visual was a real Fireflies screen recording. No
+  screen recording was available to this agent, so the reel uses generated
+  clips (distinct beats, no text/faces/logos). A real product screen
+  recording would be stronger for this Tools reel in a future version.
+- The hook "Your meeting notes are useless. This AI fixes that." is spoken
+  as caption lines 1-2 (per the script: hook on screen + spoken) and is the
+  cover frame.
+- One service restart interrupted the first assembly attempt and left a
+  corrupt concat.mp4 (moov atom missing); it was deleted and re-encoded
+  cleanly. No source files were affected.
+- Handwritten notes in clip 1 are illegible scribbles (no readable words),
+  as prompted. No garbled on-screen text observed in sampled frames.

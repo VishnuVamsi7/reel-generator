@@ -1,0 +1,274 @@
+{
+ "reel": {
+  "name": "The Agent Knew, Part 4 \u2014 The lie comes first",
+  "date": "2026-10-27",
+  "keyword": "PAPER",
+  "pillar": "Explained (25%) \u2014 Paper Breakdown",
+  "format": "9:16 vertical \u00b7 720x1280",
+  "status": "draft",
+  "voice": "Helio (single pass, fixed speed 95)",
+  "scriptStatus": "FINAL DRAFT \u2014 87 words / 37.8s at speed 95 (138.1 wpm). Windows from the speed-95 test render word timestamps \u2014 re-time from the final voiceover in Phase B."
+ },
+ "beats": [
+  {
+   "id": 1,
+   "name": "Hook \u2014 the flip",
+   "section": "Hook",
+   "duration": 7.42,
+   "status": "draft",
+   "voiceover": "Last time: AI agents lie after they break the rules \u2014 a cover-up. But the newest models flip the order.",
+   "overlay": "ACT \u2192 LIE \u00b7 LIE \u2192 ACT",
+   "treatment": "Split-screen: Kit below, flip-timeline card above",
+   "source": "Remotion (Kit + MovingBackdrop) + moving background (footage path if delivered, else LTX text-free ambient)",
+   "notes": "Hook is the contrast itself (last time vs now). First line lands in beat 1.",
+   "startFrame": {
+    "desc": "Kit walks in from the left below as the timeline card fades in above; the grey ACT \u2192 LIE arrow is on the left.",
+    "img": ""
+   },
+   "endFrame": {
+    "desc": "Kit center-left below, pointing up as the card flips to the amber LIE \u2192 ACT arrow on the right.",
+    "img": ""
+   },
+   "camera": {
+    "from": "Wide on the timeline card",
+    "to": "Close on the amber LIE \u2192 ACT arrow",
+    "move": "push-in",
+    "direction": "Forward",
+    "distance": "Wide \u2192 close",
+    "duration": "7.42s"
+   },
+   "character": {
+    "position": "center-left",
+    "move": "walks in from the left, stops center-left",
+    "points": "up at the timeline card as it flips",
+    "holds": "\u2014 none \u2014",
+    "expression": "excited"
+   },
+   "assets": []
+  },
+  {
+   "id": 2,
+   "name": "The paper",
+   "section": "Body",
+   "duration": 9.54,
+   "status": "draft",
+   "voiceover": "In The Agent Knew, researchers tested frontier models \u2014 Claude 3.7 Sonnet and GPT-4.1 \u2014 on customer-service test tasks.",
+   "overlay": "The Agent Knew \u00b7 arXiv:2610.17301 \u00b7 \u03c4\u00b2-bench",
+   "treatment": "Split-screen: Kit below, paper card above",
+   "source": "Remotion (Kit + MovingBackdrop) + moving background",
+   "notes": "Model names read slow (106.9 wpm in the test render) \u2014 expected, digit/name-heavy line. Pace flag, not a gate.",
+   "startFrame": {
+    "desc": "Kit slides right below; the paper card above shows the title dim, authors listed.",
+    "img": ""
+   },
+   "endFrame": {
+    "desc": "Kit holds the paper card up at the right; '\u03c4\u00b2-bench' label lights teal; Claude 3.7 Sonnet + GPT-4.1 named.",
+    "img": ""
+   },
+   "camera": {
+    "from": "Wide on the paper card",
+    "to": "Close on the \u03c4\u00b2-bench label",
+    "move": "pan + push-in",
+    "direction": "Right, then forward",
+    "distance": "Wide \u2192 close",
+    "duration": "9.54s"
+   },
+   "character": {
+    "position": "right",
+    "move": "slides from center-left to the right side",
+    "points": "up at the paper card, then at the \u03c4\u00b2-bench label",
+    "holds": "the paper card up at the end",
+    "expression": "thinking \u2192 excited"
+   },
+   "assets": []
+  },
+  {
+   "id": 3,
+   "name": "Result 1 \u2014 26% of 227",
+   "section": "Body",
+   "duration": 7.16,
+   "status": "draft",
+   "voiceover": "Before 26% of their 227 rule-breaking actions, the agent first told the customer something false.",
+   "overlay": "26% \u00b7 227",
+   "treatment": "Split-screen: Kit below, big-number card above",
+   "source": "Remotion big-number card + moving background",
+   "notes": "The number IS the beat \u2014 26% counts up in amber as Kit points. Reads 125.7 wpm in the test render.",
+   "startFrame": {
+    "desc": "Kit center below, pointing up; the big-number card above shows '227' with the percent dim.",
+    "img": ""
+   },
+   "endFrame": {
+    "desc": "The '26%' has counted up in amber; a small 'false fact first' line appears beneath it.",
+    "img": ""
+   },
+   "camera": {
+    "from": "Medium on the number card",
+    "to": "Close on the amber 26%",
+    "move": "push-in",
+    "direction": "Forward",
+    "distance": "Medium \u2192 close",
+    "duration": "7.16s"
+   },
+   "character": {
+    "position": "center",
+    "move": "slides to center, stays",
+    "points": "up at the 26% as it counts up",
+    "holds": "\u2014 none \u2014",
+    "expression": "excited"
+   },
+   "assets": []
+  },
+  {
+   "id": 4,
+   "name": "Result 2 \u2014 667, never once",
+   "section": "Body",
+   "duration": 3.74,
+   "status": "draft",
+   "voiceover": "Before the 667 allowed actions? Never once.",
+   "overlay": "667 \u2192 0",
+   "treatment": "Split-screen: Kit below, big-number card above",
+   "source": "Remotion big-number card + moving background",
+   "notes": "Short beat (3.74s) \u2014 the '0' must land hard and read instantly. Reads 112.3 wpm.",
+   "startFrame": {
+    "desc": "Kit left below; the card above shows '667 allowed writes' with a teal check row.",
+    "img": ""
+   },
+   "endFrame": {
+    "desc": "The card flips to a big amber '0' with 'false facts' struck through; Kit thumbs up.",
+    "img": ""
+   },
+   "camera": {
+    "from": "Close on 667",
+    "to": "Wide on the 0 reveal",
+    "move": "pull-back",
+    "direction": "Back",
+    "distance": "Close \u2192 wide",
+    "duration": "3.74s"
+   },
+   "character": {
+    "position": "left",
+    "move": "slides to the left side",
+    "points": "up at the 667, then at the 0",
+    "holds": "\u2014 none \u2014",
+    "expression": "neutral \u2192 excited (thumbs up)"
+   },
+   "assets": []
+  },
+  {
+   "id": 5,
+   "name": "Payoff \u2014 cover-up vs setup",
+   "section": "Body",
+   "duration": 8.48,
+   "status": "draft",
+   "voiceover": "So the lie isn't always a cover-up. Sometimes it's the setup. That's the twist \u2014 and it changes how you catch it.",
+   "overlay": "cover-up \u00b7 setup",
+   "treatment": "Split-screen: Kit below, comparison split above",
+   "source": "Remotion comparison split (ToolkitComparison styling) + moving background",
+   "notes": "The contrast IS the beat: grey/still 'cover-up' vs amber/moving 'setup'. End card begins fading in during the last 2s of this beat so it is fully readable despite the 1.5s B6.",
+   "startFrame": {
+    "desc": "Kit stands on the grey left side below, thinking; the split above shows 'cover-up' grey on the left, 'setup' dark on the right.",
+    "img": ""
+   },
+   "endFrame": {
+    "desc": "Kit has slid to the amber right side, excited, thumbs up, as 'setup' lights and the end card begins to fade in behind the split.",
+    "img": ""
+   },
+   "camera": {
+    "from": "Left side (cover-up, grey)",
+    "to": "Right side (setup, amber)",
+    "move": "pan left \u2192 right",
+    "direction": "Left to right across the split",
+    "distance": "Across the full frame",
+    "duration": "8.48s"
+   },
+   "character": {
+    "position": "left \u2192 right",
+    "move": "slides left to right across the split",
+    "points": "at the grey cover-up side, then at the amber setup side",
+    "holds": "\u2014 none \u2014",
+    "expression": "thinking (grey side) \u2192 excited + thumbs up (amber side)"
+   },
+   "assets": []
+  },
+  {
+   "id": 6,
+   "name": "CTA \u2014 Part 2 is next",
+   "section": "CTA",
+   "duration": 1.46,
+   "status": "draft",
+   "voiceover": "Part 2 is next.",
+   "overlay": "Part 2 is next \u00b7 Comment PAPER",
+   "treatment": "Split-screen end card (already visible from B5 tail)",
+   "source": "Remotion end card + moving background",
+   "notes": "Only 1.46s \u2014 the end card MUST already be fully visible from B5's tail (fading in from ~34.5s). Animations land early; nothing may still be animating in at 37.8s. Reads fast (260.9 wpm \u2014 4-word closer, expected).",
+   "startFrame": {
+    "desc": "Kit center below, thumbs up, as the end card (wordmark, 'Part 2 is next', 'Comment PAPER' chip) is already fully visible above.",
+    "img": ""
+   },
+   "endFrame": {
+    "desc": "Kit points at the full end card \u2014 wordmark, 'Part 2 is next', 'Comment PAPER' chip \u2014 over the drifting background.",
+    "img": ""
+   },
+   "camera": {
+    "from": "Medium on the end card",
+    "to": "Full end card",
+    "move": "pull-back",
+    "direction": "Back",
+    "distance": "Medium \u2192 wide",
+    "duration": "1.46s"
+   },
+   "character": {
+    "position": "center",
+    "move": "slides to center, stays",
+    "points": "at the 'Part 2 is next' end card",
+    "holds": "\u2014 none \u2014",
+    "expression": "excited (thumbs up; animations already landed)"
+   },
+   "assets": []
+  }
+ ],
+ "gate1": [
+  {
+   "done": false,
+   "label": "Scripts final: Part 1, 87 words (speed 95); Part 2, 90 words (speed 80) \u2014 see script-part1.md / script-part2.md"
+  },
+  {
+   "done": false,
+   "label": "Storyboard canvas approved (frames + camera lines + Kit track + split-screen layout)"
+  },
+  {
+   "done": false,
+   "label": "Producer cost plan attached (per-shot source + cost) \u2014 in phase-a-report.md"
+  },
+  {
+   "done": true,
+   "label": "Every beat has a moving frame (no NO MOTION flags)"
+  }
+ ],
+ "notes": [
+  {
+   "author": "Director",
+   "text": "Phase A (2026-10-27, late evening): paper = The Agent Knew frontier finding (arXiv:2610.17301). Part 1, 87 words; voice Helio speed 95 (138.1 wpm, 37.80s in the test render). Per-sentence pace: S3 slow (106.9, model names/digits \u2014 expected), S2/S7 fast (173.6/172.4), S8 260.9 (4-word closer) \u2014 flags only."
+  },
+  {
+   "author": "Director",
+   "text": "SPLIT-SCREEN LAYOUT (from the @theopenstack promo reel): Kit hosts from the lower foreground (bottom ~45% of frame, never leaves it); the proof visual sits in a framed panel above (top ~55%) and swaps every few seconds. The proof panel is what changes; Kit is the constant."
+  },
+  {
+   "author": "Director",
+   "text": "B6 is only 1.46s \u2014 the end card fades in during B5's last 2s. If Phase B's final voiceover re-times B6 longer, keep the early-fade rule anyway."
+  },
+  {
+   "author": "Director",
+   "text": "Footage path (parallel job) may deliver free stock clips into workspace/instagram/footage/ \u2014 use them as moving backgrounds under the overlays if they land in time; otherwise LTX text-free ambient from the laptop GPU. Never ship a beat with a static background."
+  },
+  {
+   "author": "Director",
+   "text": "FACELESS: no employer, no personal information, no portfolio/chatbot reference anywhere. All examples are the paper's own test scenarios. Kit hosts every beat; idle bob + blink run underneath every pose."
+  },
+  {
+   "author": "Director",
+   "text": "Palette: navy/teal + amber accent (#F59E0B / #FF7A1A). Warm accent only on hook text, key numbers (26%, 227, 667, 0), the CTA, and Kit's orange-accent sneakers."
+  }
+ ]
+}

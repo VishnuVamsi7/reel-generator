@@ -1,0 +1,430 @@
+{
+ "words": [
+  {
+   "word": "Your",
+   "start": 0.0,
+   "end": 0.34
+  },
+  {
+   "word": "meeting",
+   "start": 0.34,
+   "end": 0.58
+  },
+  {
+   "word": "just",
+   "start": 0.58,
+   "end": 0.9
+  },
+  {
+   "word": "ended,",
+   "start": 0.9,
+   "end": 1.36
+  },
+  {
+   "word": "and",
+   "start": 1.66,
+   "end": 1.78
+  },
+  {
+   "word": "nobody",
+   "start": 1.78,
+   "end": 2.2
+  },
+  {
+   "word": "took",
+   "start": 2.2,
+   "end": 2.56
+  },
+  {
+   "word": "notes.",
+   "start": 2.56,
+   "end": 3.06
+  },
+  {
+   "word": "Fireflies",
+   "start": 3.86,
+   "end": 4.46
+  },
+  {
+   "word": "is",
+   "start": 4.46,
+   "end": 4.94
+  },
+  {
+   "word": "an",
+   "start": 4.94,
+   "end": 5.14
+  },
+  {
+   "word": "AI",
+   "start": 5.14,
+   "end": 5.5
+  },
+  {
+   "word": "note",
+   "start": 5.5,
+   "end": 5.9
+  },
+  {
+   "word": "-taker",
+   "start": 5.9,
+   "end": 6.36
+  },
+  {
+   "word": "that",
+   "start": 6.36,
+   "end": 6.64
+  },
+  {
+   "word": "joins",
+   "start": 6.64,
+   "end": 7.04
+  },
+  {
+   "word": "your",
+   "start": 7.04,
+   "end": 7.3
+  },
+  {
+   "word": "Zoom,",
+   "start": 7.3,
+   "end": 7.82
+  },
+  {
+   "word": "Google",
+   "start": 8.26,
+   "end": 8.5
+  },
+  {
+   "word": "Meet,",
+   "start": 8.5,
+   "end": 8.84
+  },
+  {
+   "word": "or",
+   "start": 9.12,
+   "end": 9.22
+  },
+  {
+   "word": "Teams",
+   "start": 9.22,
+   "end": 9.66
+  },
+  {
+   "word": "call,",
+   "start": 9.66,
+   "end": 10.0
+  },
+  {
+   "word": "then",
+   "start": 10.6,
+   "end": 10.86
+  },
+  {
+   "word": "records",
+   "start": 10.86,
+   "end": 11.3
+  },
+  {
+   "word": "and",
+   "start": 11.3,
+   "end": 11.68
+  },
+  {
+   "word": "transcribes",
+   "start": 11.68,
+   "end": 12.5
+  },
+  {
+   "word": "it",
+   "start": 12.5,
+   "end": 12.6
+  },
+  {
+   "word": "for",
+   "start": 12.6,
+   "end": 12.86
+  },
+  {
+   "word": "you.",
+   "start": 12.86,
+   "end": 13.16
+  },
+  {
+   "word": "Minutes",
+   "start": 14.02,
+   "end": 14.44
+  },
+  {
+   "word": "later,",
+   "start": 14.44,
+   "end": 14.78
+  },
+  {
+   "word": "you",
+   "start": 15.1,
+   "end": 15.18
+  },
+  {
+   "word": "get",
+   "start": 15.18,
+   "end": 15.34
+  },
+  {
+   "word": "a",
+   "start": 15.34,
+   "end": 15.44
+  },
+  {
+   "word": "summary",
+   "start": 15.44,
+   "end": 15.9
+  },
+  {
+   "word": "with",
+   "start": 15.9,
+   "end": 16.18
+  },
+  {
+   "word": "the",
+   "start": 16.18,
+   "end": 16.34
+  },
+  {
+   "word": "key",
+   "start": 16.34,
+   "end": 16.58
+  },
+  {
+   "word": "decisions",
+   "start": 16.58,
+   "end": 17.14
+  },
+  {
+   "word": "and",
+   "start": 17.14,
+   "end": 17.54
+  },
+  {
+   "word": "action",
+   "start": 17.54,
+   "end": 18.0
+  },
+  {
+   "word": "items.",
+   "start": 18.0,
+   "end": 18.48
+  },
+  {
+   "word": "It",
+   "start": 19.06,
+   "end": 19.56
+  },
+  {
+   "word": "can",
+   "start": 19.56,
+   "end": 19.72
+  },
+  {
+   "word": "send",
+   "start": 19.72,
+   "end": 19.96
+  },
+  {
+   "word": "those",
+   "start": 19.96,
+   "end": 20.26
+  },
+  {
+   "word": "tasks",
+   "start": 20.26,
+   "end": 20.82
+  },
+  {
+   "word": "to",
+   "start": 20.82,
+   "end": 21.14
+  },
+  {
+   "word": "Slack,",
+   "start": 21.14,
+   "end": 21.56
+  },
+  {
+   "word": "Notion,",
+   "start": 22.14,
+   "end": 22.56
+  },
+  {
+   "word": "or",
+   "start": 22.86,
+   "end": 22.96
+  },
+  {
+   "word": "Asana,",
+   "start": 22.96,
+   "end": 23.48
+  },
+  {
+   "word": "and",
+   "start": 23.82,
+   "end": 24.54
+  },
+  {
+   "word": "you",
+   "start": 24.54,
+   "end": 24.68
+  },
+  {
+   "word": "can",
+   "start": 24.68,
+   "end": 24.82
+  },
+  {
+   "word": "ask",
+   "start": 24.82,
+   "end": 25.18
+  },
+  {
+   "word": "it",
+   "start": 25.18,
+   "end": 25.3
+  },
+  {
+   "word": "questions",
+   "start": 25.3,
+   "end": 25.92
+  },
+  {
+   "word": "across",
+   "start": 25.92,
+   "end": 26.28
+  },
+  {
+   "word": "all",
+   "start": 26.28,
+   "end": 26.8
+  },
+  {
+   "word": "your",
+   "start": 26.8,
+   "end": 27.0
+  },
+  {
+   "word": "past",
+   "start": 27.0,
+   "end": 27.36
+  },
+  {
+   "word": "meetings.",
+   "start": 27.36,
+   "end": 27.86
+  },
+  {
+   "word": "There's",
+   "start": 28.82,
+   "end": 29.24
+  },
+  {
+   "word": "a",
+   "start": 29.24,
+   "end": 29.32
+  },
+  {
+   "word": "free",
+   "start": 29.32,
+   "end": 29.54
+  },
+  {
+   "word": "plan,",
+   "start": 29.54,
+   "end": 30.08
+  },
+  {
+   "word": "but",
+   "start": 30.5,
+   "end": 30.74
+  },
+  {
+   "word": "AI",
+   "start": 30.74,
+   "end": 31.0
+  },
+  {
+   "word": "features",
+   "start": 31.0,
+   "end": 31.6
+  },
+  {
+   "word": "run",
+   "start": 31.6,
+   "end": 32.08
+  },
+  {
+   "word": "on",
+   "start": 32.08,
+   "end": 32.34
+  },
+  {
+   "word": "a",
+   "start": 32.34,
+   "end": 32.44
+  },
+  {
+   "word": "monthly",
+   "start": 32.44,
+   "end": 32.88
+  },
+  {
+   "word": "credit",
+   "start": 32.88,
+   "end": 33.28
+  },
+  {
+   "word": "limit.",
+   "start": 33.28,
+   "end": 33.82
+  },
+  {
+   "word": "Follow",
+   "start": 34.2,
+   "end": 35.02
+  },
+  {
+   "word": "for",
+   "start": 35.02,
+   "end": 35.32
+  },
+  {
+   "word": "a",
+   "start": 35.32,
+   "end": 35.44
+  },
+  {
+   "word": "new",
+   "start": 35.44,
+   "end": 35.64
+  },
+  {
+   "word": "AI",
+   "start": 35.64,
+   "end": 36.1
+  },
+  {
+   "word": "tool",
+   "start": 36.1,
+   "end": 36.58
+  },
+  {
+   "word": "every",
+   "start": 36.58,
+   "end": 37.04
+  },
+  {
+   "word": "day.",
+   "start": 37.04,
+   "end": 37.36
+  }
+ ],
+ "duration": 38.016
+}

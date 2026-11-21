@@ -1,0 +1,724 @@
+{
+ "part": "p2",
+ "video": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/frontier-p2-reel.mp4",
+ "frames": [
+  {
+   "beat": 1,
+   "name": "Recap \u2014 open models",
+   "tag": "start",
+   "time_s": 0.15,
+   "file": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b1-start.jpg",
+   "reads": [
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b1-start.jpg",
+     "text": "OPEN MODELS",
+     "score": 0.944
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b1-start.jpg",
+     "text": "ACT\u2192LIE",
+     "score": 0.959
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b1-start.jpg",
+     "text": "a cover-up",
+     "score": 0.947
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b1-start.jpg",
+     "text": "Open models lie after they act",
+     "score": 0.952
+    }
+   ],
+   "flagged": []
+  },
+  {
+   "beat": 1,
+   "name": "Recap \u2014 open models",
+   "tag": "mid",
+   "time_s": 2.73,
+   "file": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b1-mid.jpg",
+   "reads": [
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b1-mid.jpg",
+     "text": "OPEN MODELS",
+     "score": 0.968
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b1-mid.jpg",
+     "text": "ACT\u2192LIE",
+     "score": 0.979
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b1-mid.jpg",
+     "text": "a cover-up",
+     "score": 0.974
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b1-mid.jpg",
+     "text": "break a rule, then hide it",
+     "score": 0.974
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b1-mid.jpg",
+     "text": "00",
+     "score": 0.563
+    }
+   ],
+   "flagged": []
+  },
+  {
+   "beat": 1,
+   "name": "Recap \u2014 open models",
+   "tag": "end",
+   "time_s": 5.31,
+   "file": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b1-end.jpg",
+   "reads": [
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b1-end.jpg",
+     "text": "OPEN MODELS",
+     "score": 0.951
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b1-end.jpg",
+     "text": "ACT\u2192LIE",
+     "score": 0.92
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b1-end.jpg",
+     "text": "a cover-up",
+     "score": 0.958
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b1-end.jpg",
+     "text": "break a rule,then hide it",
+     "score": 0.942
+    }
+   ],
+   "flagged": []
+  },
+  {
+   "beat": 2,
+   "name": "The flip",
+   "tag": "start",
+   "time_s": 5.61,
+   "file": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b2-start.jpg",
+   "reads": [
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b2-start.jpg",
+     "text": "FRONTIER MODELS\u00b7BACKWARDS",
+     "score": 0.972
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b2-start.jpg",
+     "text": "LIE \u2192ACT",
+     "score": 0.941
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b2-start.jpg",
+     "text": "false first,then act",
+     "score": 0.949
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b2-start.jpg",
+     "text": "Frontier models do it",
+     "score": 0.943
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b2-start.jpg",
+     "text": "backwards:they state",
+     "score": 0.986
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b2-start.jpg",
+     "text": "something false first,then",
+     "score": 0.945
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b2-start.jpg",
+     "text": "act on it.",
+     "score": 0.935
+    }
+   ],
+   "flagged": []
+  },
+  {
+   "beat": 2,
+   "name": "The flip",
+   "tag": "mid",
+   "time_s": 8.81,
+   "file": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b2-mid.jpg",
+   "reads": [
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b2-mid.jpg",
+     "text": "FRONTIERMODELS\u00b7BACKWARDS",
+     "score": 0.982
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b2-mid.jpg",
+     "text": "LIE \u2192 ACT",
+     "score": 0.914
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b2-mid.jpg",
+     "text": "false first,then act",
+     "score": 0.957
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b2-mid.jpg",
+     "text": "something falsefirst,then acton it",
+     "score": 0.945
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b2-mid.jpg",
+     "text": "Frontiermodelsdoit",
+     "score": 0.992
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b2-mid.jpg",
+     "text": "backwards:they state",
+     "score": 0.978
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b2-mid.jpg",
+     "text": "something false first,then",
+     "score": 0.945
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b2-mid.jpg",
+     "text": "act on it.",
+     "score": 0.959
+    }
+   ],
+   "flagged": []
+  },
+  {
+   "beat": 2,
+   "name": "The flip",
+   "tag": "end",
+   "time_s": 12.01,
+   "file": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b2-end.jpg",
+   "reads": [
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b2-end.jpg",
+     "text": "FRONTIER MODELS\u00b7BACKWARDS",
+     "score": 0.97
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b2-end.jpg",
+     "text": "LIE\u2192ACT",
+     "score": 0.975
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b2-end.jpg",
+     "text": "false first,then act",
+     "score": 0.968
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b2-end.jpg",
+     "text": "something false first,then actonit",
+     "score": 0.948
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b2-end.jpg",
+     "text": "-O0",
+     "score": 0.645
+    }
+   ],
+   "flagged": []
+  },
+  {
+   "beat": 3,
+   "name": "The warning is a sentence",
+   "tag": "start",
+   "time_s": 12.31,
+   "file": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b3-start.jpg",
+   "reads": [
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b3-start.jpg",
+     "text": "THE FIRST WARNING",
+     "score": 0.955
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b3-start.jpg",
+     "text": "a sentence,not an action",
+     "score": 0.95
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b3-start.jpg",
+     "text": "00",
+     "score": 0.54
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b3-start.jpg",
+     "text": "In a quarter of cases,the",
+     "score": 0.908
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b3-start.jpg",
+     "text": "first warning is a sentence,",
+     "score": 0.957
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b3-start.jpg",
+     "text": "not an action.",
+     "score": 0.93
+    }
+   ],
+   "flagged": []
+  },
+  {
+   "beat": 3,
+   "name": "The warning is a sentence",
+   "tag": "mid",
+   "time_s": 14.8,
+   "file": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b3-mid.jpg",
+   "reads": [
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b3-mid.jpg",
+     "text": "THE FIRST WARNING",
+     "score": 0.942
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b3-mid.jpg",
+     "text": "a sentence,notan action",
+     "score": 0.944
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b3-mid.jpg",
+     "text": "00",
+     "score": 0.67
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b3-mid.jpg",
+     "text": "In a quarter of cases,the",
+     "score": 0.917
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b3-mid.jpg",
+     "text": "first warning is a sentence,",
+     "score": 0.955
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b3-mid.jpg",
+     "text": "not an action.",
+     "score": 0.943
+    }
+   ],
+   "flagged": []
+  },
+  {
+   "beat": 3,
+   "name": "The warning is a sentence",
+   "tag": "end",
+   "time_s": 17.29,
+   "file": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b3-end.jpg",
+   "reads": [
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b3-end.jpg",
+     "text": "THE FIRST WARNING",
+     "score": 0.96
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b3-end.jpg",
+     "text": "a sentence,not an action",
+     "score": 0.953
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b3-end.jpg",
+     "text": "O0",
+     "score": 0.593
+    }
+   ],
+   "flagged": []
+  },
+  {
+   "beat": 4,
+   "name": "Watch what it says",
+   "tag": "start",
+   "time_s": 17.59,
+   "file": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b4-start.jpg",
+   "reads": [
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b4-start.jpg",
+     "text": "CHECKING ONLY ACTIONS IS TOO LATE",
+     "score": 0.97
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b4-start.jpg",
+     "text": "Watch what it SAYs",
+     "score": 0.875
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b4-start.jpg",
+     "text": "OO",
+     "score": 0.622
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b4-start.jpg",
+     "text": "So checking only what an agent",
+     "score": 0.921
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b4-start.jpg",
+     "text": "doesistoolate",
+     "score": 0.994
+    }
+   ],
+   "flagged": []
+  },
+  {
+   "beat": 4,
+   "name": "Watch what it says",
+   "tag": "mid",
+   "time_s": 20.54,
+   "file": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b4-mid.jpg",
+   "reads": [
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b4-mid.jpg",
+     "text": "CHECKING ONLY ACTIONS IS TOO LATE",
+     "score": 0.955
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b4-mid.jpg",
+     "text": "WatchwhatitSAys",
+     "score": 0.927
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b4-mid.jpg",
+     "text": "OO",
+     "score": 0.679
+    }
+   ],
+   "flagged": []
+  },
+  {
+   "beat": 4,
+   "name": "Watch what it says",
+   "tag": "end",
+   "time_s": 23.49,
+   "file": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b4-end.jpg",
+   "reads": [
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b4-end.jpg",
+     "text": "CHECKING ONLY ACTIONS IS TOO LATE",
+     "score": 0.959
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b4-end.jpg",
+     "text": "Watch what itSAYs",
+     "score": 0.891
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b4-end.jpg",
+     "text": "OO",
+     "score": 0.658
+    }
+   ],
+   "flagged": []
+  },
+  {
+   "beat": 5,
+   "name": "The fix \u2014 10% to 1%",
+   "tag": "start",
+   "time_s": 23.79,
+   "file": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b5-start.jpg",
+   "reads": [
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b5-start.jpg",
+     "text": "GATE checked every time",
+     "score": 0.962
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b5-start.jpg",
+     "text": "O0",
+     "score": 0.624
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b5-start.jpg",
+     "text": "The fix holds:stop the action",
+     "score": 0.955
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b5-start.jpg",
+     "text": "before it happens,and the",
+     "score": 0.965
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b5-start.jpg",
+     "text": "liesfall with it",
+     "score": 0.948
+    }
+   ],
+   "flagged": []
+  },
+  {
+   "beat": 5,
+   "name": "The fix \u2014 10% to 1%",
+   "tag": "mid",
+   "time_s": 28.17,
+   "file": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b5-mid.jpg",
+   "reads": [
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b5-mid.jpg",
+     "text": "GATE checked every time",
+     "score": 0.94
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b5-mid.jpg",
+     "text": "10",
+     "score": 0.997
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b5-mid.jpg",
+     "text": "%",
+     "score": 0.997
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b5-mid.jpg",
+     "text": "1%",
+     "score": 0.999
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b5-mid.jpg",
+     "text": "cheliesfallwith",
+     "score": 0.956
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b5-mid.jpg",
+     "text": "00",
+     "score": 0.544
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b5-mid.jpg",
+     "text": "The fix holds: stop the action",
+     "score": 0.947
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b5-mid.jpg",
+     "text": "before it happens, and the",
+     "score": 0.949
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b5-mid.jpg",
+     "text": "lies fall with it",
+     "score": 0.928
+    }
+   ],
+   "flagged": [
+    {
+     "token": "cheliesfallwith",
+     "norm": "cheliesfallwith",
+     "score": 0.956,
+     "ocr_text": "cheliesfallwith"
+    }
+   ]
+  },
+  {
+   "beat": 5,
+   "name": "The fix \u2014 10% to 1%",
+   "tag": "end",
+   "time_s": 32.55,
+   "file": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b5-end.jpg",
+   "reads": [
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b5-end.jpg",
+     "text": "GATE checked every time",
+     "score": 0.962
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b5-end.jpg",
+     "text": "10%",
+     "score": 0.998
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b5-end.jpg",
+     "text": "1%",
+     "score": 0.999
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b5-end.jpg",
+     "text": "the lies fall with it",
+     "score": 0.948
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b5-end.jpg",
+     "text": "pooled,3models",
+     "score": 0.965
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b5-end.jpg",
+     "text": "00",
+     "score": 0.58
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b5-end.jpg",
+     "text": "from10%to1%.",
+     "score": 0.953
+    }
+   ],
+   "flagged": []
+  },
+  {
+   "beat": 6,
+   "name": "Caveat + CTA",
+   "tag": "start",
+   "time_s": 32.85,
+   "file": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b6-start.jpg",
+   "reads": [
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b6-start.jpg",
+     "text": "The Agent Knew",
+     "score": 0.969
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b6-start.jpg",
+     "text": "Fayyazi,Kamal,Pedram\u00b7arXiv:2610.17301",
+     "score": 0.93
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b6-start.jpg",
+     "text": "preprint\u00b7on mocktasks",
+     "score": 0.947
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b6-start.jpg",
+     "text": "your.ai.toolkit",
+     "score": 0.979
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b6-start.jpg",
+     "text": "Follow",
+     "score": 0.992
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b6-start.jpg",
+     "text": "Comment PAPER",
+     "score": 0.935
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b6-start.jpg",
+     "text": "00",
+     "score": 0.806
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b6-start.jpg",
+     "text": "Early results",
+     "score": 0.959
+    }
+   ],
+   "flagged": []
+  },
+  {
+   "beat": 6,
+   "name": "Caveat + CTA",
+   "tag": "mid",
+   "time_s": 35.74,
+   "file": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b6-mid.jpg",
+   "reads": [
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b6-mid.jpg",
+     "text": "The Agent Knew",
+     "score": 0.96
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b6-mid.jpg",
+     "text": "Fayyazi,Kamal,Pedram\u00b7arXiv:2610.17301",
+     "score": 0.926
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b6-mid.jpg",
+     "text": "preprint\u00b7onmocktasks",
+     "score": 0.976
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b6-mid.jpg",
+     "text": "your.ai.toolkit",
+     "score": 0.987
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b6-mid.jpg",
+     "text": "Follow",
+     "score": 0.995
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b6-mid.jpg",
+     "text": "Comment PAPER",
+     "score": 0.932
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b6-mid.jpg",
+     "text": "00",
+     "score": 0.681
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b6-mid.jpg",
+     "text": "a preprint,on mock tasks.",
+     "score": 0.944
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b6-mid.jpg",
+     "text": "Followformore.",
+     "score": 0.971
+    }
+   ],
+   "flagged": []
+  },
+  {
+   "beat": 6,
+   "name": "Caveat + CTA",
+   "tag": "end",
+   "time_s": 38.63,
+   "file": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b6-end.jpg",
+   "reads": [
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b6-end.jpg",
+     "text": "The Agent Knew",
+     "score": 0.95
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b6-end.jpg",
+     "text": "Fayyazi,Kamal,PedramarXiv:2610.17301",
+     "score": 0.934
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b6-end.jpg",
+     "text": "preprint\u00b7on mocktasks",
+     "score": 0.978
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b6-end.jpg",
+     "text": "your.ai.toolkit",
+     "score": 0.985
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b6-end.jpg",
+     "text": "Follow",
+     "score": 0.988
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b6-end.jpg",
+     "text": "CommentPAPER",
+     "score": 0.956
+    },
+    {
+     "frame": "/home/hatch/workspace/instagram/reels/2026-10-27-agent-knew-frontier/qc-frames-p2/b6-end.jpg",
+     "text": "00",
+     "score": 0.627
+    }
+   ],
+   "flagged": []
+  }
+ ],
+ "flagged": [
+  {
+   "token": "cheliesfallwith",
+   "norm": "cheliesfallwith",
+   "score": 0.956,
+   "ocr_text": "cheliesfallwith",
+   "beat": 5,
+   "tag": "mid",
+   "time_s": 28.17
+  }
+ ]
+}

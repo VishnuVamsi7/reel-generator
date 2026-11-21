@@ -1,0 +1,93 @@
+QC REPORT — "The Agent Knew" Part 3 (split build, verbatim script)
+Date: 2026-10-26 | Folder: workspace/instagram/reels/2026-10-26-agent-knew-part3/
+Source: voiceover-v0-verbatim.mp3 (50.448s, single pass, speed 100, Helio),
+segment 32.117-50.448s (sentences S8-S10).
+NOTHING WAS POSTED. No approval prompts, no publish calls. Files only.
+
+================================================================
+1. VERBATIM VERIFICATION (before cutting)
+================================================================
+- faster-whisper tiny, word timestamps, on voiceover-v0-verbatim.mp3:
+  140 tokens recognised; transcript matches vo_text.txt word-for-word
+  in order (recap + beats 5-8). Extra tokens are tokenization splits
+  ("0" + ".94", "70" + "%", "10" + "%") plus one "We're" onset artifact
+  at the S9 start (38.000-38.280s), most likely Whisper splitting the
+  onset of "Telling" — not verified by ear (no playback channel).
+  Caption text is the script text, unchanged.
+- Sentence windows (Whisper + silencedetect -40 dB gap midpoints):
+  S8 32.117-37.814 | S9 37.814-42.954 | S10 42.954-50.448.
+  This part = S8-S10, segment-relative 0.000-18.331s.
+
+================================================================
+2. THIS PART — Part 3 (beats 7-8, sentences S8-S10)
+================================================================
+- Audio: voiceover.mp3, cut from the verbatim render at 32.117-50.448s.
+  No re-render, no new lines, no rewrites, no speed change, no
+  stretching, no padding. ffprobe duration 18.331s.
+- Video: agent-knew-part3-reel.mp4, 720x1280, 30 fps, H.264 + AAC.
+  ffprobe duration 18.331s; video == voiceover, diff 0.000s.
+  Cards: card-3-beat7 (0-10.837s), card-4-beat8 (10.837-18.331s).
+  Slow zoompan max 1.03x, 0.4s fades. No loops, no frozen frames,
+  no AI video clips (designed cards only). No new bridge line was
+  recorded; continuity is carried by the description and the "Part 3"
+  kicker, as instructed.
+- Duration check: 18.331s, under 40s.
+- Cover: cover.jpg, "PART 3" / "Part 3 — stop the lie", paper title,
+  arXiv 2610.17301. NOTE: first render clipped the title at the right
+  edge ("stop the li") at 62px; rebuilt at 52px (measured 598px wide)
+  and OCR-verified in full.
+- Description: caption.txt, 116 words before hashtags (100-120),
+  756 chars total, 6-block structure, keyword PAPER, notes that this
+  continues Part 2.
+- Captions: captions.ass, 9 events, DejaVu Sans 46px, bottom-center,
+  MarginV 200, built from the measured boundaries above.
+
+Per-sentence wpm (INFORMATION ONLY — do not act on it; the +/-8% band
+is an open question with the user):
+  S8 13 words / 5.697s = 136.9 wpm | S9 12 / 5.140s = 140.1 wpm |
+  S10 21 / 7.494s = 168.1 wpm.
+  Part 3 overall: 46 words / 18.331s = 150.6 wpm.
+  (Overall verbatim render: 137 words / 50.448s = 162.9 wpm.)
+
+OCR (tesseract 5.x, --psm 6) — every detected word is approved
+designed text; garbled tokens are OCR misreads of numbers/badges:
+- card-3-beat7: BEAT 7, "Stop the act, stop the lie", "Lies after
+  stopping the violation: 10% → 1% pooled over 3 models (Gemma-4,
+  gpt-oss, Qwen3.8)", honesty-prompt callout "barely helped — false
+  claims 16% → 42%". The invented footer gloss from the old build is
+  absent. PASS.
+- card-4-beat8: BEAT 8, "Early results, not the final word",
+  THE AGENT KNEW, authors Fayyazi · Kamal · Pedram, arXiv 2610.17301,
+  "tested on 4 open models, mock tools", "not yet against agents
+  trained to hide from the probe", "PREPRINT — not yet peer-reviewed",
+  "Follow @your.ai.toolkit". PASS.
+- cover.jpg: PART 3, "Part 3 — stop the lie", THE AGENT KNEW,
+  arXiv 2610.17301. PASS (after the font-size fix above).
+
+Caption spot-checks (final render, visually read, all MATCH):
+- t=2s beat 7/S8 "Stopping the violation also stopped most of the
+  lies,", t=8s beat 7/S9, t=15s beat 8/S10 "and not yet against
+  agents". Captions on-frame, no card/caption collisions.
+
+Accuracy re-verified in voiceover, cards, and description:
+- 10%->1% labelled "pooled over 3 models (Gemma-4, gpt-oss, Qwen3.8)"
+  on the card and in the description. Honesty-prompt backfire
+  (16%->42% on gpt-oss) stated as the paper reports it. Preprint /
+  not peer-reviewed stated. No "detects lying", "solves agent safety",
+  or mind-reading framing. Probe framed as the agent's belief the
+  action is unauthorized.
+
+================================================================
+3. UNVERIFIED / OPEN
+================================================================
+- Audio was not listened to (no playback channel); verification is by
+  transcription, timings, and frame reads only.
+- Whisper word timestamps carry ~+/-0.3 s error; boundaries are gap
+  midpoints, so no caption starts/ends mid-word.
+- The "We're" onset artifact (see §1) is unverified by ear.
+- The +/-8% per-sentence pace band is reported as information only,
+  per the task; no sentences were rewritten.
+- Part 2 (recap + beats 5-6, 32.117s) was rebuilt in the sibling folder
+  2026-10-26-agent-knew-part2/; its QC is in qc-report-split.txt there.
+  The superseded 52.8s build is archived in that folder's
+  superseded-52s/ subfolder.

@@ -1,0 +1,141 @@
+QC REPORT — "The Agent Knew" Part 2 reel (beats 5-8 + recap)
+Folder: ~/workspace/instagram/reels/2026-10-26-agent-knew-part2/
+Date: 2026-10-26. FILES ONLY. NOTHING WAS POSTED. No approval prompts, no publish calls.
+Part 1 was built in parallel by another worker; this folder is Part 2 only.
+
+VOICE
+- Voice on every TTS call: avocado_v2:MAI_03 (= Helio, per verified catalog fact).
+  Every /opt/hatch/bin/tts JSON output reported voice "avocado_v2:MAI_03". No substitution.
+- CALIBRATION (per-line, from measured ffprobe durations — NOT the brief's
+  120-140 figure, which did not match behaviour): the tuner started each line
+  at speed 100, measured the real duration, and adjusted speed from that
+  measurement (higher --speed = faster speech; an early inverted adjustment
+  was caught and fixed before final synthesis). Measured behaviour varied
+  widely per line: e.g. line 01 needed speed 73, line 05 needed speed 116,
+  both landing ~146-154 wpm. This matches the Part 1 worker's warning
+  (speed 130 gave ~280 wpm on their line 1; speed 80 gave ~174 wpm).
+  Final speeds used: 63-116. No words were cut; no voice distortion.
+
+PER-LINE WPM TABLE (words / measured ffprobe duration; target 130-160 wpm)
+Line | Text (short)                                  | Words | Dur (s) | WPM   | Speed
+01   | In Part 1, an agent stopped a server...       | 18    | 7.416   | 145.6 | 73
+02   | Here's how the paper catches it.              | 6     | 2.304   | 156.2 | 70
+03   | A simple linear probe on the model's...       | 19    | 7.728   | 147.5 | 100
+04   | And it still works when the agent is told...  | 13    | 5.232   | 149.1 | 63
+05   | So check every action.                        | 4     | 1.560   | 153.8 | 116
+06   | Gate one turn and the violation just...       | 9     | 3.840   | 140.6 | 82
+07   | Gate them all and ask an approver...          | 21    | 9.024   | 139.6 | 85
+08   | Stopping the violation also stopped...        | 13    | 5.160   | 151.2 | 100
+09   | Telling the agent to be honest afterwards...  | 12    | 4.560   | 157.9 | 100
+10   | It's a preprint, tested on four open...       | 22    | 8.880   | 148.6 | 75
+TOTAL words: 137. TOTAL voiceover: 55.704 s (avg 147.6 wpm).
+WPM GATE: 10 of 10 lines in 130-160 wpm; none over 170; NO exceptions needed
+(no digit-heavy line required a documented exception — even line 03 with
+0.94 AUROC and line 07 with 70%/9% landed in band).
+
+SEGMENT DURATIONS (each beat's card shows for exactly its measured VO)
+Recap (L01+L02): 9.720 s | Beat 5 (L03+L04): 12.960 s | Beat 6 (L05+L06+L07): 14.424 s
+Beat 7 (L08+L09): 9.720 s | Beat 8 (L10): 8.880 s | Sum: 55.704 s.
+Segments built with ffmpeg zoompan (slow zoom, max 1.03x) + 0.4 s fades in/out.
+No AI video clips were generated (designed PIL cards only, per brief).
+No loops, no frozen frames.
+
+DURATIONS
+- voiceover.mp3: 55.704 s
+- agent-knew-part2-reel.mp4: 55.704 s, 720x1280, H.264 + AAC, 30 fps
+- |video - voiceover| = 0.000 s (must be within 0.5 s: PASS)
+- As briefed, this is longer than the user's time estimates (~50-56 s expected);
+  the voice was NOT sped up to hit a shorter target.
+
+CAPTIONS
+- captions.ass: PlayResX 720 / PlayResY 1280, DejaVu Sans 46px, bottom-center,
+  MarginV 200 (style copied from the v1/v2 Agent Knew captions.ass).
+- Boundaries are the measured line boundaries (see table above); each line's
+  text appears only inside its own measured window.
+- FIX APPLIED: one event per line wrapped to up to 5 lines at 46px, which
+  intruded into card content. Long lines are therefore split into sequential
+  sub-events inside the SAME measured window (durations proportional to word
+  count), so no caption event exceeds 2 lines. 23 events total for 10 lines.
+  See rebuild_captions.py for the exact splits.
+- CAPTION SPOT-CHECKS (frames extracted from the FINAL render, visually read):
+  (1) t=5.0 s — expected L01 chunk 2 (2.884-5.768 s): frame shows
+      "server it wasn't allowed to touch —". MATCH.
+  (2) t=40.0 s — expected L08 chunk 1 (37.104-40.676 s): frame shows
+      "Stopping the violation also stopped most of the lies,". MATCH.
+  Also checked t=15.0 s (L03 chunk 2: "flags the violation before the action
+  is written,") and t=30.0 s (L07 chunk 1: "Gate them all and ask an
+  approver on repeat flags:") — both MATCH.
+- FIX APPLIED (caption/card collision): the first render's 1.08x zoom pushed
+  edge content off-frame (0.88/0.65 values half-cut) and captions covered the
+  beat-8 "Follow @your.ai.toolkit" line. Zoom reduced to max 1.03x, beat-5
+  value labels moved left, beat-8 content and recap footer moved up.
+  Re-verified on the final render: 0.88 and 0.65 fully visible at t=15 s;
+  Follow line fully visible at t=50 s; recap footer clear at t=5 s.
+
+FRAME DIVERSITY — one frame per beat sampled from the final reel
+t=5 s (recap) vs t=15 s (beat 5): PSNR avg 13.86 dB
+t=15 s (beat 5) vs t=30 s (beat 6): PSNR avg 13.67 dB
+t=30 s (beat 6) vs t=40 s (beat 7): PSNR avg 14.51 dB
+t=40 s (beat 7) vs t=50 s (beat 8): PSNR avg 14.34 dB
+Fail threshold: any pair > 40 dB. Highest observed: 14.51 dB. PASS.
+Frames visually inspected (qc-frames/check-t*.jpg): all five cards are
+visually distinct (recap box / network+probe+0.94 badge / gate chips+0.70>0.09
+bars / 10%>1%+honesty callout / paper title card+arXiv ID).
+
+DESCRIPTION (caption.txt)
+- 119 prose words (100-120: PASS) + 7 hashtags on a separate line.
+  6 blocks: hook / what they'll learn / 3 takeaways + paper citation /
+  keyword CTA (PAPER: arXiv link + one-paragraph summary + explanation
+  prompt by DM) / follow line / hashtags.
+- States it continues Part 1. Keyword is PAPER.
+
+COVER
+- cover.jpg: 720x1280, from the recap card — "Part 2 — the fix" with
+  "PART 2 • RECAP" clearly marked. Visually verified legible.
+
+ACCURACY CONFIRMATION (checked line by line against the brief's rules)
+- Voiceover is the user's script VERBATIM (lines 01-10); the only added lines
+  are the two recap lines given in the brief.
+- 0.94 AUROC: stated only as "at the decision point" / "before the action is
+  written" (beat 5 card + voiceover + description). No "beats monitors"
+  claim anywhere — the 0.88 vs 0.65 split bar is labelled explicitly as the
+  LIE FORECAST under hiding pressure, not AUROC, and no monitor comparison
+  is made for violation detection.
+- "Lies 10% to 1%": presented without attributing it to a single model;
+  beat-7 card adds "(pooled over 3 models: Gemma-4, gpt-oss, Qwen3.8)".
+  Description says "pooled, 3 models". Muse 16.8%->5.1% not claimed.
+- 0.70 to 0.09: labelled "Gemma-4, gate + approver" on the beat-6 card and
+  in the description; "work still got done — completion near 1.00" on the card.
+- Honesty prompt: beat-7 card callout "false claims 16% to 42%" exactly as
+  briefed; voiceover says it "barely helped, and sometimes backfired".
+- Beat 8: "preprint, tested on four open models with mock tools, and not yet
+  against agents trained to hide from the probe"; card adds
+  "PREPRINT — not yet peer-reviewed" and arXiv 2610.17301.
+- NOWHERE does the voiceover, on-screen text, or description say the paper
+  "detects lying in AI" or "solves agent safety". No mind-reading framing;
+  the probe is described as reading the model's internal state / flagging
+  the violation. "Gate, then ask" is voiced as "ask an approver on repeat
+  flags" (the system asks the approver, not the agent).
+- One on-screen extra, not in the voiceover: beat-7 card footer
+  "Fix the action first — don't just ask the agent to be honest after."
+  This is a gloss on the briefed honesty-prompt finding, not a new claim.
+- Authors (Fayyazi, Kamal, Pedram) appear on the beat-8 card only; the
+  description cites title + arXiv ID to stay in the word budget.
+
+OPEN FLAG FOR THE PARENT (not a QC failure of this build)
+- During this build, MEMORY.md was updated with the user's newer "Rules for
+  Every Reel" (2026-10-26): voiceover in ONE pass at ONE fixed speed (1.0),
+  scripts 80-90 words ≈ 36-40 s, cut words if over 40 s. This Part 2 build
+  follows THIS task's brief instead: per-line tuned TTS speeds (63-116),
+  verbatim 137-word script, 55.704 s, no words cut. The two instructions
+  conflict; the parent should confirm with the user which governs Part 2
+  before posting. This build is delivered as briefed; nothing was re-cut
+  unilaterally.
+
+FILES DELIVERED (this folder)
+- agent-knew-part2-reel.mp4, cover.jpg, caption.txt, captions.ass, voiceover.mp3
+- line-01.mp3 .. line-10.mp3, card-0-recap.png .. card-4-beat8.png, qc-report.txt
+- Working files: seg-1..5.mp4, concat.mp4, concat_vo.txt, concat_seg.txt,
+  tts_tune.py, tts-results.json, build_cards.py, assemble.py,
+  rebuild_captions.py, qc-frames/ (check-t5/15/30/40/50.jpg, spot-t5/40.jpg,
+  beat-t15/30/50.jpg)

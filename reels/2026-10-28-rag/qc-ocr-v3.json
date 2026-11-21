@@ -1,0 +1,592 @@
+{
+ "answers-with-sources-end.jpg": [
+  [
+   "Answerfromwhatitfound",
+   0.996
+  ],
+  [
+   "\u00b7withsources",
+   0.973
+  ],
+  [
+   "Itwritesits answer",
+   0.973
+  ],
+  [
+   "fromwhatitfound-",
+   0.988
+  ],
+  [
+   "with sources.",
+   0.959
+  ],
+  [
+   "O0",
+   0.547
+  ],
+  [
+   "sources",
+   0.996
+  ],
+  [
+   "so itmakes things up far less.",
+   0.919
+  ]
+ ],
+ "answers-with-sources-mid.jpg": [
+  [
+   "Answerfromwhatitfound",
+   0.995
+  ],
+  [
+   "\u00b7withsources",
+   0.971
+  ],
+  [
+   "Itwritesitsanswer",
+   0.997
+  ],
+  [
+   "fromwhatitfound-",
+   0.985
+  ],
+  [
+   "O0",
+   0.704
+  ],
+  [
+   "sources",
+   0.995
+  ],
+  [
+   "Itwritesitsanswerfromwhat",
+   0.996
+  ],
+  [
+   "it found \u2014 with sources,",
+   0.961
+  ]
+ ],
+ "answers-with-sources-start.jpg": [
+  [
+   "Answerfromwhatitfound",
+   0.996
+  ],
+  [
+   "\u00b7withsources",
+   0.945
+  ],
+  [
+   "O0",
+   0.736
+  ],
+  [
+   "sources",
+   0.99
+  ],
+  [
+   "Itwritesitsanswerfromwhat",
+   0.996
+  ],
+  [
+   "it found \u2014with sources,",
+   0.957
+  ]
+ ],
+ "company-chatbots-end.jpg": [
+  [
+   "Chatbots thatknowtheirown",
+   0.956
+  ],
+  [
+   "business",
+   0.998
+  ],
+  [
+   "O0",
+   0.654
+  ],
+  [
+   "Illustrativeexample",
+   0.984
+  ],
+  [
+   "What is your strongest project?",
+   0.952
+  ],
+  [
+   "AtZibtekherebuiltalegacychatbotintoa",
+   0.991
+  ],
+  [
+   "productionRAGsystem\u2014~45%fewer",
+   0.974
+  ],
+  [
+   "ungroundedanswers,~35%relevancelift,~30%",
+   0.967
+  ],
+  [
+   "lead completion.",
+   0.961
+  ]
+ ],
+ "company-chatbots-mid.jpg": [
+  [
+   "Chatbotsthatknowtheirown",
+   0.971
+  ],
+  [
+   "business",
+   0.997
+  ],
+  [
+   "00",
+   0.748
+  ],
+  [
+   "Illustrativeexample",
+   0.981
+  ],
+  [
+   "What isyour strongest project?",
+   0.959
+  ],
+  [
+   "At Zibtekherebuiltalegacychatbotintoa",
+   0.978
+  ],
+  [
+   "productionRAGsystem-~45%fewer",
+   0.963
+  ],
+  [
+   "ungroundedanswers,~35%relevancelift,~30%",
+   0.964
+  ],
+  [
+   "lead completion.",
+   0.961
+  ],
+  [
+   "That'show companies",
+   0.969
+  ],
+  [
+   "build chatbots",
+   0.978
+  ],
+  [
+   "thatknowtheirbusiness.",
+   0.978
+  ]
+ ],
+ "company-chatbots-start.jpg": [
+  [
+   "Chatbotsthatknowtheirown",
+   0.979
+  ],
+  [
+   "business",
+   0.998
+  ],
+  [
+   "00",
+   0.527
+  ],
+  [
+   "Illustrative",
+   0.954
+  ],
+  [
+   "example",
+   0.991
+  ],
+  [
+   "That'show companies",
+   0.973
+  ],
+  [
+   "build chatbots",
+   0.985
+  ],
+  [
+   "thatknowtheirbusiness.",
+   0.98
+  ]
+ ],
+ "cta-end.jpg": [
+  [
+   "Follow \u00b7 one AI idea, simply, every week",
+   0.961
+  ],
+  [
+   "your.ai.toolkit",
+   0.987
+  ],
+  [
+   "Follow",
+   0.996
+  ],
+  [
+   "CommentRAG",
+   0.98
+  ],
+  [
+   "O0",
+   0.606
+  ],
+  [
+   "Follow-I explain one Al idea",
+   0.9
+  ],
+  [
+   "simply every week.",
+   0.954
+  ]
+ ],
+ "cta-mid.jpg": [
+  [
+   "Follow \u00b7 one AI idea, simply, every week",
+   0.942
+  ],
+  [
+   "your.ai.toolkit",
+   0.992
+  ],
+  [
+   "Follow",
+   0.99
+  ],
+  [
+   "CommentRAG",
+   0.983
+  ],
+  [
+   "00",
+   0.598
+  ],
+  [
+   "Follow-I explain one Al idea",
+   0.898
+  ],
+  [
+   "simply every week.",
+   0.951
+  ]
+ ],
+ "cta-start.jpg": [
+  [
+   "Follow\u00b7 one AI idea, simply, every week",
+   0.929
+  ],
+  [
+   "your.ai.toolkit",
+   0.987
+  ],
+  [
+   "00",
+   0.634
+  ]
+ ],
+ "hook-end.jpg": [
+  [
+   "AI = good guesser \u00b7 RAG = looks it up",
+   0.978
+  ],
+  [
+   "RAG",
+   0.995
+  ],
+  [
+   "O0",
+   0.682
+  ],
+  [
+   "Al doesn'tknow things.",
+   0.965
+  ],
+  [
+   "It looks them up. That's RAG.",
+   0.997
+  ]
+ ],
+ "hook-mid.jpg": [
+  [
+   "AI = good guesser \u00b7 RAG = looks it up",
+   0.974
+  ],
+  [
+   "\uff1f",
+   0.509
+  ],
+  [
+   "O0",
+   0.624
+  ],
+  [
+   "Al doesn'tknow things.",
+   0.941
+  ],
+  [
+   "It looks them up. That's RAG.",
+   0.996
+  ]
+ ],
+ "hook-start.jpg": [
+  [
+   "AI = good guesser \u00b7 RAG = looks it up",
+   0.97
+  ],
+  [
+   "?",
+   0.55
+  ],
+  [
+   "Al doesn't know things.",
+   0.951
+  ],
+  [
+   "It looks them up. That's RAG.",
+   0.995
+  ]
+ ],
+ "no-rag-vs-with-rag-end.jpg": [
+  [
+   "No RAG:guesses from memory",
+   0.968
+  ],
+  [
+   "With RAG:answersfrom yourfiles",
+   0.962
+  ],
+  [
+   "No RAG",
+   0.919
+  ],
+  [
+   "WithRAG",
+   0.99
+  ],
+  [
+   "guesses from memory",
+   0.957
+  ],
+  [
+   "answersfromyour",
+   0.996
+  ],
+  [
+   "files",
+   0.97
+  ],
+  [
+   "\u81ea\u76ee\u76ee",
+   0.758
+  ],
+  [
+   "with sources",
+   0.988
+  ]
+ ],
+ "no-rag-vs-with-rag-mid.jpg": [
+  [
+   "No RAG:guesses from memory",
+   0.953
+  ],
+  [
+   "With RAG:answers from your files",
+   0.94
+  ],
+  [
+   "No RAG",
+   0.908
+  ],
+  [
+   "WithRAG",
+   0.99
+  ],
+  [
+   "guesses from memory",
+   0.964
+  ],
+  [
+   "answersfromyour",
+   0.998
+  ],
+  [
+   "files",
+   0.997
+  ],
+  [
+   "No RAG, it guesses from memory.",
+   0.952
+  ],
+  [
+   "WithRAG,itanswers",
+   0.969
+  ],
+  [
+   "from your files.",
+   0.998
+  ]
+ ],
+ "no-rag-vs-with-rag-start.jpg": [
+  [
+   "No RAG:guesses from memory",
+   0.948
+  ],
+  [
+   "With RAG:answers from your files",
+   0.957
+  ],
+  [
+   "No RAG",
+   0.934
+  ],
+  [
+   "With RAG",
+   0.953
+  ],
+  [
+   "guesses from memory",
+   0.963
+  ],
+  [
+   "answersfromyour",
+   0.996
+  ],
+  [
+   "files",
+   0.989
+  ]
+ ],
+ "open-book-exam-end.jpg": [
+  [
+   "RAG=Retrieval-Augmented Generation",
+   0.986
+  ],
+  [
+   "Works like an open-book exam",
+   0.926
+  ],
+  [
+   "\u4e09E",
+   0.545
+  ],
+  [
+   "O0",
+   0.748
+  ],
+  [
+   "RAG=Retrieval-Augmented",
+   0.986
+  ],
+  [
+   "Generation",
+   0.991
+  ]
+ ],
+ "open-book-exam-mid.jpg": [
+  [
+   "RAG=Retrieval-Augmented Generation",
+   0.985
+  ],
+  [
+   "workslikeanopen-bookexam",
+   0.968
+  ],
+  [
+   "OO",
+   0.712
+  ],
+  [
+   "Al'sagoodguesser.RAG-",
+   0.951
+  ],
+  [
+   "Retrieval-Augmented",
+   0.988
+  ],
+  [
+   "Generation-",
+   0.961
+  ]
+ ],
+ "open-book-exam-start.jpg": [
+  [
+   "RAG=Retrieval-Augmented Generation",
+   0.986
+  ],
+  [
+   "workslikeanopen-bookexam",
+   0.975
+  ],
+  [
+   "O0",
+   0.708
+  ]
+ ],
+ "search-documents-first-end.jpg": [
+  [
+   "Search docsfirst\u2192",
+   0.964
+  ],
+  [
+   "find therelevantpages",
+   0.971
+  ],
+  [
+   "find therelevantpages",
+   0.978
+  ],
+  [
+   "and finds the relevant pages.",
+   0.982
+  ]
+ ],
+ "search-documents-first-mid.jpg": [
+  [
+   "Search docsfirst\u2192",
+   0.957
+  ],
+  [
+   "find the relevantpages",
+   0.965
+  ],
+  [
+   "00",
+   0.691
+  ],
+  [
+   "find therelevantpa",
+   0.967
+  ],
+  [
+   "Before answering, it searches",
+   0.977
+  ],
+  [
+   "your PDFs and notes -",
+   0.97
+  ]
+ ],
+ "search-documents-first-start.jpg": [
+  [
+   "Search docs first\u2192",
+   0.971
+  ],
+  [
+   "find therelevantpages",
+   0.972
+  ],
+  [
+   "E",
+   0.541
+  ],
+  [
+   "00",
+   0.764
+  ]
+ ]
+}

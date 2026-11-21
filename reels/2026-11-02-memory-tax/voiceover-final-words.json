@@ -1,0 +1,425 @@
+{
+ "duration": 36.84,
+ "words": [
+  {
+   "word": "Your",
+   "start": 0.0,
+   "end": 0.32
+  },
+  {
+   "word": "AI",
+   "start": 0.32,
+   "end": 0.66
+  },
+  {
+   "word": "agent",
+   "start": 0.66,
+   "end": 1.14
+  },
+  {
+   "word": "remembers",
+   "start": 1.14,
+   "end": 1.58
+  },
+  {
+   "word": "everything,",
+   "start": 1.58,
+   "end": 2.3
+  },
+  {
+   "word": "or",
+   "start": 2.96,
+   "end": 3.34
+  },
+  {
+   "word": "does",
+   "start": 3.34,
+   "end": 3.6
+  },
+  {
+   "word": "it?",
+   "start": 3.6,
+   "end": 3.88
+  },
+  {
+   "word": "When",
+   "start": 4.64,
+   "end": 4.84
+  },
+  {
+   "word": "it",
+   "start": 4.84,
+   "end": 5.0
+  },
+  {
+   "word": "rewrites",
+   "start": 5.0,
+   "end": 5.4
+  },
+  {
+   "word": "your",
+   "start": 5.4,
+   "end": 5.58
+  },
+  {
+   "word": "history",
+   "start": 5.58,
+   "end": 5.98
+  },
+  {
+   "word": "into",
+   "start": 5.98,
+   "end": 6.26
+  },
+  {
+   "word": "neat",
+   "start": 6.26,
+   "end": 6.5
+  },
+  {
+   "word": "memory,",
+   "start": 6.5,
+   "end": 6.94
+  },
+  {
+   "word": "it",
+   "start": 7.44,
+   "end": 7.6
+  },
+  {
+   "word": "can",
+   "start": 7.6,
+   "end": 7.74
+  },
+  {
+   "word": "quietly",
+   "start": 7.74,
+   "end": 8.2
+  },
+  {
+   "word": "drop",
+   "start": 8.2,
+   "end": 8.56
+  },
+  {
+   "word": "the",
+   "start": 8.56,
+   "end": 8.82
+  },
+  {
+   "word": "detail",
+   "start": 8.82,
+   "end": 9.2
+  },
+  {
+   "word": "you",
+   "start": 9.2,
+   "end": 9.46
+  },
+  {
+   "word": "needed.",
+   "start": 9.46,
+   "end": 9.8
+  },
+  {
+   "word": "In",
+   "start": 10.34,
+   "end": 10.82
+  },
+  {
+   "word": "one",
+   "start": 10.82,
+   "end": 11.1
+  },
+  {
+   "word": "long",
+   "start": 11.1,
+   "end": 11.54
+  },
+  {
+   "word": "memory",
+   "start": 11.54,
+   "end": 11.88
+  },
+  {
+   "word": "test,",
+   "start": 11.88,
+   "end": 12.5
+  },
+  {
+   "word": "plain",
+   "start": 12.94,
+   "end": 13.12
+  },
+  {
+   "word": "retrieval",
+   "start": 13.12,
+   "end": 13.72
+  },
+  {
+   "word": "scored",
+   "start": 13.72,
+   "end": 14.02
+  },
+  {
+   "word": "81",
+   "start": 14.02,
+   "end": 14.56
+  },
+  {
+   "word": "%",
+   "start": 14.56,
+   "end": 15.26
+  },
+  {
+   "word": "beating",
+   "start": 15.26,
+   "end": 16.0
+  },
+  {
+   "word": "every",
+   "start": 16.0,
+   "end": 16.52
+  },
+  {
+   "word": "fancy",
+   "start": 16.52,
+   "end": 17.0
+  },
+  {
+   "word": "memory",
+   "start": 17.0,
+   "end": 17.28
+  },
+  {
+   "word": "system",
+   "start": 17.28,
+   "end": 17.76
+  },
+  {
+   "word": "in",
+   "start": 17.76,
+   "end": 17.92
+  },
+  {
+   "word": "that",
+   "start": 17.92,
+   "end": 18.08
+  },
+  {
+   "word": "test.",
+   "start": 18.08,
+   "end": 18.6
+  },
+  {
+   "word": "That",
+   "start": 19.24,
+   "end": 19.58
+  },
+  {
+   "word": "is",
+   "start": 19.58,
+   "end": 19.8
+  },
+  {
+   "word": "the",
+   "start": 19.8,
+   "end": 19.92
+  },
+  {
+   "word": "memory",
+   "start": 19.92,
+   "end": 20.22
+  },
+  {
+   "word": "tax.",
+   "start": 20.22,
+   "end": 20.6
+  },
+  {
+   "word": "Rewriting",
+   "start": 21.56,
+   "end": 21.96
+  },
+  {
+   "word": "helps",
+   "start": 21.96,
+   "end": 22.26
+  },
+  {
+   "word": "sometimes,",
+   "start": 22.26,
+   "end": 22.92
+  },
+  {
+   "word": "but",
+   "start": 23.38,
+   "end": 23.58
+  },
+  {
+   "word": "it",
+   "start": 23.58,
+   "end": 23.68
+  },
+  {
+   "word": "costs",
+   "start": 23.68,
+   "end": 23.96
+  },
+  {
+   "word": "you",
+   "start": 23.96,
+   "end": 24.26
+  },
+  {
+   "word": "evidence.",
+   "start": 24.26,
+   "end": 24.66
+  },
+  {
+   "word": "The",
+   "start": 25.38,
+   "end": 25.7
+  },
+  {
+   "word": "fix",
+   "start": 25.7,
+   "end": 26.0
+  },
+  {
+   "word": "is",
+   "start": 26.0,
+   "end": 26.16
+  },
+  {
+   "word": "simple.",
+   "start": 26.16,
+   "end": 26.54
+  },
+  {
+   "word": "Let",
+   "start": 27.22,
+   "end": 27.46
+  },
+  {
+   "word": "memory",
+   "start": 27.46,
+   "end": 27.84
+  },
+  {
+   "word": "organize,",
+   "start": 27.84,
+   "end": 28.5
+  },
+  {
+   "word": "but",
+   "start": 28.5,
+   "end": 29.04
+  },
+  {
+   "word": "never",
+   "start": 29.04,
+   "end": 29.38
+  },
+  {
+   "word": "delete",
+   "start": 29.38,
+   "end": 29.74
+  },
+  {
+   "word": "the",
+   "start": 29.74,
+   "end": 29.96
+  },
+  {
+   "word": "source.",
+   "start": 29.96,
+   "end": 30.28
+  },
+  {
+   "word": "So",
+   "start": 31.1,
+   "end": 31.32
+  },
+  {
+   "word": "keep",
+   "start": 31.32,
+   "end": 31.5
+  },
+  {
+   "word": "a",
+   "start": 31.5,
+   "end": 31.66
+  },
+  {
+   "word": "way",
+   "start": 31.66,
+   "end": 31.84
+  },
+  {
+   "word": "back",
+   "start": 31.84,
+   "end": 32.12
+  },
+  {
+   "word": "to",
+   "start": 32.12,
+   "end": 32.28
+  },
+  {
+   "word": "the",
+   "start": 32.28,
+   "end": 32.4
+  },
+  {
+   "word": "raw",
+   "start": 32.4,
+   "end": 32.62
+  },
+  {
+   "word": "history.",
+   "start": 32.62,
+   "end": 33.18
+  },
+  {
+   "word": "Follow",
+   "start": 34.0,
+   "end": 34.26
+  },
+  {
+   "word": "for",
+   "start": 34.26,
+   "end": 34.54
+  },
+  {
+   "word": "a",
+   "start": 34.54,
+   "end": 34.64
+  },
+  {
+   "word": "new",
+   "start": 34.64,
+   "end": 34.9
+  },
+  {
+   "word": "AI",
+   "start": 34.9,
+   "end": 35.26
+  },
+  {
+   "word": "paper",
+   "start": 35.26,
+   "end": 35.7
+  },
+  {
+   "word": "every",
+   "start": 35.7,
+   "end": 36.12
+  },
+  {
+   "word": "day.",
+   "start": 36.12,
+   "end": 36.4
+  }
+ ]
+}

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Storyboard Canvas — Agent Knew Frontier Part 2 — your.ai.toolkit</title>
+<style>
+  /* Page design system: navy #0B1F3A, teal #14B8A6, white. Plain HTML/CSS/JS, no framework, no network. */
+  :root { --navy:#0B1F3A; --navy2:#12294d; --navy3:#0a1a2e; --teal:#14B8A6; --teal-dim:#0e8a7d; --white:#f4f7fa; --muted:#8fa3b8; --amber:#F59E0B; --red:#e5484d; --green:#2fbf71; --card:#10263f; --line:#1e3a5c; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy3); color:var(--white); font-family:"Segoe UI", system-ui, -apple-system, sans-serif; padding:24px; }
+  a { color:var(--teal); }
+  .wrap { max-width:1560px; margin:0 auto; }
+
+  /* ---------- header ---------- */
+  header { background:linear-gradient(135deg, var(--navy), var(--navy2)); border:1px solid var(--line); border-radius:14px; padding:22px 26px; margin-bottom:18px; }
+  header .eyebrow { color:var(--teal); font-size:12px; letter-spacing:.18em; text-transform:uppercase; font-weight:700; }
+  header h1 { font-size:30px; margin:6px 0 4px; }
+  header .sub { color:var(--muted); font-size:14px; }
+  .meta { display:flex; flex-wrap:wrap; gap:10px; margin-top:16px; }
+  .chip { background:var(--navy3); border:1px solid var(--line); border-radius:999px; padding:6px 12px; font-size:13px; }
+  .chip b { color:var(--teal); font-weight:700; }
+  .status-badge { display:inline-block; border-radius:999px; padding:5px 14px; font-size:13px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; }
+  .status-draft { background:#3a2a00; color:var(--amber); border:1px solid var(--amber); }
+  .status-approved { background:#06351f; color:var(--green); border:1px solid var(--green); }
+  .status-outline { background:#1a2a44; color:var(--muted); border:1px solid var(--muted); }
+  .warn-strip { margin-top:14px; background:#2a1503; border:1px solid var(--amber); border-radius:8px; padding:10px 14px; font-size:13px; color:#ffd9a0; }
+  .warn-strip b { color:var(--amber); }
+
+  /* ---------- how-to ---------- */
+  details.howto { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:12px 16px; margin-bottom:18px; font-size:13.5px; line-height:1.55; color:#d7e2ee; }
+  details.howto summary { cursor:pointer; color:var(--teal); font-weight:700; font-size:14px; }
+  details.howto code { background:var(--navy3); padding:1px 6px; border-radius:4px; font-size:12.5px; }
+
+  /* ---------- timeline bar ---------- */
+  .timeline { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:14px 16px; margin-bottom:18px; }
+  .timeline h2 { font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin-bottom:10px; }
+  .tl-track { display:flex; gap:3px; height:44px; }
+  .tl-seg { border-radius:6px; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:700; min-width:34px; overflow:hidden; white-space:nowrap; background:var(--teal-dim); color:#fff; border:1px solid rgba(255,255,255,.15); }
+  .tl-seg.hook { background:#0e7490; } .tl-seg.cta { background:#5b4a9e; }
+  .tl-seg.flagged { background:var(--red); }
+  .tl-labels { display:flex; gap:3px; margin-top:6px; font-size:11px; color:var(--muted); }
+  .tl-labels span { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; text-align:center; }
+
+  /* ---------- sections (canvas group frames, borrowed from PAI groups-compose) ---------- */
+  .section { border:1.5px solid var(--teal-dim); border-radius:14px; padding:16px 16px 8px; margin-bottom:20px; background:rgba(20,184,166,.04); }
+  .section > h2 { font-size:15px; letter-spacing:.12em; text-transform:uppercase; color:var(--teal); margin-bottom:12px; }
+  .section > h2 span { color:var(--muted); font-size:12px; letter-spacing:0; text-transform:none; font-weight:400; }
+  .beats { display:flex; gap:14px; overflow-x:auto; padding-bottom:10px; }
+
+  /* ---------- beat card (one canvas shot node) ---------- */
+  .beat { flex:0 0 340px; background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px; display:flex; flex-direction:column; gap:10px; }
+  .beat.flagged { border:2px solid var(--red); }
+  .beat-head { display:flex; justify-content:space-between; align-items:flex-start; gap:8px; }
+  .beat-head h3 { font-size:16px; line-height:1.25; }
+  .beat-head .num { background:var(--teal); color:#04241f; font-weight:800; border-radius:8px; padding:3px 9px; font-size:13px; white-space:nowrap; }
+  .beat-time { font-size:12.5px; color:var(--muted); }
+  .beat-time b { color:var(--white); }
+  .flag-banner { background:#3d0a0c; border:1px solid var(--red); color:#ffb3b6; border-radius:8px; padding:8px 10px; font-size:12.5px; font-weight:700; }
+  .frames { display:flex; gap:8px; }
+  .frame { flex:1; }
+  .frame .tag { font-size:10.5px; letter-spacing:.12em; color:var(--muted); text-transform:uppercase; margin-bottom:4px; display:flex; justify-content:space-between; }
+  .frame .tag b { color:var(--teal); }
+  .frame .mock { aspect-ratio:9/16; max-height:190px; width:100%; border-radius:8px; border:1px solid var(--line); background:linear-gradient(160deg, #16345c 0%, #0B1F3A 55%, #0a2e2a 100%); display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:10px; gap:6px; overflow:hidden; }
+  .frame .mock .mock-label { font-size:10px; letter-spacing:.14em; color:var(--teal); text-transform:uppercase; font-weight:700; }
+  .frame .mock .mock-desc { font-size:12px; line-height:1.45; color:#dbe7f3; }
+  .frame img { width:100%; aspect-ratio:9/16; max-height:190px; object-fit:cover; border-radius:8px; border:1px solid var(--line); display:block; }
+  .camera { background:var(--navy3); border:1px solid var(--line); border-radius:8px; padding:9px 11px; font-size:12.5px; line-height:1.5; }
+  .camera .cam-title { color:var(--teal); font-weight:700; font-size:11px; letter-spacing:.12em; text-transform:uppercase; margin-bottom:3px; }
+  .camera .cam-diagram { font-family:ui-monospace, monospace; color:#cfe3f5; margin:4px 0; font-size:12px; }
+  .vo { font-size:13px; line-height:1.55; background:rgba(20,184,166,.08); border-left:3px solid var(--teal); border-radius:0 8px 8px 0; padding:8px 10px; }
+  .vo .lbl, .overlay .lbl, .treat .lbl, .assets .lbl, .char .lbl { font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); font-weight:700; margin-bottom:3px; }
+  .char { font-size:12.5px; line-height:1.55; background:rgba(245,158,11,.08); border-left:3px solid var(--amber); border-radius:0 8px 8px 0; padding:8px 10px; }
+  .char b { color:var(--amber); }
+  .overlay { font-size:13px; line-height:1.5; }
+  .overlay .words { color:#fff; font-weight:600; }
+  .treat { font-size:12.5px; color:#c7d5e4; line-height:1.5; }
+  .treat b { color:var(--white); }
+  .assets { font-size:12px; color:var(--muted); line-height:1.6; }
+  .assets code { color:#a9c6e2; background:var(--navy3); padding:1px 5px; border-radius:4px; font-size:11.5px; }
+  .beat-foot { display:flex; justify-content:space-between; align-items:center; margin-top:auto; padding-top:6px; border-top:1px solid var(--line); }
+  .beat-note { font-size:12px; color:var(--amber); font-style:italic; line-height:1.45; }
+
+  /* ---------- gate + notes ---------- */
+  .bottom { display:flex; gap:18px; flex-wrap:wrap; }
+  .panel { flex:1 1 420px; background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px 18px; }
+  .panel h2 { font-size:14px; letter-spacing:.12em; text-transform:uppercase; color:var(--teal); margin-bottom:10px; }
+  .panel ul { list-style:none; font-size:13.5px; line-height:1.9; }
+  .panel li::before { content:"☐ "; color:var(--muted); }
+  .panel li.done::before { content:"☑ "; color:var(--green); }
+  .panel .note-item { border-left:3px solid var(--amber); padding:6px 10px; margin-bottom:8px; font-size:13.5px; line-height:1.5; background:var(--navy3); border-radius:0 8px 8px 0; }
+  .panel .note-item b { color:var(--amber); }
+  footer { margin-top:18px; font-size:12px; color:var(--muted); text-align:center; line-height:1.6; }
+</style>
+</head>
+<body>
+<div class="wrap" id="app"><!-- rendered by JS from the CANVAS data block below --></div>
+
+<!-- ============================================================================
+  CANVAS DATA — EDIT THIS BLOCK ONLY.
+  This JSON is the source of truth for the whole board (borrowed from PAI-Pro:
+  canvas state is just a file on disk; the viewer renders it, nothing else
+  owns it). To make a new reel's canvas: copy this file, edit this block.
+  - beats: one shot node per beat, in timeline order. Start/end times are
+    computed from durations — enter duration only.
+  - startFrame / endFrame: "desc" is the director's written mock of what the
+    frame looks like. "img" is optional: a relative path to a real mockup
+    image (drop it in the reel folder). If "img" is set, the image is shown;
+    otherwise the description renders as a designed placeholder.
+  - camera.move: push-in | pull-back | pan | orbit | drift | cut | static.
+    "static" or identical start/end descriptions get flagged NO MOTION.
+  - character: Kit's track for the beat — position (left / center-left /
+    center / center-right / right), move (how he travels), points (what he
+    points at), holds (which card he brings into the center, or "— none —"),
+    expression (neutral / excited / thinking). Kit is the foreground host:
+    he walks/slides, points, holds cards, and never stands frozen (idle bob
+    + blink run underneath every pose). The character track is part of the
+    canvas the director fills in — every beat has one.
+  - status per beat and overall: draft | approved | outline.
+  - Do NOT edit the HTML/JS below this block.
+============================================================================= -->
+<script type="application/json" id="canvas-data">{"reel": {"name": "The Agent Knew, Part 5 \u2014 What it changes", "date": "2026-10-27", "keyword": "PAPER", "pillar": "Explained (25%) \u2014 Paper Breakdown", "format": "9:16 vertical \u00b7 720x1280", "status": "draft", "voice": "Helio (single pass, fixed speed 80)", "scriptStatus": "FINAL DRAFT \u2014 90 words / 38.78s at speed 80 (139.2 wpm). Windows from the speed-80 test render word timestamps \u2014 re-time from the final voiceover in Phase B."}, "beats": [{"id": 1, "name": "Recap \u2014 open models", "section": "Hook", "duration": 5.48, "status": "draft", "voiceover": "Open models lie after they act \u2014 break a rule, then hide it.", "overlay": "ACT \u2192 LIE", "treatment": "Split-screen: Kit below, timeline card above", "source": "Remotion (Kit + MovingBackdrop) + moving background (footage path if delivered, else LTX text-free ambient)", "notes": "Recap hook \u2014 lands the contrast in one line so a viewer who missed Part 1 still follows.", "startFrame": {"desc": "Kit walks in from the left below; the timeline card above shows a grey ACT arrow.", "img": ""}, "endFrame": {"desc": "The timeline completes grey ACT \u2192 LIE; Kit points up at the LIE step.", "img": ""}, "camera": {"from": "Wide on the timeline card", "to": "Close on the grey LIE step", "move": "drift + push-in", "direction": "Forward", "distance": "Wide \u2192 close", "duration": "5.48s"}, "character": {"position": "center-left", "move": "walks in from the left, stops center-left", "points": "up at the timeline as it completes", "holds": "\u2014 none \u2014", "expression": "neutral"}, "assets": []}, {"id": 2, "name": "The flip", "section": "Body", "duration": 6.68, "status": "draft", "voiceover": "Frontier models do it backwards: they state something false first, then act on it.", "overlay": "LIE \u2192 ACT", "treatment": "Split-screen: Kit below, timeline card above", "source": "Remotion (Kit + MovingBackdrop) + moving background", "notes": "Mirror of B1 with the order reversed, amber instead of grey \u2014 the visual rhyme carries the point.", "startFrame": {"desc": "Kit slides right below; the timeline card above resets, dim.", "img": ""}, "endFrame": {"desc": "The timeline completes amber LIE \u2192 ACT; Kit holds the flipped card up.", "img": ""}, "camera": {"from": "Wide on the reset timeline", "to": "Close on the amber ACT step", "move": "push-in", "direction": "Forward", "distance": "Wide \u2192 close", "duration": "6.68s"}, "character": {"position": "right", "move": "slides from center-left to the right side", "points": "up at the flipped timeline", "holds": "the flipped timeline card up at the end", "expression": "thinking \u2192 excited"}, "assets": []}, {"id": 3, "name": "The warning is a sentence", "section": "Body", "duration": 5.28, "status": "draft", "voiceover": "In a quarter of cases, the first warning is a sentence, not an action.", "overlay": "a sentence, not an action", "treatment": "Split-screen: Kit below, speech-bubble card above", "source": "Remotion (Kit + MovingBackdrop) + moving background", "notes": "Reads 159.1 wpm in the test render \u2014 fast; flag only. The bubble lighting amber IS the beat.", "startFrame": {"desc": "Kit center below, watching; the card above shows a dim speech bubble beside a dim action icon.", "img": ""}, "endFrame": {"desc": "The speech bubble lights amber with a check; the action icon stays dim. Kit points up at the bubble.", "img": ""}, "camera": {"from": "Medium on the bubble + icon", "to": "Close on the lit bubble", "move": "push-in", "direction": "Forward", "distance": "Medium \u2192 close", "duration": "5.28s"}, "character": {"position": "center", "move": "slides to center, stays", "points": "up at the speech bubble as it lights", "holds": "\u2014 none \u2014", "expression": "excited"}, "assets": []}, {"id": 4, "name": "Watch what it says", "section": "Body", "duration": 6.2, "status": "draft", "voiceover": "So checking only what an agent does is too late \u2014 you have to watch what it says.", "overlay": "watch what it SAYS", "treatment": "Split-screen: Kit below, bubble card above", "source": "Remotion (Kit + MovingBackdrop) + moving background", "notes": "Reads 164.5 wpm \u2014 fast; flag only. Interpretation beat (see fact-check.md): reasoning from the verified ordering, not a measured result. The overlay keeps it as a question of attention, not a paper claim.", "startFrame": {"desc": "Kit left below, thinking; the bubble card above replays dim, then the word 'SAYS' brightens.", "img": ""}, "endFrame": {"desc": "Kit points up at the brightened 'SAYS'; the bubble pulses amber once.", "img": ""}, "camera": {"from": "Wide on the bubble card", "to": "Close on 'SAYS'", "move": "pan + push-in", "direction": "Right, then forward", "distance": "Wide \u2192 close", "duration": "6.2s"}, "character": {"position": "left", "move": "slides to the left side", "points": "up at the 'SAYS' word as it brightens", "holds": "\u2014 none \u2014", "expression": "thinking \u2192 excited"}, "assets": []}, {"id": 5, "name": "The fix \u2014 10% \u2192 1%", "section": "Body", "duration": 9.48, "status": "draft", "voiceover": "The fix holds: stop the action before it happens, and the lies fall with it \u2014 from 10% to 1%.", "overlay": "GATE \u2014 checked every time \u00b7 10% \u2192 1% \u00b7 pooled, 3 models", "treatment": "Split-screen: Kit below, gate card above", "source": "Remotion gate card + moving background", "notes": "Reads 120.3 wpm \u2014 slow; flag only. The 'pooled, 3 models' label carries the scope \u2014 it must stay legible. The gate finding was measured on open-weight models; the script says 'the fix holds' as continuity, not as a frontier measurement.", "startFrame": {"desc": "Kit center below, presenting; the gate card above shows a dim gate with 'checked every time' beneath it.", "img": ""}, "endFrame": {"desc": "The gate lights teal with a check; '10% \u2192 1%' counts in amber with the 'pooled, 3 models' label beneath.", "img": ""}, "camera": {"from": "Medium on the gate card", "to": "Close on the amber 10% \u2192 1%", "move": "push-in", "direction": "Forward", "distance": "Medium \u2192 close", "duration": "9.48s"}, "character": {"position": "center", "move": "slides to center, stays", "points": "at the gate as it lights, then at the 10% \u2192 1%", "holds": "the gate card up at the end", "expression": "excited (nod + thumbs up when the gate checks)"}, "assets": []}, {"id": 6, "name": "Caveat + CTA", "section": "CTA", "duration": 5.66, "status": "draft", "voiceover": "Early results \u2014 a preprint, on mock tasks. Follow for more.", "overlay": "preprint \u00b7 mock tasks \u00b7 Follow \u00b7 Comment PAPER", "treatment": "Split-screen end card with citation", "source": "Remotion end card + moving background", "notes": "5.66s \u2014 comfortable for the citation + Follow. Citation (title, authors, arXiv ID) must be legible; animations land by ~36.5s.", "startFrame": {"desc": "Kit center below, thumbs up, as the end card begins: citation lines form above, wordmark below.", "img": ""}, "endFrame": {"desc": "Kit points at the full end card \u2014 citation (The Agent Knew, Fayyazi, Kamal, Pedram, arXiv:2610.17301), wordmark, 'Follow', 'Comment PAPER' chip.", "img": ""}, "camera": {"from": "Medium on the citation", "to": "Full end card", "move": "pull-back", "direction": "Back", "distance": "Medium \u2192 wide", "duration": "5.66s"}, "character": {"position": "center", "move": "slides to center, stays", "points": "at the citation, then at the 'Follow' end card", "holds": "\u2014 none \u2014", "expression": "excited (thumbs up; animations land early)"}, "assets": []}], "gate1": [{"done": false, "label": "Scripts final: Part 1, 87 words (speed 95); Part 2, 90 words (speed 80) \u2014 see script-part1.md / script-part2.md"}, {"done": false, "label": "Storyboard canvas approved (frames + camera lines + Kit track + split-screen layout)"}, {"done": false, "label": "Producer cost plan attached (per-shot source + cost) \u2014 in phase-a-report.md"}, {"done": true, "label": "Every beat has a moving frame (no NO MOTION flags)"}], "notes": [{"author": "Director", "text": "Phase A (2026-10-27, late evening): Part 2, 90 words (at the cap); voice Helio speed 80 (139.2 wpm, 38.78s in the test render). Per-sentence pace: S3 159.1, S4 164.5 fast; S5 120.3, S6 118.1 slow \u2014 flags only."}, {"author": "Director", "text": "SPLIT-SCREEN LAYOUT (from the @theopenstack promo reel): Kit hosts from the lower foreground (bottom ~45% of frame, never leaves it); the proof visual sits in a framed panel above (top ~55%) and swaps every few seconds. The proof panel is what changes; Kit is the constant."}, {"author": "Director", "text": "B4 is an interpretation beat (see fact-check.md): 'watch what it says' follows from the verified ordering, it is not a measured result. Do not upgrade it into a paper claim on screen."}, {"author": "Director", "text": "B5 label 'pooled, 3 models' must stay legible \u2014 it is the scope of the 10% \u2192 1% figure."}, {"author": "Director", "text": "Footage path (parallel job) may deliver free stock clips into workspace/instagram/footage/ \u2014 use them as moving backgrounds under the overlays if they land in time; otherwise LTX text-free ambient from the laptop GPU. Never ship a beat with a static background."}, {"author": "Director", "text": "FACELESS: no employer, no personal information, no portfolio/chatbot reference anywhere. Kit hosts every beat; idle bob + blink run underneath every pose."}, {"author": "Director", "text": "Palette: navy/teal + amber accent (#F59E0B / #FF7A1A). Warm accent only on hook text, key numbers (10% \u2192 1%), the CTA, and Kit's orange-accent sneakers."}]}</script>
+
+<script>
+(function () {
+  "use strict";
+  var data = JSON.parse(document.getElementById("canvas-data").textContent);
+  var app = document.getElementById("app");
+
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+  function words(str) { return (str || "").trim().split(/\s+/).filter(Boolean).length; }
+  function fmt(t) { return t.toFixed(1) + "s"; }
+
+  // Motion check: a beat fails when its start/end frames are identical
+  // OR the camera never moves. Pixel change is not motion — the frame must travel.
+  function motionFlag(b) {
+    var sameFrames = (b.startFrame.desc || "").trim().toLowerCase() === (b.endFrame.desc || "").trim().toLowerCase();
+    var staticCam = /static|none/i.test(b.camera.move || "");
+    if (sameFrames && staticCam) return "Start and end frames are identical AND the camera is static.";
+    if (sameFrames) return "Start and end frames are identical — the frame never changes.";
+    if (staticCam) return "Camera is static — the frame never moves.";
+    return null;
+  }
+
+  // Cumulative time windows from durations.
+  var t = 0;
+  data.beats.forEach(function (b) { b._start = t; t += b.duration; b._end = t; });
+  var total = t;
+  var totalWords = data.beats.reduce(function (n, b) { return n + words(b.voiceover); }, 0);
+  var flagged = data.beats.filter(function (b) { return motionFlag(b); }).length;
+  var approved = data.beats.filter(function (b) { return b.status === "approved"; }).length;
+
+  var statusClass = data.reel.status === "approved" ? "status-approved" : (data.reel.status === "outline" ? "status-outline" : "status-draft");
+
+  var html = "";
+  html += '<header>';
+  html += '<div class="eyebrow">your.ai.toolkit — Storyboard Canvas</div>';
+  html += '<h1>' + esc(data.reel.name) + '</h1>';
+  html += '<div class="sub">' + esc(data.reel.scriptStatus) + '</div>';
+  html += '<div class="meta">';
+  html += '<span class="chip">Date <b>' + esc(data.reel.date) + '</b></span>';
+  html += '<span class="chip">Keyword <b>' + esc(data.reel.keyword) + '</b></span>';
+  html += '<span class="chip">Pillar <b>' + esc(data.reel.pillar) + '</b></span>';
+  html += '<span class="chip">Format <b>' + esc(data.reel.format) + '</b></span>';
+  html += '<span class="chip">Voiceover <b>' + totalWords + ' words · ~' + fmt(total) + '</b></span>';
+  html += '<span class="chip">Beats <b>' + data.beats.length + '</b> · Approved <b>' + approved + '/' + data.beats.length + '</b></span>';
+  html += '<span class="status-badge ' + statusClass + '">' + esc(data.reel.status) + '</span>';
+  html += '</div>';
+  if (flagged > 0) {
+    html += '<div class="warn-strip"><b>⚠ ' + flagged + ' beat' + (flagged > 1 ? 's' : '') + ' flagged NO MOTION.</b> A beat whose start and end frames are identical, or whose camera never moves, reads as a still photo. Redesign before Gate 1 — motion must move the frame.</div>';
+  }
+  html += '</header>';
+
+  html += '<details class="howto"><summary>How to use this canvas</summary>'
+    + '<p>One file, no build step, no server: open it in a browser. The JSON block at the top of the file (<code>canvas-data</code>) is the source of truth — edit it and reload. '
+    + 'Each beat is one shot node: two frame mocks (start / end), one camera line, the voiceover line attached to the beat, overlay words, treatment, source, and assets — plus Kit\'s character track (where he stands, how he moves, what he points at, what card he holds, his expression). '
+    + 'Beats sit in timeline order inside visible section frames (Hook / Body / CTA). Nothing generates until this canvas is <b>approved</b> at Gate 1 — that is the draft gate: a draft canvas never advances to generation. '
+    + 'To use a real mockup image instead of a written frame description, put the image in the reel folder and set the beat\'s <code>startFrame.img</code> / <code>endFrame.img</code> to its relative path.</p></details>';
+
+  // Timeline bar (PAI Timeline concept: shot_id order, durations to scale).
+  html += '<div class="timeline"><h2>Timeline — shot order (durations to scale)</h2><div class="tl-track">';
+  data.beats.forEach(function (b) {
+    var w = Math.max(4, (b.duration / total) * 100);
+    var cls = "tl-seg" + (b.section === "Hook" ? " hook" : "") + (b.section === "CTA" ? " cta" : "") + (motionFlag(b) ? " flagged" : "");
+    html += '<div class="' + cls + '" style="flex:0 0 ' + w.toFixed(1) + '%" title="Beat ' + b.id + ' — ' + esc(b.name) + ' (' + fmt(b.duration) + ')">' + b.id + '</div>';
+  });
+  html += '</div><div class="tl-labels">';
+  data.beats.forEach(function (b) {
+    var w = Math.max(4, (b.duration / total) * 100);
+    html += '<span style="flex:0 0 ' + w.toFixed(1) + '%">' + fmt(b.duration) + '</span>';
+  });
+  html += '</div></div>';
+
+  // Sections in first-appearance order.
+  var sections = [];
+  data.beats.forEach(function (b) { if (sections.indexOf(b.section) === -1) sections.push(b.section); });
+  sections.forEach(function (section) {
+    var secBeats = data.beats.filter(function (b) { return b.section === section; });
+    var secDur = secBeats.reduce(function (n, b) { return n + b.duration; }, 0);
+    html += '<section class="section"><h2>' + esc(section) + ' <span>— ' + secBeats.length + ' beat' + (secBeats.length > 1 ? 's' : '') + ' · ' + fmt(secDur) + '</span></h2><div class="beats">';
+    secBeats.forEach(function (b) {
+      var flag = motionFlag(b);
+      var bStatus = b.status === "approved" ? "status-approved" : (b.status === "outline" ? "status-outline" : "status-draft");
+      html += '<article class="beat' + (flag ? ' flagged' : '') + '">';
+      html += '<div class="beat-head"><h3>' + esc(b.name) + '</h3><span class="num">BEAT ' + b.id + '</span></div>';
+      html += '<div class="beat-time"><b>' + fmt(b._start) + ' – ' + fmt(b._end) + '</b> · ' + fmt(b.duration) + ' · shot ' + b.id + '</div>';
+      if (flag) html += '<div class="flag-banner">⚠ NO MOTION — ' + esc(flag) + '</div>';
+      html += '<div class="frames">';
+      ["startFrame", "endFrame"].forEach(function (key, i) {
+        var f = b[key];
+        html += '<div class="frame"><div class="tag"><span>' + (i === 0 ? "Start frame" : "End frame") + '</span><b>' + (i === 0 ? "t=" + fmt(b._start) : "t=" + fmt(b._end)) + '</b></div>';
+        if (f.img) html += '<img src="' + esc(f.img) + '" alt="' + esc(f.desc) + '">';
+        else html += '<div class="mock"><span class="mock-label">Frame mock</span><span class="mock-desc">' + esc(f.desc) + '</span></div>';
+        html += '</div>';
+      });
+      html += '</div>';
+      var cam = b.camera;
+      html += '<div class="camera"><div class="cam-title">Camera — ' + esc(cam.move) + '</div>'
+        + '<div class="cam-diagram">' + esc(cam.from) + ' &nbsp;──►&nbsp; ' + esc(cam.to) + '</div>'
+        + 'Direction: ' + esc(cam.direction) + ' · Distance: ' + esc(cam.distance) + ' · Move duration: ' + esc(cam.duration) + '</div>';
+      if (b.character) {
+        var ch = b.character;
+        html += '<div class="char"><div class="lbl">Kit — character track</div>'
+          + '<b>' + esc(ch.position || "") + '</b> · ' + esc(ch.move || "")
+          + '<br>Points: ' + esc(ch.points || "—") + ' · Holds: ' + esc(ch.holds || "—")
+          + '<br>Expression: <b>' + esc(ch.expression || "") + '</b></div>';
+      }
+      html += '<div class="vo"><div class="lbl">Voiceover (' + words(b.voiceover) + ' words)</div>“' + esc(b.voiceover) + '”</div>';
+      html += '<div class="overlay"><div class="lbl">On-screen words</div><span class="words">' + esc(b.overlay) + '</span></div>';
+      html += '<div class="treat"><div class="lbl">Treatment · Source</div><b>' + esc(b.treatment) + '</b> — ' + esc(b.source) + '</div>';
+      html += '<div class="assets"><div class="lbl">Attached assets</div>' + (b.assets && b.assets.length ? b.assets.map(function (a) { return '<code>' + esc(a) + '</code>'; }).join(" ") : '— none yet —') + '</div>';
+      if (b.notes) html += '<div class="beat-note">' + esc(b.notes) + '</div>';
+      html += '<div class="beat-foot"><span class="status-badge ' + bStatus + '">' + esc(b.status) + '</span><span class="beat-time">shot ' + b.id + '</span></div>';
+      html += '</article>';
+    });
+    html += '</div></section>';
+  });
+
+  html += '<div class="bottom">';
+  html += '<div class="panel"><h2>Gate 1 checklist</h2><ul>';
+  (data.gate1 || []).forEach(function (g) { html += '<li class="' + (g.done ? 'done' : '') + '">' + esc(g.label) + '</li>'; });
+  html += '</ul></div>';
+  html += '<div class="panel"><h2>Director notes</h2>';
+  (data.notes || []).forEach(function (n) { html += '<div class="note-item"><b>' + esc(n.author) + ':</b> ' + esc(n.text) + '</div>'; });
+  html += '</div></div>';
+
+  html += '<footer>Storyboard canvas — your.ai.toolkit · Concepts borrowed from PAI-Pro (canvas nodes + edges, file-on-disk state, groups, timeline by shot_id, draft gate) and OpenMontage STORYBOARD.md (per-frame metadata, status outline → built → animated). Implemented here from scratch in plain HTML/CSS/JS — no PAI-Pro or OpenMontage code. Nothing generates until this canvas is approved.</footer>';
+
+  app.innerHTML = html;
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,278 @@
+{
+ "reel": {
+  "name": "The Agent Knew, Part 5 \u2014 What it changes",
+  "date": "2026-10-27",
+  "keyword": "PAPER",
+  "pillar": "Explained (25%) \u2014 Paper Breakdown",
+  "format": "9:16 vertical \u00b7 720x1280",
+  "status": "draft",
+  "voice": "Helio (single pass, fixed speed 80)",
+  "scriptStatus": "FINAL DRAFT \u2014 90 words / 38.78s at speed 80 (139.2 wpm). Windows from the speed-80 test render word timestamps \u2014 re-time from the final voiceover in Phase B."
+ },
+ "beats": [
+  {
+   "id": 1,
+   "name": "Recap \u2014 open models",
+   "section": "Hook",
+   "duration": 5.48,
+   "status": "draft",
+   "voiceover": "Open models lie after they act \u2014 break a rule, then hide it.",
+   "overlay": "ACT \u2192 LIE",
+   "treatment": "Split-screen: Kit below, timeline card above",
+   "source": "Remotion (Kit + MovingBackdrop) + moving background (footage path if delivered, else LTX text-free ambient)",
+   "notes": "Recap hook \u2014 lands the contrast in one line so a viewer who missed Part 1 still follows.",
+   "startFrame": {
+    "desc": "Kit walks in from the left below; the timeline card above shows a grey ACT arrow.",
+    "img": ""
+   },
+   "endFrame": {
+    "desc": "The timeline completes grey ACT \u2192 LIE; Kit points up at the LIE step.",
+    "img": ""
+   },
+   "camera": {
+    "from": "Wide on the timeline card",
+    "to": "Close on the grey LIE step",
+    "move": "drift + push-in",
+    "direction": "Forward",
+    "distance": "Wide \u2192 close",
+    "duration": "5.48s"
+   },
+   "character": {
+    "position": "center-left",
+    "move": "walks in from the left, stops center-left",
+    "points": "up at the timeline as it completes",
+    "holds": "\u2014 none \u2014",
+    "expression": "neutral"
+   },
+   "assets": []
+  },
+  {
+   "id": 2,
+   "name": "The flip",
+   "section": "Body",
+   "duration": 6.68,
+   "status": "draft",
+   "voiceover": "Frontier models do it backwards: they state something false first, then act on it.",
+   "overlay": "LIE \u2192 ACT",
+   "treatment": "Split-screen: Kit below, timeline card above",
+   "source": "Remotion (Kit + MovingBackdrop) + moving background",
+   "notes": "Mirror of B1 with the order reversed, amber instead of grey \u2014 the visual rhyme carries the point.",
+   "startFrame": {
+    "desc": "Kit slides right below; the timeline card above resets, dim.",
+    "img": ""
+   },
+   "endFrame": {
+    "desc": "The timeline completes amber LIE \u2192 ACT; Kit holds the flipped card up.",
+    "img": ""
+   },
+   "camera": {
+    "from": "Wide on the reset timeline",
+    "to": "Close on the amber ACT step",
+    "move": "push-in",
+    "direction": "Forward",
+    "distance": "Wide \u2192 close",
+    "duration": "6.68s"
+   },
+   "character": {
+    "position": "right",
+    "move": "slides from center-left to the right side",
+    "points": "up at the flipped timeline",
+    "holds": "the flipped timeline card up at the end",
+    "expression": "thinking \u2192 excited"
+   },
+   "assets": []
+  },
+  {
+   "id": 3,
+   "name": "The warning is a sentence",
+   "section": "Body",
+   "duration": 5.28,
+   "status": "draft",
+   "voiceover": "In a quarter of cases, the first warning is a sentence, not an action.",
+   "overlay": "a sentence, not an action",
+   "treatment": "Split-screen: Kit below, speech-bubble card above",
+   "source": "Remotion (Kit + MovingBackdrop) + moving background",
+   "notes": "Reads 159.1 wpm in the test render \u2014 fast; flag only. The bubble lighting amber IS the beat.",
+   "startFrame": {
+    "desc": "Kit center below, watching; the card above shows a dim speech bubble beside a dim action icon.",
+    "img": ""
+   },
+   "endFrame": {
+    "desc": "The speech bubble lights amber with a check; the action icon stays dim. Kit points up at the bubble.",
+    "img": ""
+   },
+   "camera": {
+    "from": "Medium on the bubble + icon",
+    "to": "Close on the lit bubble",
+    "move": "push-in",
+    "direction": "Forward",
+    "distance": "Medium \u2192 close",
+    "duration": "5.28s"
+   },
+   "character": {
+    "position": "center",
+    "move": "slides to center, stays",
+    "points": "up at the speech bubble as it lights",
+    "holds": "\u2014 none \u2014",
+    "expression": "excited"
+   },
+   "assets": []
+  },
+  {
+   "id": 4,
+   "name": "Watch what it says",
+   "section": "Body",
+   "duration": 6.2,
+   "status": "draft",
+   "voiceover": "So checking only what an agent does is too late \u2014 you have to watch what it says.",
+   "overlay": "watch what it SAYS",
+   "treatment": "Split-screen: Kit below, bubble card above",
+   "source": "Remotion (Kit + MovingBackdrop) + moving background",
+   "notes": "Reads 164.5 wpm \u2014 fast; flag only. Interpretation beat (see fact-check.md): reasoning from the verified ordering, not a measured result. The overlay keeps it as a question of attention, not a paper claim.",
+   "startFrame": {
+    "desc": "Kit left below, thinking; the bubble card above replays dim, then the word 'SAYS' brightens.",
+    "img": ""
+   },
+   "endFrame": {
+    "desc": "Kit points up at the brightened 'SAYS'; the bubble pulses amber once.",
+    "img": ""
+   },
+   "camera": {
+    "from": "Wide on the bubble card",
+    "to": "Close on 'SAYS'",
+    "move": "pan + push-in",
+    "direction": "Right, then forward",
+    "distance": "Wide \u2192 close",
+    "duration": "6.2s"
+   },
+   "character": {
+    "position": "left",
+    "move": "slides to the left side",
+    "points": "up at the 'SAYS' word as it brightens",
+    "holds": "\u2014 none \u2014",
+    "expression": "thinking \u2192 excited"
+   },
+   "assets": []
+  },
+  {
+   "id": 5,
+   "name": "The fix \u2014 10% \u2192 1%",
+   "section": "Body",
+   "duration": 9.48,
+   "status": "draft",
+   "voiceover": "The fix holds: stop the action before it happens, and the lies fall with it \u2014 from 10% to 1%.",
+   "overlay": "GATE \u2014 checked every time \u00b7 10% \u2192 1% \u00b7 pooled, 3 models",
+   "treatment": "Split-screen: Kit below, gate card above",
+   "source": "Remotion gate card + moving background",
+   "notes": "Reads 120.3 wpm \u2014 slow; flag only. The 'pooled, 3 models' label carries the scope \u2014 it must stay legible. The gate finding was measured on open-weight models; the script says 'the fix holds' as continuity, not as a frontier measurement.",
+   "startFrame": {
+    "desc": "Kit center below, presenting; the gate card above shows a dim gate with 'checked every time' beneath it.",
+    "img": ""
+   },
+   "endFrame": {
+    "desc": "The gate lights teal with a check; '10% \u2192 1%' counts in amber with the 'pooled, 3 models' label beneath.",
+    "img": ""
+   },
+   "camera": {
+    "from": "Medium on the gate card",
+    "to": "Close on the amber 10% \u2192 1%",
+    "move": "push-in",
+    "direction": "Forward",
+    "distance": "Medium \u2192 close",
+    "duration": "9.48s"
+   },
+   "character": {
+    "position": "center",
+    "move": "slides to center, stays",
+    "points": "at the gate as it lights, then at the 10% \u2192 1%",
+    "holds": "the gate card up at the end",
+    "expression": "excited (nod + thumbs up when the gate checks)"
+   },
+   "assets": []
+  },
+  {
+   "id": 6,
+   "name": "Caveat + CTA",
+   "section": "CTA",
+   "duration": 5.66,
+   "status": "draft",
+   "voiceover": "Early results \u2014 a preprint, on mock tasks. Follow for more.",
+   "overlay": "preprint \u00b7 mock tasks \u00b7 Follow \u00b7 Comment PAPER",
+   "treatment": "Split-screen end card with citation",
+   "source": "Remotion end card + moving background",
+   "notes": "5.66s \u2014 comfortable for the citation + Follow. Citation (title, authors, arXiv ID) must be legible; animations land by ~36.5s.",
+   "startFrame": {
+    "desc": "Kit center below, thumbs up, as the end card begins: citation lines form above, wordmark below.",
+    "img": ""
+   },
+   "endFrame": {
+    "desc": "Kit points at the full end card \u2014 citation (The Agent Knew, Fayyazi, Kamal, Pedram, arXiv:2610.17301), wordmark, 'Follow', 'Comment PAPER' chip.",
+    "img": ""
+   },
+   "camera": {
+    "from": "Medium on the citation",
+    "to": "Full end card",
+    "move": "pull-back",
+    "direction": "Back",
+    "distance": "Medium \u2192 wide",
+    "duration": "5.66s"
+   },
+   "character": {
+    "position": "center",
+    "move": "slides to center, stays",
+    "points": "at the citation, then at the 'Follow' end card",
+    "holds": "\u2014 none \u2014",
+    "expression": "excited (thumbs up; animations land early)"
+   },
+   "assets": []
+  }
+ ],
+ "gate1": [
+  {
+   "done": false,
+   "label": "Scripts final: Part 1, 87 words (speed 95); Part 2, 90 words (speed 80) \u2014 see script-part1.md / script-part2.md"
+  },
+  {
+   "done": false,
+   "label": "Storyboard canvas approved (frames + camera lines + Kit track + split-screen layout)"
+  },
+  {
+   "done": false,
+   "label": "Producer cost plan attached (per-shot source + cost) \u2014 in phase-a-report.md"
+  },
+  {
+   "done": true,
+   "label": "Every beat has a moving frame (no NO MOTION flags)"
+  }
+ ],
+ "notes": [
+  {
+   "author": "Director",
+   "text": "Phase A (2026-10-27, late evening): Part 2, 90 words (at the cap); voice Helio speed 80 (139.2 wpm, 38.78s in the test render). Per-sentence pace: S3 159.1, S4 164.5 fast; S5 120.3, S6 118.1 slow \u2014 flags only."
+  },
+  {
+   "author": "Director",
+   "text": "SPLIT-SCREEN LAYOUT (from the @theopenstack promo reel): Kit hosts from the lower foreground (bottom ~45% of frame, never leaves it); the proof visual sits in a framed panel above (top ~55%) and swaps every few seconds. The proof panel is what changes; Kit is the constant."
+  },
+  {
+   "author": "Director",
+   "text": "B4 is an interpretation beat (see fact-check.md): 'watch what it says' follows from the verified ordering, it is not a measured result. Do not upgrade it into a paper claim on screen."
+  },
+  {
+   "author": "Director",
+   "text": "B5 label 'pooled, 3 models' must stay legible \u2014 it is the scope of the 10% \u2192 1% figure."
+  },
+  {
+   "author": "Director",
+   "text": "Footage path (parallel job) may deliver free stock clips into workspace/instagram/footage/ \u2014 use them as moving backgrounds under the overlays if they land in time; otherwise LTX text-free ambient from the laptop GPU. Never ship a beat with a static background."
+  },
+  {
+   "author": "Director",
+   "text": "FACELESS: no employer, no personal information, no portfolio/chatbot reference anywhere. Kit hosts every beat; idle bob + blink run underneath every pose."
+  },
+  {
+   "author": "Director",
+   "text": "Palette: navy/teal + amber accent (#F59E0B / #FF7A1A). Warm accent only on hook text, key numbers (10% \u2192 1%), the CTA, and Kit's orange-accent sneakers."
+  }
+ ]
+}

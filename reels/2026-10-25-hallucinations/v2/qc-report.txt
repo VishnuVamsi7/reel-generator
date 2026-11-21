@@ -1,0 +1,156 @@
+QC REPORT — "Why AI hallucinates" reel v2 (your.ai.toolkit)
+Date: 2026-10-25 | Folder: ~/workspace/instagram/reels/2026-10-25-hallucinations/v2/
+Source: v1 script lines (canonical, from task) + caption.txt copied VERBATIM from v1 (diff-verified).
+NOTHING WAS POSTED. No approval prompts, no publish calls. Files only.
+
+================================================================
+SPEED NOTE (deviation from the brief, with evidence)
+================================================================
+Brief said start at --speed 80. Line 1 at speed 80 measured 2.184s = 82.4 wpm
+(3 words). At that rate the 105-word script would total ~79s and every line
+would sit far below the 130-160 wpm target. Calibration on line 1:
+speed 80 -> 2.184s (82 wpm) | 100 -> 1.488s (121 wpm) | 120 -> 1.248s (144 wpm)
+| 140 -> 1.032s (174 wpm). So per-line speeds were tuned to a 145 wpm target
+(range used: 57-195). Two retune rounds were needed; final table below.
+All TTS calls used voice avocado_v2:MAI_03 and every JSON response reported
+voice "avocado_v2:MAI_03" (= Helio, per the verified catalog fact).
+
+================================================================
+GATE 4 — VOICE + PER-LINE WPM (all lines 130-160, none over 170) : PASS
+================================================================
+Voice verified avocado_v2:MAI_03 (= Helio) on all 18 lines (30 TTS calls total:
+18 initial + 12 retune round 1 + 3 retune round 2; every JSON ok=true).
+Durations measured with ffprobe per line-NN.mp3. wpm = words / (duration/60).
+
+Line | TTS speed | mp3 dur (s) | words | wpm   | verdict
+ 1   | 120       | 1.248       | 3     | 144.2 | OK
+ 2   | 195       | 1.200       | 3     | 150.0 | OK
+ 3   |  81       | 2.352       | 6     | 153.1 | OK
+ 4   | 120       | 2.256       | 6     | 159.6 | OK
+ 5   |  84       | 3.840       | 9     | 140.6 | OK
+ 6   |  96       | 3.384       | 8     | 141.8 | OK
+ 7   |  64       | 3.216       | 7     | 130.6 | OK
+ 8   | 120       | 3.360       | 8     | 142.9 | OK
+ 9   | 120       | 1.272       | 3     | 141.5 | OK
+10   |  57       | 2.112       | 5     | 142.0 | OK
+11   |  97       | 3.048       | 7     | 137.8 | OK
+12   | 120       | 2.976       | 7     | 141.1 | OK
+13   |  80       | 2.472       | 6     | 145.6 | OK
+14   | 120       | 2.352       | 6     | 153.1 | OK
+15   | 195       | 1.224       | 3     | 147.1 | OK
+16   |  83       | 2.928       | 7     | 143.4 | OK
+17   |  78       | 2.496       | 6     | 144.2 | OK
+18   |  96       | 2.088       | 5     | 143.7 | OK
+Total words: 105 | Total voiceover: 43.824s | Average: 143.8 wpm
+Range: 130.6-159.6 wpm. No line over 170. PASS.
+
+================================================================
+GATE 3 — CAPTION BOUNDARIES = MEASURED AUDIO BOUNDARIES : PASS
+================================================================
+captions.ass built from cumulative measured mp3 durations (no estimates).
+Style copied from v1: PlayResX 720, PlayResY 1280, DejaVu Sans 46px,
+bottom-center (Alignment 2), MarginV 200.
+ASS times are centisecond-rounded, so each boundary is within 0.01s of measured.
+
+Line | Start (s) | End (s)   | mp3 dur (s) | Text
+ 1   |  0.000    |  1.248    | 1.248 | AI doesn't lie.
+ 2   |  1.248    |  2.448    | 1.200 | It guesses — confidently.
+ 3   |  2.448    |  4.800    | 2.352 | Why does AI make things up?
+ 4   |  4.800    |  7.056    | 2.256 | Because it doesn't actually know anything.
+ 5   |  7.056    | 10.896    | 3.840 | A language model predicts the most likely next word —
+ 6   | 10.896    | 14.280    | 3.384 | it's a very convincing guesser, not a fact-checker.
+ 7   | 14.280    | 17.496    | 3.216 | Ask it something it wasn't trained on
+ 8   | 17.496    | 20.856    | 3.360 | and it'll still answer, smoothly, confidently, and wrong.
+ 9   | 20.856    | 22.128    | 1.272 | That's a hallucination.
+10   | 22.128    | 24.240    | 2.112 | Here's how you catch it.
+11   | 24.240    | 27.288    | 3.048 | One: ask for sources, and click them.
+12   | 27.288    | 30.264    | 2.976 | Two: double-check every number, date, and name —
+13   | 30.264    | 32.736    | 2.472 | those are where it slips most.
+14   | 32.736    | 35.088    | 2.352 | Three: use tools that search first,
+15   | 35.088    | 36.312    | 1.224 | like Perplexity or NotebookLM,
+16   | 36.312    | 39.240    | 2.928 | so the answer comes from real documents.
+17   | 39.240    | 41.736    | 2.496 | AI is a great starting point.
+18   | 41.736    | 43.824    | 2.088 | It's a terrible final answer.
+Spot-check on burned-in frames: t=5s shows line 4 ("Because it doesn't
+actually know anything."); t=20s shows line 8 ("and it'll still answer,
+smoothly, confidently, and wrong."). Both correct for their timestamps. PASS.
+
+================================================================
+GATE 1 — CLIP COUNT + VISUAL DISTINCTNESS : PASS
+================================================================
+Clips needed = ceil(43.824 / 10) = 5. Clips generated = 5, all first-attempt
+successes (0 retries needed), each 720x1280, 10.000s, 24fps.
+One frame extracted per clip (t=5s of each clip-N.mp4, in qc_frames/) and
+visually inspected — all five scenes are different:
+ clip-1: smartphone close-up, AI chatbot app answering confidently
+ clip-2: white dice tumbling on dark teal table, floating question marks
+ clip-3: hands typing on laptop, next-word prediction appearing on screen
+ clip-4: magnifying glass over printed document + phone, "WRONG" stamp
+ clip-5: laptop showing search-first app, green checkmarks beside sources
+No clip reused, looped, or frozen. PASS.
+
+Clip prompts used (all vertical 9:16, 720x1280, ~10s):
+ 1: "Close-up of a smartphone on a desk showing a friendly AI chatbot app; a
+    confident answer types itself out smoothly on the chat screen with a small
+    pulsing AI avatar icon. Warm modern home-office lighting, shallow depth
+    of field, clean and minimal."
+ 2: "A pair of white dice tumbling and rolling across a dark teal tabletop in
+    slow motion, landing on random faces, with soft dramatic lighting and
+    subtle floating question marks in the background. Conveys guessing and
+    chance, not certainty."
+ 3: "Top-down view of hands typing on a laptop keyboard; on the laptop screen,
+    autocomplete word suggestions pop up one after another above the cursor as
+    the sentence is typed, like next-word prediction. Modern bright workspace,
+    clean minimal desk."
+ 4: "A large magnifying glass moves slowly across a printed document and a
+    phone screen showing a chat answer, revealing a highlighted wrong date and
+    a red X mark stamped beside it. Investigative mood, warm desk lamp
+    lighting, paper and pen on a wooden desk."
+ 5: "A calm, bright scene of a person at a tidy desk opening a search-first AI
+    app on a laptop; green checkmarks appear one by one beside short source
+    citations and document icons on screen, conveying verified answers from
+    real documents. Soft daylight, hopeful and trustworthy mood."
+
+================================================================
+GATE 2 — FRAME DIVERSITY (PSNR, 5s samples, >40 dB = FAIL) : PASS
+================================================================
+One frame every 5s from the final reel (t=0,5,...,40s); PSNR between
+consecutive samples (ffmpeg psnr filter, average):
+ t=00s vs t=05s :   9.27 dB
+ t=05s vs t=10s :   7.11 dB
+ t=10s vs t=15s :  16.27 dB
+ t=15s vs t=20s :   5.80 dB
+ t=20s vs t=25s :  10.54 dB
+ t=25s vs t=30s :   7.58 dB
+ t=30s vs t=35s :   9.83 dB
+ t=35s vs t=40s :  10.33 dB
+Highest consecutive PSNR: 16.27 dB — far below the 40 dB near-identical
+threshold. No frozen/near-identical pair. PASS.
+
+================================================================
+GATE 5 — DURATIONS : PASS
+================================================================
+ voiceover.mp3 length:        43.824s (target ~40-45s) PASS
+ final video (format):        43.792s | video stream 43.792s, audio 43.776s
+ video vs voiceover diff:     0.032s (limit 0.5s) PASS
+ Assembly: 5 clips concatenated (50.000s), trimmed 6.176s from the END
+ (tail of clip-5 only, 0:00-3.824 of clip-5 used) — never extended, no loops.
+ Captions burned with ffmpeg subtitles filter from measured captions.ass.
+ Cover: cover.jpg extracted from final reel at t=1.0s (line 1, "AI doesn't lie.").
+
+================================================================
+FILES DELIVERED (v2 folder)
+================================================================
+ hallucinations-reel.mp4 (11 MB, 720x1280, 43.79s, H.264 + AAC)
+ cover.jpg (from final reel t=1.0s)
+ caption.txt (verbatim copy of v1, keyword CHECK, diff-verified)
+ captions.ass (measured boundaries, v1 style block)
+ voiceover.mp3 (43.824s, concat of line-01..line-18.mp3)
+ line-01.mp3 .. line-18.mp3 (per-line voiceover, avocado_v2:MAI_03)
+ clip-1.mp4 .. clip-5.mp4 (each 720x1280, 10.000s)
+ qc-report.txt (this file)
+ qc_frames/ (per-clip frames + 5s reel samples used for QC)
+ concat_vo.txt / concat_clips.txt (assembly lists, intermediate)
+
+OVERALL: ALL FIVE QC GATES PASS. Reel ready for Vishnu's review.
+NOT POSTED anywhere.

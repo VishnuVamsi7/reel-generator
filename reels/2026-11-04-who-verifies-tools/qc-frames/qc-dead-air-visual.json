@@ -1,0 +1,93 @@
+{
+  "video": "/home/hatch/workspace/instagram/reels/2026-11-04-who-verifies-tools/who-verifies-tools-visual.mp4",
+  "duration_s": 38.47,
+  "freezedetect": {
+    "noise_db": -60.0,
+    "min_dur_s": 0.6
+  },
+  "thresholds": {
+    "fail_fraction": 0.3,
+    "fail_span_s": 2.0,
+    "longest_shot_s": 8.0
+  },
+  "freeze_spans": [
+    [
+      0.0,
+      1.23
+    ],
+    [
+      9.9,
+      12.9
+    ],
+    [
+      22.8,
+      25.83
+    ],
+    [
+      37.23,
+      38.47
+    ]
+  ],
+  "dead_air_during_speech_s": 8.5,
+  "dead_air_spans": [
+    [
+      0.0,
+      1.23
+    ],
+    [
+      9.9,
+      12.9
+    ],
+    [
+      22.8,
+      25.83
+    ],
+    [
+      37.23,
+      38.47
+    ]
+  ],
+  "beats": [
+    {
+      "name": "B1 Pic1",
+      "start": 0.0,
+      "end": 10.99,
+      "duration_s": 10.99,
+      "frozen_s": 2.32,
+      "frozen_during_speech_s": 2.32,
+      "frozen_fraction": 0.211,
+      "longest_freeze_s": 1.23,
+      "verdict": "PASS",
+      "reasons": []
+    },
+    {
+      "name": "B2 Pic2",
+      "start": 10.99,
+      "end": 24.36,
+      "duration_s": 13.37,
+      "frozen_s": 3.47,
+      "frozen_during_speech_s": 3.47,
+      "frozen_fraction": 0.26,
+      "longest_freeze_s": 1.91,
+      "verdict": "PASS",
+      "reasons": []
+    },
+    {
+      "name": "B3 Pic3",
+      "start": 24.36,
+      "end": 38.47,
+      "duration_s": 14.11,
+      "frozen_s": 2.71,
+      "frozen_during_speech_s": 2.71,
+      "frozen_fraction": 0.192,
+      "longest_freeze_s": 1.47,
+      "verdict": "PASS",
+      "reasons": []
+    }
+  ],
+  "pacing_cv": 1.0,
+  "warnings": [
+    "longest shot B3 Pic3 14.11s (>8s) \u2014 consider splitting"
+  ],
+  "verdict": "PASS"
+}

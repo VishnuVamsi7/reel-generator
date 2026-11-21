@@ -1,0 +1,318 @@
+{
+  "reel": {
+    "name": "Reasoning effort, Part 3 \u2014 Start low, climb only on failure",
+    "date": "2026-10-28",
+    "keyword": "PAPER",
+    "pillar": "Explained (25%)",
+    "format": "9:16 vertical \u00b7 720x1280",
+    "status": "draft",
+    "scriptStatus": "PROPOSAL \u2014 87 words / 39.48s at Helio speed 85 (132.2 wpm, test render). Figs 5 + 4 PENDING from Vishnu. Awaiting Gate 1.",
+    "voice": "Helio (single pass, fixed speed 85)"
+  },
+  "beats": [
+    {
+      "id": 1,
+      "name": "Hook \u2014 the fix",
+      "section": "Hook",
+      "duration": 5.0,
+      "voiceover": "So what's the fix? Don't pick one effort level. Start low.",
+      "overlay": "The fix: start low",
+      "startFrame": {
+        "desc": "Kit walks in from the left; wide shot of Fig 5 (laddering vs fixed efforts) dim behind him.",
+        "img": ""
+      },
+      "endFrame": {
+        "desc": "Kit stops center-left, pointing up at Fig 5; the laddering line (green triangles) has begun drawing in from the low end.",
+        "img": ""
+      },
+      "camera": {
+        "move": "push-in",
+        "from": "Wide on Fig 5",
+        "to": "Medium on Fig 5's panels",
+        "direction": "Forward, slightly down",
+        "distance": "Wide \u2192 medium",
+        "duration": "5.0s"
+      },
+      "character": {
+        "position": "center-left",
+        "move": "walks in from the left, stops center-left",
+        "points": "up at Fig 5's laddering line",
+        "holds": "\u2014 none \u2014",
+        "expression": "excited"
+      },
+      "treatment": "Paper figure (Fig 5) animated in Remotion \u2014 pan/zoom + line draw-in; Kit foreground",
+      "source": "Paper figure supplied by Vishnu (PENDING) + Remotion",
+      "assets": [
+        "Fig 5 \u2014 PENDING \u2014 figure not yet received from Vishnu"
+      ],
+      "status": "draft",
+      "notes": "Hook completes at ~5.0s \u2014 past the 3s ideal; the first line lands ~3.5s. Flagged for Gate 1."
+    },
+    {
+      "id": 2,
+      "name": "Climb only on failure",
+      "section": "Body",
+      "duration": 8.6,
+      "voiceover": "If the answer fails a check, climb to max \u2014 and only then. The paper calls it na\u00efve laddering.",
+      "overlay": "Na\u00efve laddering \u00b7 climb only on failure",
+      "startFrame": {
+        "desc": "Fig 5's laddering line at the low end; a 'failed check' marker is dim.",
+        "img": ""
+      },
+      "endFrame": {
+        "desc": "The green line has stepped up only at the failure marker; the 'na\u00efve laddering' label has appeared; Kit points at the step.",
+        "img": ""
+      },
+      "camera": {
+        "move": "pan",
+        "from": "Low end of Fig 5's laddering line",
+        "to": "The step-up point",
+        "direction": "Left \u2192 right, following the step",
+        "distance": "Across the line",
+        "duration": "8.6s"
+      },
+      "character": {
+        "position": "center",
+        "move": "slides to center",
+        "points": "at the step-up point on the line",
+        "holds": "\u2014 none \u2014",
+        "expression": "excited"
+      },
+      "treatment": "Paper figure (Fig 5) animated in Remotion \u2014 line steps up at the failure marker",
+      "source": "Paper figure supplied by Vishnu (PENDING) + Remotion",
+      "assets": [
+        "Fig 5 \u2014 PENDING \u2014 figure not yet received from Vishnu"
+      ],
+      "status": "draft",
+      "notes": "The step happens ONLY at the failure marker \u2014 that is the whole idea. If the line climbs early, the beat is wrong."
+    },
+    {
+      "id": 3,
+      "name": "Matches or beats max, costs less",
+      "section": "Body",
+      "duration": 8.2,
+      "voiceover": "It matches or beats fixed max effort on every model and benchmark tested \u2014 and it costs less.",
+      "overlay": "Matches or beats max \u00b7 costs less",
+      "startFrame": {
+        "desc": "Fig 5's panels: the laddering line and the fixed-max line both mid-chart, close together.",
+        "img": ""
+      },
+      "endFrame": {
+        "desc": "The laddering line has finished ahead of the fixed-max line (higher success, lower cost); Kit has slid with it, excited.",
+        "img": ""
+      },
+      "camera": {
+        "move": "pan",
+        "from": "Mid-chart, lines together",
+        "to": "End of chart, laddering ahead",
+        "direction": "Left \u2192 right, racing the lines",
+        "distance": "Across the full figure width",
+        "duration": "8.2s"
+      },
+      "character": {
+        "position": "center",
+        "move": "slides with the laddering line",
+        "points": "at the laddering line as it finishes ahead",
+        "holds": "\u2014 none \u2014",
+        "expression": "excited"
+      },
+      "treatment": "Paper figure (Fig 5) animated in Remotion \u2014 lines race to the finish",
+      "source": "Paper figure supplied by Vishnu (PENDING) + Remotion",
+      "assets": [
+        "Fig 5 \u2014 PENDING \u2014 figure not yet received from Vishnu"
+      ],
+      "status": "draft",
+      "notes": "The payoff beat: the line race is the visual argument. Laddering must visibly finish ahead."
+    },
+    {
+      "id": 4,
+      "name": "GPT-5.6-sol: 83 \u2192 89, \u221217%",
+      "section": "Body",
+      "duration": 5.4,
+      "voiceover": "GPT-5.6-sol on Terminal-Bench: 83 to 89 percent solved, bill down 17 percent.",
+      "overlay": "83.0% \u2192 88.6% \u00b7 \u221217.4%",
+      "startFrame": {
+        "desc": "Medium on Fig 5's GPT-5.6-sol panel; the numbers are small.",
+        "img": ""
+      },
+      "endFrame": {
+        "desc": "Zoomed tight on the panel; amber '83.0% \u2192 88.6%' and '\u221217.4%' overlays have landed; Kit points at each.",
+        "img": ""
+      },
+      "camera": {
+        "move": "push-in",
+        "from": "Medium on Fig 5",
+        "to": "Tight on the GPT-5.6-sol panel",
+        "direction": "Forward into the panel",
+        "distance": "Medium \u2192 tight",
+        "duration": "5.4s"
+      },
+      "character": {
+        "position": "right",
+        "move": "slides to the right side",
+        "points": "at the amber overlays as they land",
+        "holds": "\u2014 none \u2014",
+        "expression": "excited"
+      },
+      "treatment": "Paper figure (Fig 5) animated in Remotion \u2014 zoom + amber overlays",
+      "source": "Paper figure supplied by Vishnu (PENDING) + Remotion",
+      "assets": [
+        "Fig 5 \u2014 PENDING \u2014 figure not yet received from Vishnu"
+      ],
+      "status": "draft",
+      "notes": "Voiceover rounds 88.6% \u2192 '89 percent' and 17.4% \u2192 '17 percent'; the overlays show the exact figures."
+    },
+    {
+      "id": 5,
+      "name": "What extra effort buys",
+      "section": "Body",
+      "duration": 4.5,
+      "voiceover": "Start cheap, pay for max only when it earns it.",
+      "overlay": "Pay for max only when it earns it",
+      "startFrame": {
+        "desc": "Kit center; Fig 4 (behaviour-group shifts) fades in behind him, bars still centred.",
+        "img": ""
+      },
+      "endFrame": {
+        "desc": "The diverging bars have slid out from centre; the 'evaluation' bar (largest change) is highlighted \u2014 the extra effort mostly buys more checking.",
+        "img": ""
+      },
+      "camera": {
+        "move": "drift",
+        "from": "Medium on Fig 4, bars centred",
+        "to": "Medium on Fig 4, bars diverged",
+        "direction": "Slow drift",
+        "distance": "Medium \u2192 medium",
+        "duration": "4.5s"
+      },
+      "character": {
+        "position": "center",
+        "move": "slides to center, stays",
+        "points": "at the highlighted 'evaluation' bar",
+        "holds": "\u2014 none \u2014",
+        "expression": "thinking"
+      },
+      "treatment": "Paper figure (Fig 4) animated in Remotion \u2014 diverging bars slide out from centre",
+      "source": "Paper figure supplied by Vishnu (PENDING) + Remotion",
+      "assets": [
+        "Fig 4 \u2014 PENDING \u2014 figure not yet received from Vishnu"
+      ],
+      "status": "draft",
+      "notes": "Fig 4 linkage is the director's read of \u00a73.3 (extra effort mostly buys more checking). Tighten at Gate 1 once the figure is in hand; if the link reads loose, this beat reverts to the Fig 5 end frame."
+    },
+    {
+      "id": 6,
+      "name": "Preprint flag",
+      "section": "CTA",
+      "duration": 4.1,
+      "voiceover": "Early results \u2014 a preprint, not the final word.",
+      "overlay": "Preprint \u2014 Oct 2026 \u00b7 not the final word",
+      "startFrame": {
+        "desc": "Kit center, over the Fig 5 end frame; the citation line is dim.",
+        "img": ""
+      },
+      "endFrame": {
+        "desc": "The citation line ('Sun et al., arXiv:2610.34491 \u2014 Preprint, Oct 2026') is fully lit; Kit nods at it.",
+        "img": ""
+      },
+      "camera": {
+        "move": "pull-back",
+        "from": "Medium on Fig 5 end frame",
+        "to": "Medium-wide, citation line visible",
+        "direction": "Back",
+        "distance": "Medium \u2192 medium-wide",
+        "duration": "4.1s"
+      },
+      "character": {
+        "position": "center",
+        "move": "slides to center, stays",
+        "points": "at the citation line as it lights",
+        "holds": "\u2014 none \u2014",
+        "expression": "neutral \u2192 excited (nod)"
+      },
+      "treatment": "Paper figure (Fig 5) + citation overlay",
+      "source": "Paper figure supplied by Vishnu (PENDING) + Remotion",
+      "assets": [
+        "Fig 5 \u2014 PENDING \u2014 figure not yet received from Vishnu"
+      ],
+      "status": "draft",
+      "notes": "The preprint flag must be legible on screen, not just spoken."
+    },
+    {
+      "id": 7,
+      "name": "CTA \u2014 Follow",
+      "section": "CTA",
+      "duration": 3.6,
+      "voiceover": "Follow for one AI idea, simply, every week.",
+      "overlay": "Follow \u00b7 one AI idea, simply, every week",
+      "startFrame": {
+        "desc": "Kit center, thumbs up, as the end card begins; tight on the page wordmark over the drifting background.",
+        "img": ""
+      },
+      "endFrame": {
+        "desc": "Kit points at the full end card \u2014 wordmark, 'Follow', and the citation line \u2014 over the drifting background.",
+        "img": ""
+      },
+      "camera": {
+        "move": "pull-back",
+        "from": "Tight on the wordmark",
+        "to": "Full end card",
+        "direction": "Back",
+        "distance": "Close \u2192 medium-wide",
+        "duration": "3.6s"
+      },
+      "character": {
+        "position": "center",
+        "move": "slides to center, stays",
+        "points": "at the 'Follow' end card",
+        "holds": "\u2014 none \u2014",
+        "expression": "excited (thumbs up; animations land early)"
+      },
+      "treatment": "LTX ambient + end card",
+      "source": "LTX text-free ambient clip (laptop GPU) + Remotion end card",
+      "assets": [],
+      "status": "draft",
+      "notes": "CTA beat is short (3.6s) \u2014 animations must land in the first second."
+    }
+  ],
+  "notes": [
+    {
+      "author": "Director",
+      "text": "Phase A (2026-10-28): script 87 words, Helio speed 85 (132.2 wpm, 39.48s in the test render \u2014 in band, under 40s but close to the cap; any added words need cuts elsewhere). Figs 5 + 4 PENDING from Vishnu; the canvas cannot go to Gate 1 until the figures arrive."
+    },
+    {
+      "author": "Director",
+      "text": "Beat 5's Fig 4 linkage is provisional \u2014 see the beat note. Gate 1 decides whether it stays."
+    },
+    {
+      "author": "Director",
+      "text": "Palette: navy/teal + amber accent (#F59E0B). Amber only on hook text, 'na\u00efve laddering', the 83.0% \u2192 88.6% / \u221217.4% numbers, and the CTA."
+    },
+    {
+      "author": "Director",
+      "text": "Citation: Sun et al., arXiv:2610.34491 (preprint, Oct 2026). The citation line is on screen in Beat 6 and in the description."
+    }
+  ],
+  "gate1": [
+    {
+      "label": "Script approved by Vishnu (verbatim, 87 words)",
+      "done": false
+    },
+    {
+      "label": "Figs 5 + 4 received from Vishnu as images",
+      "done": false
+    },
+    {
+      "label": "Storyboard canvas approved (frames + camera lines)",
+      "done": false
+    },
+    {
+      "label": "Producer cost plan attached (per-shot source + cost) \u2014 in phase-a-report.md",
+      "done": false
+    },
+    {
+      "label": "Every beat has a moving frame (no NO MOTION flags)",
+      "done": true
+    }
+  ]
+}

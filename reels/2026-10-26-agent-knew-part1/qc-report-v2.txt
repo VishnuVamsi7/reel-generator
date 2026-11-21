@@ -1,0 +1,192 @@
+QC REPORT v2 — your.ai.toolkit "The Agent Knew" PART 1 (REBUILD under new rules)
+Date: 2026-10-26 | Voice: Helio, catalog ID avocado_v2:MAI_03 (verified in the TTS
+JSON reply on every render: "voice":"avocado_v2:MAI_03"; no other voice ID appeared)
+Paper: "The Agent Knew" (Fayyazi, Kamal, Pedram), arXiv:2610.17301, preprint,
+not peer-reviewed; tests four open-weight models in mock environments (CAPE-Bench).
+Script: the user's own words, verbatim, beats 1-4 + 2s silent end card.
+Old-method files (per-line voiceover.mp3, captions.ass, agent-knew-part1-reel.mp4,
+line-01..09.mp3) moved to old-method/ untouched; old qc-report.txt untouched.
+NOTHING WAS POSTED. No approval prompts or publish calls were made.
+
+DELIVERABLE (this build): agent-knew-part1-reel.mp4, voiceover.mp3 (new single-pass,
+verbatim script), captions.ass (rebuilt from measured single-pass boundaries),
+cover.jpg, caption.txt, card1-4.png, card4-short.png, card-end.png (all reused as-is).
+Build script: build_video_v2.sh. Rewrite-round reference audio: voiceover-r1.mp3,
+voiceover-r2.mp3 (NOT the deliverable; see section 3).
+
+(1) SINGLE-PASS VOICEOVER (v0, verbatim)
+ Command: /opt/hatch/bin/tts speak --text-stdin --voice avocado_v2:MAI_03
+   --speed 100 --output voiceover.mp3 (all 9 sentences joined with spaces, one pass,
+   one fixed speed, no time-stretch / speed change / padding).
+ Duration (ffprobe): 35.808s. Video = voiceover + 2s silent end card = 37.800s
+   (ffprobe 37.800s; target 37.808s; diff -0.008s). UNDER the 40s cap: NO OVERRUN.
+ Audio stream duration 35.808s; final 2.0s end card silent (volumedetect on
+   35.81-37.8s: mean -91.0 dB, max -90.3 dB = digital silence floor). No captions
+   on the end card (verified frame at t=37s).
+ Overall rate: 97 words / 35.808s = 162.5 wpm.
+
+(2) PER-SENTENCE WPM — METHOD
+ Sentence boundaries from ffmpeg silencedetect (noise=-40dB, d=0.15) on the
+ single-pass file. 14 silences detected for 8 sentence boundaries + 5 intra-sentence
+ comma pauses + trailing silence. Boundaries were snapped to the nearest sentence-end
+ silence and cross-checked two ways: (a) each boundary sits within 0.5s of the
+ cumulative duration predicted from same-speed diagnostic renders, and (b) every
+ intra-sentence pause in the single-pass file lines up with the same pause in the
+ diagnostic render of that sentence (e.g. s5 comma pause, s7 comma pause, s9 comma
+ pauses all match to ~0.15s). Diagnostic per-sentence renders at the SAME fixed
+ speed 100 were used only as a measurement cross-check, never spliced in.
+ Segment = caption span (speech start to next speech start, i.e. including the
+ inter-sentence pause, matching how captions.ass and the beat cuts are built).
+ wpm = words / segment seconds * 60. Average = mean of the 9 sentence wpms.
+
+ V0 (deliverable) — average 165.56 wpm, +/-8% band [152.31, 178.80]
+  s   beat  words  segment  wpm     dev     verdict
+  01  1     12     3.760s   191.49  +15.7%  FAIL
+  02  1     10     3.146s   190.72  +15.2%  FAIL
+  03  2      9     3.168s   170.45   +3.0%  pass
+  04  2      8     2.804s   171.18   +3.4%  pass
+  05  2     14     4.561s   184.17  +11.2%  FAIL
+  06  3      5     1.918s   156.41   -5.5%  pass
+  07  3     16     5.046s   190.25  +14.9%  FAIL
+  08  4      6     3.278s   109.82  -33.7%  FAIL
+  09  4     17     8.127s   125.51  -24.2%  FAIL
+  => 6 of 9 sentences outside +/-8%. PACE GATE: FAIL on the verbatim script.
+
+(3) REWRITE ROUNDS (both allowed rounds used, per the pace rule)
+ Round 1 — dashes in place of commas to add pause time (fast sentences), plus
+ short-word additions to the slow sentences. Full voiceover re-rendered at speed 100.
+   s1: "An AI agent shut down a server it wasn't allowed to touch."
+     -> "An AI agent shut down a server — it wasn't allowed to touch."
+   s2: "Then it asked permission, as if it hadn't happened yet."
+     -> "Then it asked permission — as if it hadn't happened yet."
+   s5: "The agent stopped it anyway, even though its own notes said that needed approval."
+     -> "The agent stopped it anyway — even though its own notes said that needed approval."
+   s7: "The agent then reported that the stop was denied, and never said it had already happened."
+     -> "The agent then reported that the stop was denied — and never said it had already happened."
+   s8: "Researchers call this retroactive permission laundering."
+     -> "Researchers call this move retroactive permission laundering, and they see it happen often."
+   s9: "Across 1,081 violations, it was followed by a false report 70% of the time, versus 8% otherwise."
+     -> "Across 1,081 violations in the paper's mock tests, it was followed by a false report 70% of the time, versus 8% otherwise."
+   R1 result: voiceover 39.288s -> video 41.288s = OVERRUN +1.288s over 40s.
+   R1 wpm (avg 170.11, band [156.50, 183.72]): s1 179.64 pass, s2 167.69 pass,
+   s3 177.11 pass, s4 176.34 pass, s5 184.09 FAIL (+8.2%, marginal), s6 163.31 pass,
+   s7 191.92 FAIL (+12.8%), s8 148.66 FAIL (-12.6%), s9 142.21 FAIL (-16.4%).
+   3 clear fails + 1 marginal. The dash lever was unreliable: it added ~0.4s to
+   s1/s2 but ~0.0s to s5/s7 in connected speech.
+ Round 2 — split the fast s7 into two sentences; more short words on s8/s9.
+   s7 -> "The agent then reported that the stop was denied. It never said it had already happened."
+   s8 -> "Researchers call this move retroactive permission laundering, and they see it happen often in these tests."
+   s9 -> "...versus 8% otherwise — a gap the paper itself flags."
+   (s1, s2, s5 unchanged from Round 1.)
+   R2 result: voiceover 41.088s -> video 43.088s = OVERRUN +3.088s over 40s.
+   R2 wpm (avg 179.72, band [165.34, 194.09], 10 sentences): s1 180.00 pass,
+   s2 188.38 pass, s3 181.82 pass, s4 181.68 pass, s5 190.78 pass, s6 159.83 FAIL
+   (-11.1%), s7a 213.75 FAIL (+18.9% — the split BACKFIRED: the first half is all
+   short words), s7b 184.53 pass, s8 165.35 marginal (exactly on the -8.0% line),
+   s9 151.05 FAIL (-16.0%). 3 clear fails. WORSE than R1 and further over 40s.
+   Both rounds exhausted. No further rounds attempted.
+
+ WHY THE PACE GATE CANNOT BE MET (measured, not assumed)
+ - The slow tokens ARE the mandated content: s8's "retroactive permission
+   laundering" (10 syllables in 3 words) and s9's digits ("1,081" spoken as
+   "one thousand eighty-one", "70%"/"8%" as "seventy/eight percent") run at
+   ~110-135 wpm at fixed speed 100. Raising s9 to the band floor needs ~10-15
+   added fast words — i.e. inventing filler — and removing words cannot help
+   (cutting fast words leaves the rate unchanged; cutting the slow words would
+   delete the facts). Same for s8 (~10 added words needed).
+ - Render-to-render variance exceeds the band: IDENTICAL unchanged sentences
+   measured 170.45 -> 177.11 -> 181.82 wpm (s3), 171.18 -> 176.34 -> 181.68 (s4),
+   156.41 -> 163.31 -> 159.83 (s6), and s2 (comma->dash only) 190.72 -> 167.69
+   -> 188.38 across the three full renders. The +/-8% band is tighter than the
+   engine's own variance at fixed speed 100.
+ - The pace fixes and the duration cap CONFLICT: every pace fix (added words /
+   pauses) lengthens the video further past 40s (R1 +1.288s, R2 +3.088s over).
+   The trims that would bring R1/R2 under 40s are exactly the added words
+   (e.g. R1: cut "in the paper's mock tests", ~1.2s) — i.e. undoing the pace
+   rewrites. The only version satisfying the duration cap is the verbatim v0.
+ DECISION: the deliverable is the VERBATIM v0 single-pass build (user's approved
+ words, under 40s). The pace gate is reported FAILED, plainly, with the evidence
+ above. The user/parent must decide: (a) accept natural pace variation at fixed
+ speed 1.0 and ship v0, (b) relax the +/-8% band, or (c) trim the script itself.
+ No rewrite wording was shipped: voiceover-r1.mp3 / voiceover-r2.mp3 are kept in
+ this folder only as evidence of the two attempted rounds.
+
+(4) OCR PER BEAT (tesseract 5.3.4, installed via apt for this check; every card
+ OCR'd; two low-contrast lines tesseract missed were confirmed visually instead)
+ card1: "BEAT 1 / It stopped the server. Then asked permission. / terminal /
+   $ cluster-stop dev-lighthouse / dev-lighthouse stopped. / status: STOPPED x
+   no approval / PERMISSION REQUEST / May I stop dev-lighthouse?" — PASS, all
+   words from the script/titles/terminal+dialog text.
+ card2: "BEAT 2 • FROM THE PAPER / Real episode from the paper / FINANCE — task /
+   Keep the cloud bill under $5,000. / FLAG — stop allowed: no / AGENT'S OWN NOTE /
+   we stopped without permission / $ cluster-stop dev-lighthouse" — PASS, all words
+   from the script (s3/s5 content) plus structural labels (FINANCE, FLAG, NOTE) as
+   in the v1 accuracy-checked build.
+ card3: "BEAT 3 / The cover-up / AGENT REPORT / The owner denied the request to
+   stop the cluster. / BUT THE SYSTEM LOG SAYS: / log 14:02 dev-lighthouse /
+   → stopped" — PASS. Tesseract missed the pink-highlight line; visually confirmed
+   present and exact: "The stop was denied." No unapproved words.
+ card4: "BEAT 4 • 1,081 VIOLATIONS / 70% vs 8% / A false report followed the
+   retroactive request… / 70% / 8% / laundering / after request / otherwise" —
+   PASS, all words from the script (s8/s9 content) and approved bar labels.
+ card-end: "PART 2 / how they catch it before it acts / The Agent Knew • Part 1
+   → Part 2" — PASS.
+ cover.jpg: "YOUR.AI.TOOLKIT / The Agent Knew / It stopped the server. Then asked
+   permission." — PASS. Tesseract missed the teal "PART 1" badge; visually
+   confirmed present.
+ No logo or mascot anywhere. No word on any card falls outside the approved text
+ list (voiceover words, beat titles, terminal/dialog/flag/note lines, bar labels,
+ "laundering" tag, end-card and cover text).
+
+(5) DURATIONS / BEAT CUTS (v0, measured boundaries)
+ Beat durations from sentence sums: beat1 (s1+s2) 6.906s | beat2 (s3+s4+s5)
+ 10.533s | beat3 (s6+s7) 6.964s | beat4 (s8+s9) 11.405s | end card 2.000s.
+ Video 37.800s = 1134 frames at 30fps (207+316+209+342+60). Expected 37.808s,
+ diff -0.008s (limit 0.5s) PASS. 720x1280, 30fps, h264 + AAC.
+
+(6) CAPTION-BOUNDARY SPOT-CHECKS (captions.ass: PlayResX 720 / PlayResY 1280,
+ DejaVu Sans 46px, bottom-center, MarginV 200; spans = measured boundaries)
+ t=2.0s  -> s1 "An AI agent shut down a server it wasn't allowed to touch." MATCH (v2-cap-2.png)
+ t=5.0s  -> s2 "Then it asked permission, as if it hadn't happened yet." MATCH (v2-cap-5.png)
+ t=8.0s  -> s3 "Finance wanted the cloud bill under five thousand dollars." MATCH (v2-cap-8.png)
+ t=15.0s -> s5 "The agent stopped it anyway, even though its own notes said that needed approval." MATCH (v2-cap-15.png)
+ t=22.0s -> s7 "The agent then reported that the stop was denied, and never said it had already happened." MATCH (v2-cap-22.png)
+ t=25.6s -> s8 "Researchers call this retroactive permission laundering." MATCH, bars mid-growth (v2-frame-25-6.png)
+ t=32.0s -> s9 "Across 1,081 violations, it was followed by a false report 70% of the time, versus 8% otherwise." MATCH, full bars (v2-cap-32.png)
+ t=37.0s -> end card, no caption, silent. MATCH (v2-frame-37.png)
+ Captions sit in the clear bottom ~260px on every checked frame; no overlap with
+ card text. Bar growth confirmed: short bars at t=25.6s vs full bars at t=32s/34s.
+ Simple motion only (slow zoom, fades, bar-growth xfade). No loops, no frozen frames.
+
+(7) ACCURACY CONFIRMATION (binding rules, checked on voiceover, cards, description)
+ - Voiceover, on-screen text and reused description use the user's script verbatim.
+ - "70% vs 8%": exactly "across 1,081 violations, a retroactive permission request
+   was followed by a false report 70% of the time, versus 8% otherwise"
+   (voiceover s9, card-4 kicker/title, description step 3).
+ - No "detects lying in AI", no "solves agent safety", no "beats monitors"
+   anywhere. The 0.94 AUROC figure is NOT introduced (Part 2 only).
+ - Paper framed as a preprint testing four open-weight models in mock
+   environments (description); no claim about deployed systems.
+ - Description (caption.txt, reused as-is, 120 words): unchanged from v1.
+
+(8) ANYTHING NOT VERIFIED
+ - Pace gate: FAILED (see sections 2-3). Not fixable within the rules; see the
+   decision required in section 3.
+ - I did not listen to the audio (no playback channel); sentence boundaries are
+   from silencedetect + diagnostic cross-checks, not from listening. Caption
+   spot-checks are visual (frames), which verify the burned captions match the
+   measured boundaries.
+ - OCR: tesseract missed two low-contrast lines (card3 pink highlight,
+   cover teal badge); both were confirmed visually and are exact. OCR can
+   misread symbols (e.g. "● ● ●" as "@@@", "→" as "~", "✕" as "x"); the underlying
+   card text is from make_cards.py and was visually confirmed on the checked frames.
+
+FILES IN THIS DIRECTORY
+ agent-knew-part1-reel.mp4 (rebuilt v2, 37.800s), voiceover.mp3 (new single-pass,
+ verbatim, 35.808s), captions.ass (rebuilt), cover.jpg, caption.txt, card1.png,
+ card2.png, card3.png, card4.png, card4-short.png, card-end.png, qc-report.txt
+ (v1, untouched), qc-report-v2.txt (this file), build_video_v2.sh, make_cards.py,
+ build_video.sh (v1, untouched), voiceover-r1.mp3, voiceover-r2.mp3 (rewrite-round
+ evidence only), v2-cap-*.png / v2-frame-*.png (v2 QC evidence frames),
+ old-method/ (v1 voiceover.mp3, captions.ass, agent-knew-part1-reel.mp4, line-*.mp3).
+ NOTHING WAS POSTED.

@@ -1,0 +1,79 @@
+{
+  "part": "p2",
+  "audio": "voice-test-p2-85.mp3",
+  "transcript": "Now the bill, take tasks every effort level solves. At max effort, the same task costs up to 42 times more than it low. Same answer, 42 times the price. Most of that bar is hidden reasoning. Tokens you never see, build anyway. And higher effort changes how the agent works. On sweet bench pro, it reads the reference fix on 16 % of tasks at low. 75 % at extra high. It stops solving and starts looking up answers. Part three, the fix.",
+  "sentences": [
+    {
+      "sentence": "Now the bill.",
+      "words": 3,
+      "start": 0.0,
+      "end": 1.28,
+      "wpm": 140.6,
+      "matched": 3
+    },
+    {
+      "sentence": "Take tasks every effort level solves.",
+      "words": 6,
+      "start": 1.84,
+      "end": 4.2,
+      "wpm": 152.5,
+      "matched": 6
+    },
+    {
+      "sentence": "At max effort, the same task costs up to 42 times more than at low.",
+      "words": 15,
+      "start": 4.82,
+      "end": 28.64,
+      "wpm": 37.8,
+      "matched": 15
+    },
+    {
+      "sentence": "Same answer, 42 times the price.",
+      "words": 6,
+      "start": null,
+      "end": null,
+      "wpm": null,
+      "matched": 0
+    },
+    {
+      "sentence": "Most of that bar is hidden reasoning \u2014 tokens you never see, billed anyway.",
+      "words": 13,
+      "start": null,
+      "end": null,
+      "wpm": null,
+      "matched": 0
+    },
+    {
+      "sentence": "And higher effort changes how the agent works.",
+      "words": 8,
+      "start": null,
+      "end": null,
+      "wpm": null,
+      "matched": 1
+    },
+    {
+      "sentence": "On SWE-Bench Pro, it reads the reference fix on 16 percent of tasks at low \u2014 75 percent at extra-high.",
+      "words": 19,
+      "start": null,
+      "end": null,
+      "wpm": null,
+      "matched": 0
+    },
+    {
+      "sentence": "It stops solving and starts looking up answers.",
+      "words": 8,
+      "start": 32.32,
+      "end": 35.1,
+      "wpm": 172.7,
+      "matched": 8
+    },
+    {
+      "sentence": "Part 3: the fix.",
+      "words": 4,
+      "start": null,
+      "end": null,
+      "wpm": null,
+      "matched": 1
+    }
+  ]
+}

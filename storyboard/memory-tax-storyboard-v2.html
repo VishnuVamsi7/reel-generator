@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Storyboard Canvas — TEMPLATE — your.ai.toolkit</title>
+<style>
+  /* Page design system: navy #0B1F3A, teal #14B8A6, white. Plain HTML/CSS/JS, no framework, no network. */
+  :root { --navy:#0B1F3A; --navy2:#12294d; --navy3:#0a1a2e; --teal:#14B8A6; --teal-dim:#0e8a7d; --white:#f4f7fa; --muted:#8fa3b8; --amber:#F59E0B; --red:#e5484d; --green:#2fbf71; --card:#10263f; --line:#1e3a5c; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy3); color:var(--white); font-family:"Segoe UI", system-ui, -apple-system, sans-serif; padding:24px; }
+  a { color:var(--teal); }
+  .wrap { max-width:1560px; margin:0 auto; }
+
+  /* ---------- header ---------- */
+  header { background:linear-gradient(135deg, var(--navy), var(--navy2)); border:1px solid var(--line); border-radius:14px; padding:22px 26px; margin-bottom:18px; }
+  header .eyebrow { color:var(--teal); font-size:12px; letter-spacing:.18em; text-transform:uppercase; font-weight:700; }
+  header h1 { font-size:30px; margin:6px 0 4px; }
+  header .sub { color:var(--muted); font-size:14px; }
+  .meta { display:flex; flex-wrap:wrap; gap:10px; margin-top:16px; }
+  .chip { background:var(--navy3); border:1px solid var(--line); border-radius:999px; padding:6px 12px; font-size:13px; }
+  .chip b { color:var(--teal); font-weight:700; }
+  .status-badge { display:inline-block; border-radius:999px; padding:5px 14px; font-size:13px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; }
+  .status-draft { background:#3a2a00; color:var(--amber); border:1px solid var(--amber); }
+  .status-approved { background:#06351f; color:var(--green); border:1px solid var(--green); }
+  .status-outline { background:#1a2a44; color:var(--muted); border:1px solid var(--muted); }
+  .warn-strip { margin-top:14px; background:#2a1503; border:1px solid var(--amber); border-radius:8px; padding:10px 14px; font-size:13px; color:#ffd9a0; }
+  .warn-strip b { color:var(--amber); }
+
+  /* ---------- how-to ---------- */
+  details.howto { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:12px 16px; margin-bottom:18px; font-size:13.5px; line-height:1.55; color:#d7e2ee; }
+  details.howto summary { cursor:pointer; color:var(--teal); font-weight:700; font-size:14px; }
+  details.howto code { background:var(--navy3); padding:1px 6px; border-radius:4px; font-size:12.5px; }
+
+  /* ---------- timeline bar ---------- */
+  .timeline { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:14px 16px; margin-bottom:18px; }
+  .timeline h2 { font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin-bottom:10px; }
+  .tl-track { display:flex; gap:3px; height:44px; }
+  .tl-seg { border-radius:6px; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:700; min-width:34px; overflow:hidden; white-space:nowrap; background:var(--teal-dim); color:#fff; border:1px solid rgba(255,255,255,.15); }
+  .tl-seg.hook { background:#0e7490; } .tl-seg.cta { background:#5b4a9e; }
+  .tl-seg.flagged { background:var(--red); }
+  .tl-labels { display:flex; gap:3px; margin-top:6px; font-size:11px; color:var(--muted); }
+  .tl-labels span { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; text-align:center; }
+
+  /* ---------- sections (canvas group frames, borrowed from PAI groups-compose) ---------- */
+  .section { border:1.5px solid var(--teal-dim); border-radius:14px; padding:16px 16px 8px; margin-bottom:20px; background:rgba(20,184,166,.04); }
+  .section > h2 { font-size:15px; letter-spacing:.12em; text-transform:uppercase; color:var(--teal); margin-bottom:12px; }
+  .section > h2 span { color:var(--muted); font-size:12px; letter-spacing:0; text-transform:none; font-weight:400; }
+  .beats { display:flex; gap:14px; overflow-x:auto; padding-bottom:10px; }
+
+  /* ---------- beat card (one canvas shot node) ---------- */
+  .beat { flex:0 0 340px; background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px; display:flex; flex-direction:column; gap:10px; }
+  .beat.flagged { border:2px solid var(--red); }
+  .beat-head { display:flex; justify-content:space-between; align-items:flex-start; gap:8px; }
+  .beat-head h3 { font-size:16px; line-height:1.25; }
+  .beat-head .num { background:var(--teal); color:#04241f; font-weight:800; border-radius:8px; padding:3px 9px; font-size:13px; white-space:nowrap; }
+  .beat-time { font-size:12.5px; color:var(--muted); }
+  .beat-time b { color:var(--white); }
+  .flag-banner { background:#3d0a0c; border:1px solid var(--red); color:#ffb3b6; border-radius:8px; padding:8px 10px; font-size:12.5px; font-weight:700; }
+  .frames { display:flex; gap:8px; }
+  .frame { flex:1; }
+  .frame .tag { font-size:10.5px; letter-spacing:.12em; color:var(--muted); text-transform:uppercase; margin-bottom:4px; display:flex; justify-content:space-between; }
+  .frame .tag b { color:var(--teal); }
+  .frame .mock { aspect-ratio:9/16; max-height:190px; width:100%; border-radius:8px; border:1px solid var(--line); background:linear-gradient(160deg, #16345c 0%, #0B1F3A 55%, #0a2e2a 100%); display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:10px; gap:6px; overflow:hidden; }
+  .frame .mock .mock-label { font-size:10px; letter-spacing:.14em; color:var(--teal); text-transform:uppercase; font-weight:700; }
+  .frame .mock .mock-desc { font-size:12px; line-height:1.45; color:#dbe7f3; }
+  .frame img { width:100%; aspect-ratio:9/16; max-height:190px; object-fit:cover; border-radius:8px; border:1px solid var(--line); display:block; }
+  .camera { background:var(--navy3); border:1px solid var(--line); border-radius:8px; padding:9px 11px; font-size:12.5px; line-height:1.5; }
+  .camera .cam-title { color:var(--teal); font-weight:700; font-size:11px; letter-spacing:.12em; text-transform:uppercase; margin-bottom:3px; }
+  .camera .cam-diagram { font-family:ui-monospace, monospace; color:#cfe3f5; margin:4px 0; font-size:12px; }
+  .vo { font-size:13px; line-height:1.55; background:rgba(20,184,166,.08); border-left:3px solid var(--teal); border-radius:0 8px 8px 0; padding:8px 10px; }
+  .vo .lbl, .overlay .lbl, .treat .lbl, .assets .lbl, .char .lbl { font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); font-weight:700; margin-bottom:3px; }
+  .char { font-size:12.5px; line-height:1.55; background:rgba(245,158,11,.08); border-left:3px solid var(--amber); border-radius:0 8px 8px 0; padding:8px 10px; }
+  .char b { color:var(--amber); }
+  .overlay { font-size:13px; line-height:1.5; }
+  .overlay .words { color:#fff; font-weight:600; }
+  .treat { font-size:12.5px; color:#c7d5e4; line-height:1.5; }
+  .treat b { color:var(--white); }
+  .assets { font-size:12px; color:var(--muted); line-height:1.6; }
+  .assets code { color:#a9c6e2; background:var(--navy3); padding:1px 5px; border-radius:4px; font-size:11.5px; }
+  .beat-foot { display:flex; justify-content:space-between; align-items:center; margin-top:auto; padding-top:6px; border-top:1px solid var(--line); }
+  .beat-note { font-size:12px; color:var(--amber); font-style:italic; line-height:1.45; }
+
+  /* ---------- gate + notes ---------- */
+  .bottom { display:flex; gap:18px; flex-wrap:wrap; }
+  .panel { flex:1 1 420px; background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px 18px; }
+  .panel h2 { font-size:14px; letter-spacing:.12em; text-transform:uppercase; color:var(--teal); margin-bottom:10px; }
+  .panel ul { list-style:none; font-size:13.5px; line-height:1.9; }
+  .panel li::before { content:"☐ "; color:var(--muted); }
+  .panel li.done::before { content:"☑ "; color:var(--green); }
+  .panel .note-item { border-left:3px solid var(--amber); padding:6px 10px; margin-bottom:8px; font-size:13.5px; line-height:1.5; background:var(--navy3); border-radius:0 8px 8px 0; }
+  .panel .note-item b { color:var(--amber); }
+  footer { margin-top:18px; font-size:12px; color:var(--muted); text-align:center; line-height:1.6; }
+</style>
+</head>
+<body>
+<div class="wrap" id="app"><!-- rendered by JS from the CANVAS data block below --></div>
+
+<!-- ============================================================================
+  CANVAS DATA — EDIT THIS BLOCK ONLY.
+  This JSON is the source of truth for the whole board (borrowed from PAI-Pro:
+  canvas state is just a file on disk; the viewer renders it, nothing else
+  owns it). To make a new reel's canvas: copy this file, edit this block.
+  - beats: one shot node per beat, in timeline order. Start/end times are
+    computed from durations — enter duration only.
+  - startFrame / endFrame: "desc" is the director's written mock of what the
+    frame looks like. "img" is optional: a relative path to a real mockup
+    image (drop it in the reel folder). If "img" is set, the image is shown;
+    otherwise the description renders as a designed placeholder.
+  - camera.move: push-in | pull-back | pan | orbit | drift | cut | static.
+    "static" or identical start/end descriptions get flagged NO MOTION.
+  - character: Kit's track for the beat — position (left / center-left /
+    center / center-right / right), move (how he travels), points (what he
+    points at), holds (which card he brings into the center, or "— none —"),
+    expression (neutral / excited / thinking). Kit is the foreground host:
+    he walks/slides, points, holds cards, and never stands frozen (idle bob
+    + blink run underneath every pose). The character track is part of the
+    canvas the director fills in — every beat has one.
+  - status per beat and overall: draft | approved | outline.
+  - Do NOT edit the HTML/JS below this block.
+============================================================================= -->
+<script type="application/json" id="canvas-data">{
+ "reel": {
+  "name": "Memory Tax — Paper Breakdown, Day 1 — V2 (animated graphs)",
+  "date": "2026-11-02",
+  "keyword": "PAPER",
+  "pillar": "Explained",
+  "format": "9:16 vertical · 720x1280",
+  "status": "v2-built",
+  "scriptStatus": "Script APPROVED verbatim by Vishnu 2026-11-02 01:34 CST — 83 words",
+  "voice": "Helio (avocado_v2:MAI_03), single pass, fixed speed 85 — final 36.84s / 135.2 wpm, measured"
+ },
+ "beats": [
+  {
+   "id": 1,
+   "name": "Hook — two paths",
+   "section": "Hook",
+   "duration": 10.34,
+   "voiceover": "Your AI agent remembers everything. Or does it? When it rewrites your history into neat memory, it can quietly drop the detail you needed.",
+   "overlay": "Small captions only (36px, from measured timestamps)",
+   "startFrame": {
+    "desc": "Pic 1 full frame: diamond node top-centre, intact teal stack left, gapped slate stack right, navy background.",
+    "img": "../reels/2026-11-02-memory-tax/pic1.png"
+   },
+   "endFrame": {
+    "desc": "Right gapped stack after the drops: most grey blocks fallen and faded away, left teal stack still fully intact; camera pushed toward the right stack.",
+    "img": "../reels/2026-11-02-memory-tax/pic1.png"
+   },
+   "camera": {
+    "move": "push-in + pan-right (continuous, no hold)",
+    "from": "Full Pic 1, scale 1.00, centred",
+    "to": "Scale 1.15, centred on the right gapped stack",
+    "direction": "Forward and right, following the loss",
+    "distance": "Full frame to close on the dropping stack",
+    "duration": "10.34s"
+   },
+   "character": {
+    "position": "— none — (image-led build)",
+    "move": "No Kit in this build; the camera move is the host motion",
+    "points": "— none —",
+    "holds": "— none —",
+    "expression": "—"
+   },
+   "treatment": "SPRITE ANIMATION (render_v2.py): right-stack blocks are crops of Pic 1 that fall 220px and fade out one by one at 8.2/8.6/9.0/9.4/9.8s; left stack stays solid; camera navigates wide -> right stack. No number overlay.",
+   "source": "Remotion, $0 — approved Pic 1",
+   "assets": [
+    "pic1.png"
+   ],
+   "status": "draft",
+   "notes": "V2 fix: content moves, not just the camera. First QC run failed dead-air (3.03s freeze from a 3s camera hold) — fixed by continuous camera motion; re-run PASS, 0 freezes."
+  },
+  {
+   "id": 2,
+   "name": "Result — bars fall",
+   "section": "Body",
+   "duration": 8.9,
+   "voiceover": "In one long-memory test, plain retrieval scored eighty-one percent, beating every fancy memory system in that test.",
+   "overlay": "Small captions only (36px, from measured timestamps)",
+   "startFrame": {
+    "desc": "Bars at zero: baseline only, first bar just starting to grow.",
+    "img": "../reels/2026-11-02-memory-tax/pic2.png"
+   },
+   "endFrame": {
+    "desc": "All five bars grown to data heights: tallest teal left, then descending 79.4 / 78.8 / 76.6 / 73.6, dots fallen off the shorter bars; camera pushed in slightly, all bars still in frame.",
+    "img": "../reels/2026-11-02-memory-tax/pic2.png"
+   },
+   "camera": {
+    "move": "continuous slow push-in",
+    "from": "Full bars frame, scale 1.00, centred",
+    "to": "Scale 1.12, centred x=330 (window still contains all bars, 90-629)",
+    "direction": "Forward, growth sweeps left to right",
+    "distance": "Full frame to a tighter full-chart frame",
+    "duration": "8.90s"
+   },
+   "character": {
+    "position": "— none — (image-led build)",
+    "move": "No Kit in this build; the camera move is the host motion",
+    "points": "— none —",
+    "holds": "— none —",
+    "expression": "—"
+   },
+   "treatment": "SPRITE ANIMATION: each bar is a crop of Pic 2, grown from the baseline to its Table 1 height (81.4->560px, 79.4->546, 78.8->542, 76.6->527, 73.6->506, baseline 999). Dots fall off bars 2-5 after each settles, then disappear. NO 81.4% overlay, NO system names on screen.",
+   "source": "Remotion, $0 — approved Pic 2",
+   "assets": [
+    "pic2.png"
+   ],
+   "status": "draft",
+   "notes": "Heights are data-accurate (range only 9.6%), so the fall is modest by design; colour fade teal->grey and falling dots carry the ranking. First QC run failed dead-air (3.97s freeze after bars settled, camera static) — fixed by continuous camera motion; re-run PASS."
+  },
+  {
+   "id": 3,
+   "name": "Payoff — the scale tips",
+   "section": "Body",
+   "duration": 6.14,
+   "voiceover": "That is the memory tax. Rewriting helps sometimes, but it costs you evidence.",
+   "overlay": "Small captions only (36px, from measured timestamps)",
+   "startFrame": {
+    "desc": "Scale level: bright small pan left, larger grey pan right, beam level.",
+    "img": "../reels/2026-11-02-memory-tax/pic3.png"
+   },
+   "endFrame": {
+    "desc": "Scale actually tipped: beam rotated so the grey right pan sits lower, left pan higher; camera pushed toward the right pan. Return arrow is NOT in this beat (cropped out of the scale sprite).",
+    "img": "../reels/2026-11-02-memory-tax/pic3.png"
+   },
+   "camera": {
+    "move": "push-in + pan-right",
+    "from": "Full Pic 3 scale, scale 1.00, centred",
+    "to": "Scale 1.25, panned to the tipping right pan",
+    "direction": "Forward and right, following the tip",
+    "distance": "Full scale to close on tipping pan",
+    "duration": "6.14s"
+   },
+   "character": {
+    "position": "— none — (image-led build)",
+    "move": "No Kit in this build; the camera move is the host motion",
+    "points": "— none —",
+    "holds": "— none —",
+    "expression": "—"
+   },
+   "treatment": "SPRITE ANIMATION: the whole scale (crop of Pic 3, y240-520, colour-masked) rotates 0->10 degrees around its diamond pivot so the grey pan goes DOWN. No overlay text except small captions.",
+   "source": "Remotion, $0 — approved Pic 3",
+   "assets": [
+    "pic3.png"
+   ],
+   "status": "draft",
+   "notes": "Sub-beat 3a of Beat 3. Same image as 3b, different camera window and overlay — that is the split that stops the 18.7s beat sitting static."
+  },
+  {
+   "id": 4,
+   "name": "Fix + CTA — return to the source",
+   "section": "CTA",
+   "duration": 11.46,
+   "voiceover": "The fix is simple: let memory organise, but never delete the source. So keep a way back to the raw history. Follow for a new AI paper every day.",
+   "overlay": "Small captions only (36px, from measured timestamps)",
+   "startFrame": {
+    "desc": "Amber return arrow revealing right-to-left across the lower frame.",
+    "img": "../reels/2026-11-02-memory-tax/pic3.png"
+   },
+   "endFrame": {
+    "desc": "Full intact teal stack brightened block by block, small organised layer on top, amber arrow completed pointing back to the stack.",
+    "img": "../reels/2026-11-02-memory-tax/pic3.png"
+   },
+   "camera": {
+    "move": "travel down-left along the arrow to the stack",
+    "from": "Scale 1.25 on the tipping pan",
+    "to": "Scale 1.00, centred on the intact stack",
+    "direction": "Down-left along the arrow",
+    "distance": "Tipping pan to full stack",
+    "duration": "11.46s"
+   },
+   "character": {
+    "position": "— none — (image-led build)",
+    "move": "No Kit in this build; the camera move is the host motion",
+    "points": "— none —",
+    "holds": "— none —",
+    "expression": "—"
+   },
+   "treatment": "SPRITE ANIMATION: amber arrow is an amber-masked crop of Pic 3, revealed right->left over 4s; stack blocks (crops of Pic 3) brighten 1.0->1.45x one by one; small top layer appears late. Longest-shot warning (11.46s) remains: it is split visually into arrow-reveal + stack-brighten sub-beats.",
+   "source": "Remotion, $0 — approved Pic 3",
+   "assets": [
+    "pic3.png"
+   ],
+   "status": "draft",
+   "notes": "Sub-beat 3b of Beat 3. Overlay swap + camera travel, not a held still. CTA is the approved script's final sentence, verbatim."
+  }
+ ],
+ "notes": [
+  {
+   "author": "Director",
+   "text": "V2 (2026-11-02): fixes V1's flaw — V1 panned over still images with captions + a large 81.4% overlay, so the paper was READ, not SEEN. V2 animates the content inside each image (right-stack blocks fall, bars grow to Table 1 heights, scale tips, arrow returns) and the camera navigates the context; captions are small (36px) and secondary. Muted-no-captions test passes beat by beat."
+  },
+  {
+   "author": "Director",
+   "text": "Technique, honestly: bars/blocks are rectangular crops of the Claude PNGs (clean); diamond/scale/arrow are colour-masked crops of the PNGs (only artwork moves, no rectangle edges); background is a recreated navy gradient (the PNGs' gradient backgrounds could not be cleanly segmented, so the background was rebuilt in the same palette). No element is claimed as a PNG morph — beats are cuts, not morphs."
+  },
+  {
+   "author": "Director",
+   "text": "Beat windows unchanged from the reused voiceover: B1 0.00-10.34, B2 10.34-19.24, B3a 19.24-25.38, B3b 25.38-36.84. Total 36.84s, 1105 frames at 30fps. Voiceover NOT re-rendered (voiceover-final.mp3, Helio speed 85)."
+  },
+  {
+   "author": "Director",
+   "text": "Data mapping for B2 (LongMemEval-s, Qwen3.6-27B, Table 1): bar1 plain retrieval (RAG 2-round) 81.4, bar2 A-Mem 79.4, bar3 LightMem 78.8, bar4 MemOS 76.6, bar5 SimpleMem 73.6. Heights scaled to 560/546/542/527/506px on a 999 baseline. System names and numbers are in this canvas/QC/description only — never on screen in V2."
+  }
+ ],
+ "gate1": [
+  {
+   "label": "Script approved by Vishnu (verbatim, 80–90 words)",
+   "done": true
+  },
+  {
+   "label": "Storyboard canvas approved (frames + camera lines)",
+   "done": false
+  },
+  {
+   "label": "Producer cost plan attached (per-shot source + cost)",
+   "done": true
+  },
+  {
+   "label": "Every beat has a moving frame (no NO MOTION flags)",
+   "done": true
+  }
+ ]
+}</script>
+
+<script>
+(function () {
+  "use strict";
+  var data = JSON.parse(document.getElementById("canvas-data").textContent);
+  var app = document.getElementById("app");
+
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+  function words(str) { return (str || "").trim().split(/\s+/).filter(Boolean).length; }
+  function fmt(t) { return t.toFixed(1) + "s"; }
+
+  // Motion check: a beat fails when its start/end frames are identical
+  // OR the camera never moves. Pixel change is not motion — the frame must travel.
+  function motionFlag(b) {
+    var sameFrames = (b.startFrame.desc || "").trim().toLowerCase() === (b.endFrame.desc || "").trim().toLowerCase();
+    var staticCam = /static|none/i.test(b.camera.move || "");
+    if (sameFrames && staticCam) return "Start and end frames are identical AND the camera is static.";
+    if (sameFrames) return "Start and end frames are identical — the frame never changes.";
+    if (staticCam) return "Camera is static — the frame never moves.";
+    return null;
+  }
+
+  // Cumulative time windows from durations.
+  var t = 0;
+  data.beats.forEach(function (b) { b._start = t; t += b.duration; b._end = t; });
+  var total = t;
+  var totalWords = data.beats.reduce(function (n, b) { return n + words(b.voiceover); }, 0);
+  var flagged = data.beats.filter(function (b) { return motionFlag(b); }).length;
+  var approved = data.beats.filter(function (b) { return b.status === "approved"; }).length;
+
+  var statusClass = data.reel.status === "approved" ? "status-approved" : (data.reel.status === "outline" ? "status-outline" : "status-draft");
+
+  var html = "";
+  html += '<header>';
+  html += '<div class="eyebrow">your.ai.toolkit — Storyboard Canvas</div>';
+  html += '<h1>' + esc(data.reel.name) + '</h1>';
+  html += '<div class="sub">' + esc(data.reel.scriptStatus) + '</div>';
+  html += '<div class="meta">';
+  html += '<span class="chip">Date <b>' + esc(data.reel.date) + '</b></span>';
+  html += '<span class="chip">Keyword <b>' + esc(data.reel.keyword) + '</b></span>';
+  html += '<span class="chip">Pillar <b>' + esc(data.reel.pillar) + '</b></span>';
+  html += '<span class="chip">Format <b>' + esc(data.reel.format) + '</b></span>';
+  html += '<span class="chip">Voiceover <b>' + totalWords + ' words · ~' + fmt(total) + '</b></span>';
+  html += '<span class="chip">Beats <b>' + data.beats.length + '</b> · Approved <b>' + approved + '/' + data.beats.length + '</b></span>';
+  html += '<span class="status-badge ' + statusClass + '">' + esc(data.reel.status) + '</span>';
+  html += '</div>';
+  if (flagged > 0) {
+    html += '<div class="warn-strip"><b>⚠ ' + flagged + ' beat' + (flagged > 1 ? 's' : '') + ' flagged NO MOTION.</b> A beat whose start and end frames are identical, or whose camera never moves, reads as a still photo. Redesign before Gate 1 — motion must move the frame.</div>';
+  }
+  html += '</header>';
+
+  html += '<details class="howto"><summary>How to use this canvas</summary>'
+    + '<p>One file, no build step, no server: open it in a browser. The JSON block at the top of the file (<code>canvas-data</code>) is the source of truth — edit it and reload. '
+    + 'Each beat is one shot node: two frame mocks (start / end), one camera line, the voiceover line attached to the beat, overlay words, treatment, source, and assets — plus Kit\'s character track (where he stands, how he moves, what he points at, what card he holds, his expression). '
+    + 'Beats sit in timeline order inside visible section frames (Hook / Body / CTA). Nothing generates until this canvas is <b>approved</b> at Gate 1 — that is the draft gate: a draft canvas never advances to generation. '
+    + 'To use a real mockup image instead of a written frame description, put the image in the reel folder and set the beat\'s <code>startFrame.img</code> / <code>endFrame.img</code> to its relative path.</p></details>';
+
+  // Timeline bar (PAI Timeline concept: shot_id order, durations to scale).
+  html += '<div class="timeline"><h2>Timeline — shot order (durations to scale)</h2><div class="tl-track">';
+  data.beats.forEach(function (b) {
+    var w = Math.max(4, (b.duration / total) * 100);
+    var cls = "tl-seg" + (b.section === "Hook" ? " hook" : "") + (b.section === "CTA" ? " cta" : "") + (motionFlag(b) ? " flagged" : "");
+    html += '<div class="' + cls + '" style="flex:0 0 ' + w.toFixed(1) + '%" title="Beat ' + b.id + ' — ' + esc(b.name) + ' (' + fmt(b.duration) + ')">' + b.id + '</div>';
+  });
+  html += '</div><div class="tl-labels">';
+  data.beats.forEach(function (b) {
+    var w = Math.max(4, (b.duration / total) * 100);
+    html += '<span style="flex:0 0 ' + w.toFixed(1) + '%">' + fmt(b.duration) + '</span>';
+  });
+  html += '</div></div>';
+
+  // Sections in first-appearance order.
+  var sections = [];
+  data.beats.forEach(function (b) { if (sections.indexOf(b.section) === -1) sections.push(b.section); });
+  sections.forEach(function (section) {
+    var secBeats = data.beats.filter(function (b) { return b.section === section; });
+    var secDur = secBeats.reduce(function (n, b) { return n + b.duration; }, 0);
+    html += '<section class="section"><h2>' + esc(section) + ' <span>— ' + secBeats.length + ' beat' + (secBeats.length > 1 ? 's' : '') + ' · ' + fmt(secDur) + '</span></h2><div class="beats">';
+    secBeats.forEach(function (b) {
+      var flag = motionFlag(b);
+      var bStatus = b.status === "approved" ? "status-approved" : (b.status === "outline" ? "status-outline" : "status-draft");
+      html += '<article class="beat' + (flag ? ' flagged' : '') + '">';
+      html += '<div class="beat-head"><h3>' + esc(b.name) + '</h3><span class="num">BEAT ' + b.id + '</span></div>';
+      html += '<div class="beat-time"><b>' + fmt(b._start) + ' – ' + fmt(b._end) + '</b> · ' + fmt(b.duration) + ' · shot ' + b.id + '</div>';
+      if (flag) html += '<div class="flag-banner">⚠ NO MOTION — ' + esc(flag) + '</div>';
+      html += '<div class="frames">';
+      ["startFrame", "endFrame"].forEach(function (key, i) {
+        var f = b[key];
+        html += '<div class="frame"><div class="tag"><span>' + (i === 0 ? "Start frame" : "End frame") + '</span><b>' + (i === 0 ? "t=" + fmt(b._start) : "t=" + fmt(b._end)) + '</b></div>';
+        if (f.img) html += '<img src="' + esc(f.img) + '" alt="' + esc(f.desc) + '">';
+        else html += '<div class="mock"><span class="mock-label">Frame mock</span><span class="mock-desc">' + esc(f.desc) + '</span></div>';
+        html += '</div>';
+      });
+      html += '</div>';
+      var cam = b.camera;
+      html += '<div class="camera"><div class="cam-title">Camera — ' + esc(cam.move) + '</div>'
+        + '<div class="cam-diagram">' + esc(cam.from) + ' &nbsp;──►&nbsp; ' + esc(cam.to) + '</div>'
+        + 'Direction: ' + esc(cam.direction) + ' · Distance: ' + esc(cam.distance) + ' · Move duration: ' + esc(cam.duration) + '</div>';
+      if (b.character) {
+        var ch = b.character;
+        html += '<div class="char"><div class="lbl">Kit — character track</div>'
+          + '<b>' + esc(ch.position || "") + '</b> · ' + esc(ch.move || "")
+          + '<br>Points: ' + esc(ch.points || "—") + ' · Holds: ' + esc(ch.holds || "—")
+          + '<br>Expression: <b>' + esc(ch.expression || "") + '</b></div>';
+      }
+      html += '<div class="vo"><div class="lbl">Voiceover (' + words(b.voiceover) + ' words)</div>“' + esc(b.voiceover) + '”</div>';
+      html += '<div class="overlay"><div class="lbl">On-screen words</div><span class="words">' + esc(b.overlay) + '</span></div>';
+      html += '<div class="treat"><div class="lbl">Treatment · Source</div><b>' + esc(b.treatment) + '</b> — ' + esc(b.source) + '</div>';
+      html += '<div class="assets"><div class="lbl">Attached assets</div>' + (b.assets && b.assets.length ? b.assets.map(function (a) { return '<code>' + esc(a) + '</code>'; }).join(" ") : '— none yet —') + '</div>';
+      if (b.notes) html += '<div class="beat-note">' + esc(b.notes) + '</div>';
+      html += '<div class="beat-foot"><span class="status-badge ' + bStatus + '">' + esc(b.status) + '</span><span class="beat-time">shot ' + b.id + '</span></div>';
+      html += '</article>';
+    });
+    html += '</div></section>';
+  });
+
+  html += '<div class="bottom">';
+  html += '<div class="panel"><h2>Gate 1 checklist</h2><ul>';
+  (data.gate1 || []).forEach(function (g) { html += '<li class="' + (g.done ? 'done' : '') + '">' + esc(g.label) + '</li>'; });
+  html += '</ul></div>';
+  html += '<div class="panel"><h2>Director notes</h2>';
+  (data.notes || []).forEach(function (n) { html += '<div class="note-item"><b>' + esc(n.author) + ':</b> ' + esc(n.text) + '</div>'; });
+  html += '</div></div>';
+
+  html += '<footer>Storyboard canvas — your.ai.toolkit · Concepts borrowed from PAI-Pro (canvas nodes + edges, file-on-disk state, groups, timeline by shot_id, draft gate) and OpenMontage STORYBOARD.md (per-frame metadata, status outline → built → animated). Implemented here from scratch in plain HTML/CSS/JS — no PAI-Pro or OpenMontage code. Nothing generates until this canvas is approved.</footer>';
+
+  app.innerHTML = html;
+})();
+</script>
+</body>
+</html>

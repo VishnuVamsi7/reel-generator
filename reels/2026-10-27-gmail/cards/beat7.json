@@ -1,0 +1,20 @@
+{
+ "theme": "flat-motion-graphics",
+ "cuts": [
+  {
+   "id": "beat7",
+   "source": "",
+   "type": "gmail_card",
+   "gmailVariant": "endcard",
+   "text": "Follow for a new AI tool every day.",
+   "backgroundVideo": "ltx-endcard.mp4",
+   "backgroundVideoStart": 0,
+   "backgroundOverlay": 0.3,
+   "in_seconds": 0,
+   "out_seconds": 2.8,
+   "backgroundColor": "#0B1F3A",
+   "accentColor": "#14B8A6",
+   "color": "#FFFFFF"
+  }
+ ]
+}

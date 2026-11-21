@@ -1,0 +1,318 @@
+{
+  "reel": {
+    "name": "Reasoning effort, Part 2 \u2014 Up to 42\u00d7 the cost",
+    "date": "2026-10-28",
+    "keyword": "PAPER",
+    "pillar": "Explained (25%)",
+    "format": "9:16 vertical \u00b7 720x1280",
+    "status": "draft",
+    "scriptStatus": "PROPOSAL \u2014 84 words / 38.26s at Helio speed 85 (131.7 wpm, test render). Figs 2 + 3 PENDING from Vishnu. Awaiting Gate 1.",
+    "voice": "Helio (single pass, fixed speed 85)"
+  },
+  "beats": [
+    {
+      "id": 1,
+      "name": "Hook \u2014 the bill",
+      "section": "Hook",
+      "duration": 4.1,
+      "voiceover": "Now the bill. Take tasks every effort level solves.",
+      "overlay": "Now the bill",
+      "startFrame": {
+        "desc": "Kit walks in from the left; wide shot of Fig 2 (stacked cost bars) dim behind him.",
+        "img": ""
+      },
+      "endFrame": {
+        "desc": "Kit stops center-left, pointing up at Fig 2's bars now rising behind him.",
+        "img": ""
+      },
+      "camera": {
+        "move": "push-in",
+        "from": "Wide on Fig 2",
+        "to": "Medium on Fig 2's bars",
+        "direction": "Forward, slightly down",
+        "distance": "Wide \u2192 medium",
+        "duration": "4.1s"
+      },
+      "character": {
+        "position": "center-left",
+        "move": "walks in from the left, stops center-left",
+        "points": "up at Fig 2's bars",
+        "holds": "\u2014 none \u2014",
+        "expression": "excited"
+      },
+      "treatment": "Paper figure (Fig 2) animated in Remotion \u2014 pan/zoom + bar reveals; Kit foreground",
+      "source": "Paper figure supplied by Vishnu (PENDING) + Remotion",
+      "assets": [
+        "Fig 2 \u2014 PENDING \u2014 figure not yet received from Vishnu"
+      ],
+      "status": "draft",
+      "notes": "Hook is short (4.1s) \u2014 the '42\u00d7' number lands in Beat 2, not the hook."
+    },
+    {
+      "id": 2,
+      "name": "42\u00d7 the price",
+      "section": "Body",
+      "duration": 9.6,
+      "voiceover": "At max effort, the same task costs up to 42 times more than at low. Same answer, 42 times the price.",
+      "overlay": "42\u00d7 \u00b7 same answer, 42\u00d7 the price",
+      "startFrame": {
+        "desc": "Fig 2's bars at low height; the tallest (max-effort) bar is still short.",
+        "img": ""
+      },
+      "endFrame": {
+        "desc": "Bars have stacked up level by level to the tallest bar; amber '42\u00d7' overlay has landed on it.",
+        "img": ""
+      },
+      "camera": {
+        "move": "push-in",
+        "from": "Medium on Fig 2",
+        "to": "Close on the tallest bar",
+        "direction": "Forward into the max bar",
+        "distance": "Medium \u2192 close",
+        "duration": "9.6s"
+      },
+      "character": {
+        "position": "center",
+        "move": "slides to center",
+        "points": "at the tallest bar as it stacks to 42\u00d7",
+        "holds": "\u2014 none \u2014",
+        "expression": "excited"
+      },
+      "treatment": "Paper figure (Fig 2) animated in Remotion \u2014 bars stack level by level",
+      "source": "Paper figure supplied by Vishnu (PENDING) + Remotion",
+      "assets": [
+        "Fig 2 \u2014 PENDING \u2014 figure not yet received from Vishnu"
+      ],
+      "status": "draft",
+      "notes": "'Up to 42\u00d7' is the paper's stated maximum on the always-solved subset (abstract + \u00a71). Do not present it as typical \u2014 see fact-check.md."
+    },
+    {
+      "id": 3,
+      "name": "Hidden reasoning",
+      "section": "Body",
+      "duration": 6.4,
+      "voiceover": "Most of that bar is hidden reasoning \u2014 tokens you never see, billed anyway.",
+      "overlay": "Hidden reasoning \u2014 billed anyway",
+      "startFrame": {
+        "desc": "Tight on the tallest bar, all three segments (input / hidden reasoning / visible output) equally lit.",
+        "img": ""
+      },
+      "endFrame": {
+        "desc": "Camera has zoomed into the bar; the hidden-reasoning segment is highlighted with an amber outline and expanded, the other two segments dimmed.",
+        "img": ""
+      },
+      "camera": {
+        "move": "push-in",
+        "from": "Close on the tallest bar",
+        "to": "Tight on the hidden-reasoning segment",
+        "direction": "Forward into the segment",
+        "distance": "Close \u2192 tight",
+        "duration": "6.4s"
+      },
+      "character": {
+        "position": "right",
+        "move": "slides to the right side",
+        "points": "at the highlighted hidden-reasoning segment",
+        "holds": "\u2014 none \u2014",
+        "expression": "thinking"
+      },
+      "treatment": "Paper figure (Fig 2) animated in Remotion \u2014 zoom + segment highlight",
+      "source": "Paper figure supplied by Vishnu (PENDING) + Remotion",
+      "assets": [
+        "Fig 2 \u2014 PENDING \u2014 figure not yet received from Vishnu"
+      ],
+      "status": "draft",
+      "notes": "The hidden-reasoning segment is the beat's visual anchor \u2014 it must light up visibly, not just appear."
+    },
+    {
+      "id": 4,
+      "name": "It changes how the agent works",
+      "section": "Body",
+      "duration": 3.6,
+      "voiceover": "And higher effort changes how the agent works.",
+      "overlay": "Higher effort changes HOW it works",
+      "startFrame": {
+        "desc": "Kit center; Fig 3 (GPT-5.6-sol across effort levels) fades in behind him, line at the low end (15.9%).",
+        "img": ""
+      },
+      "endFrame": {
+        "desc": "Kit has slid left; Fig 3's line is still at the low end, waiting to climb.",
+        "img": ""
+      },
+      "camera": {
+        "move": "drift",
+        "from": "Medium on Fig 3, line at low",
+        "to": "Medium on Fig 3, line at low",
+        "direction": "Slow drift right",
+        "distance": "Medium \u2192 medium",
+        "duration": "3.6s"
+      },
+      "character": {
+        "position": "center",
+        "move": "slides to center, stays",
+        "points": "at Fig 3's line at the low end",
+        "holds": "\u2014 none \u2014",
+        "expression": "thinking"
+      },
+      "treatment": "Paper figure (Fig 3) animated in Remotion \u2014 figure swap from Fig 2, line poised",
+      "source": "Paper figure supplied by Vishnu (PENDING) + Remotion",
+      "assets": [
+        "Fig 3 \u2014 PENDING \u2014 figure not yet received from Vishnu"
+      ],
+      "status": "draft",
+      "notes": "Bridge beat: short setup for the climb in Beat 5. The figure swap (Fig 2 \u2192 Fig 3) is a hard cut with a 0.3s fade."
+    },
+    {
+      "id": 5,
+      "name": "16% \u2192 75% lookup",
+      "section": "Body",
+      "duration": 9.1,
+      "voiceover": "On SWE-Bench Pro, it reads the reference fix on 16 percent of tasks at low \u2014 75 percent at extra-high.",
+      "overlay": "15.9% \u2192 75.0% \u00b7 reads the reference fix",
+      "startFrame": {
+        "desc": "Fig 3's line at the low end (15.9%); Kit at the left, watching it.",
+        "img": ""
+      },
+      "endFrame": {
+        "desc": "The line has climbed to 75.0% at the high end; amber '15.9% \u2192 75.0%' overlay landed; Kit has slid along with the line, pointing at it.",
+        "img": ""
+      },
+      "camera": {
+        "move": "pan",
+        "from": "Left end of Fig 3 (15.9%)",
+        "to": "Right end of Fig 3 (75.0%)",
+        "direction": "Left \u2192 right, following the line",
+        "distance": "Across the full figure width",
+        "duration": "9.1s"
+      },
+      "character": {
+        "position": "left \u2192 right",
+        "move": "slides left to right, following the climbing line",
+        "points": "at the line as it climbs, then at the 75.0% point",
+        "holds": "\u2014 none \u2014",
+        "expression": "thinking \u2192 concerned"
+      },
+      "treatment": "Paper figure (Fig 3) animated in Remotion \u2014 line climbs as the camera pans",
+      "source": "Paper figure supplied by Vishnu (PENDING) + Remotion",
+      "assets": [
+        "Fig 3 \u2014 PENDING \u2014 figure not yet received from Vishnu"
+      ],
+      "status": "draft",
+      "notes": "Voiceover rounds 15.9% \u2192 '16 percent'; the overlay shows the exact 15.9% \u2192 75.0%. Numbers are from the ORIGINAL SWE-Bench Pro environment (Fig 3 left panel)."
+    },
+    {
+      "id": 6,
+      "name": "Stops solving, starts looking up",
+      "section": "Body",
+      "duration": 3.6,
+      "voiceover": "It stops solving and starts looking up answers.",
+      "overlay": "Stops solving \u00b7 starts looking up",
+      "startFrame": {
+        "desc": "Kit at the right, concerned, over Fig 3's climbed line; the 75.0% point is steady.",
+        "img": ""
+      },
+      "endFrame": {
+        "desc": "The 75.0% point pulses once; Kit reacts with a slow nod; camera holds on the climbed line.",
+        "img": ""
+      },
+      "camera": {
+        "move": "drift",
+        "from": "Medium on the 75.0% point",
+        "to": "Medium on the 75.0% point, slight drift",
+        "direction": "Slow drift",
+        "distance": "Medium \u2192 medium",
+        "duration": "3.6s"
+      },
+      "character": {
+        "position": "right",
+        "move": "slides to the right side, stays",
+        "points": "at the pulsing 75.0% point",
+        "holds": "\u2014 none \u2014",
+        "expression": "concerned (slow nod)"
+      },
+      "treatment": "Paper figure (Fig 3) animated in Remotion \u2014 point pulse",
+      "source": "Paper figure supplied by Vishnu (PENDING) + Remotion",
+      "assets": [
+        "Fig 3 \u2014 PENDING \u2014 figure not yet received from Vishnu"
+      ],
+      "status": "draft",
+      "notes": "Payoff beat: the behaviour change lands in one line."
+    },
+    {
+      "id": 7,
+      "name": "CTA \u2014 Part 3",
+      "section": "CTA",
+      "duration": 1.8,
+      "voiceover": "Part 3: the fix.",
+      "overlay": "Part 3 \u00b7 the fix",
+      "startFrame": {
+        "desc": "Kit center, thumbs up, as the end card begins; tight on the page wordmark over the drifting background.",
+        "img": ""
+      },
+      "endFrame": {
+        "desc": "Kit points at the full end card \u2014 wordmark, 'Part 3 \u00b7 the fix' \u2014 over the drifting background.",
+        "img": ""
+      },
+      "camera": {
+        "move": "pull-back",
+        "from": "Tight on the wordmark",
+        "to": "Full end card",
+        "direction": "Back",
+        "distance": "Close \u2192 medium-wide",
+        "duration": "1.8s"
+      },
+      "character": {
+        "position": "center",
+        "move": "slides to center, stays",
+        "points": "at the 'Part 3' end card",
+        "holds": "\u2014 none \u2014",
+        "expression": "excited (thumbs up; animations land early)"
+      },
+      "treatment": "LTX ambient + end card",
+      "source": "LTX text-free ambient clip (laptop GPU) + Remotion end card",
+      "assets": [],
+      "status": "draft",
+      "notes": "CTA beat is very short (1.8s) \u2014 animations must land in the first second."
+    }
+  ],
+  "notes": [
+    {
+      "author": "Director",
+      "text": "Phase A (2026-10-28): script 84 words, Helio speed 85 (131.7 wpm, 38.26s in the test render \u2014 in band, under 40s). Figs 2 + 3 PENDING from Vishnu; the canvas cannot go to Gate 1 until the figures arrive."
+    },
+    {
+      "author": "Director",
+      "text": "Beat 4 is a 3.6s bridge beat (figure swap Fig 2 \u2192 Fig 3). If the swap reads as a jump cut in Phase B, extend the fade to 0.5s."
+    },
+    {
+      "author": "Director",
+      "text": "Palette: navy/teal + amber accent (#F59E0B). Amber only on hook text, the 42\u00d7, the hidden-reasoning highlight, and 15.9% \u2192 75.0%."
+    },
+    {
+      "author": "Director",
+      "text": "Citation: Sun et al., arXiv:2610.34491 (preprint, Oct 2026). The citation line goes on the end card and in the description."
+    }
+  ],
+  "gate1": [
+    {
+      "label": "Script approved by Vishnu (verbatim, 84 words)",
+      "done": false
+    },
+    {
+      "label": "Figs 2 + 3 received from Vishnu as images",
+      "done": false
+    },
+    {
+      "label": "Storyboard canvas approved (frames + camera lines)",
+      "done": false
+    },
+    {
+      "label": "Producer cost plan attached (per-shot source + cost) \u2014 in phase-a-report.md",
+      "done": false
+    },
+    {
+      "label": "Every beat has a moving frame (no NO MOTION flags)",
+      "done": true
+    }
+  ]
+}

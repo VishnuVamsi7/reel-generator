@@ -1,0 +1,449 @@
+SEG 0.00-7.10:  The tool worked. It's printout misled the agent. It said found 20 documents, hiding they were
+SEG 7.10-15.42:  the first 20 of 4,772. The checker saw only that printout, so it approved the wrong answer.
+SEG 16.16-24.00:  In one fixed answer test, across three kinds of error, all 90 verdicts flipped from accept to reject.
+SEG 24.74-31.02:  Re-write the printout to state its limits and caps, and how to handle them, and the checker catches
+SEG 31.02-37.88:  the error. Check what your tool hides, not just what it shows. Follow for the next paper.
+{
+ "words": [
+  {
+   "word": "The",
+   "start": 0.0,
+   "end": 0.3
+  },
+  {
+   "word": "tool",
+   "start": 0.3,
+   "end": 0.52
+  },
+  {
+   "word": "worked.",
+   "start": 0.52,
+   "end": 0.86
+  },
+  {
+   "word": "It's",
+   "start": 1.48,
+   "end": 1.78
+  },
+  {
+   "word": "printout",
+   "start": 1.78,
+   "end": 2.24
+  },
+  {
+   "word": "misled",
+   "start": 2.24,
+   "end": 2.86
+  },
+  {
+   "word": "the",
+   "start": 2.86,
+   "end": 3.08
+  },
+  {
+   "word": "agent.",
+   "start": 3.08,
+   "end": 3.44
+  },
+  {
+   "word": "It",
+   "start": 4.18,
+   "end": 4.36
+  },
+  {
+   "word": "said",
+   "start": 4.36,
+   "end": 4.58
+  },
+  {
+   "word": "found",
+   "start": 4.58,
+   "end": 4.92
+  },
+  {
+   "word": "20",
+   "start": 4.92,
+   "end": 5.38
+  },
+  {
+   "word": "documents,",
+   "start": 5.38,
+   "end": 6.04
+  },
+  {
+   "word": "hiding",
+   "start": 6.5,
+   "end": 6.76
+  },
+  {
+   "word": "they",
+   "start": 6.76,
+   "end": 7.0
+  },
+  {
+   "word": "were",
+   "start": 7.0,
+   "end": 7.1
+  },
+  {
+   "word": "the",
+   "start": 7.1,
+   "end": 7.22
+  },
+  {
+   "word": "first",
+   "start": 7.22,
+   "end": 7.5
+  },
+  {
+   "word": "20",
+   "start": 7.5,
+   "end": 8.02
+  },
+  {
+   "word": "of",
+   "start": 8.02,
+   "end": 8.18
+  },
+  {
+   "word": "4",
+   "start": 8.18,
+   "end": 8.58
+  },
+  {
+   "word": ",772.",
+   "start": 8.58,
+   "end": 10.52
+  },
+  {
+   "word": "The",
+   "start": 11.24,
+   "end": 11.64
+  },
+  {
+   "word": "checker",
+   "start": 11.64,
+   "end": 11.98
+  },
+  {
+   "word": "saw",
+   "start": 11.98,
+   "end": 12.22
+  },
+  {
+   "word": "only",
+   "start": 12.22,
+   "end": 12.6
+  },
+  {
+   "word": "that",
+   "start": 12.6,
+   "end": 12.84
+  },
+  {
+   "word": "printout,",
+   "start": 12.84,
+   "end": 13.54
+  },
+  {
+   "word": "so",
+   "start": 13.88,
+   "end": 14.06
+  },
+  {
+   "word": "it",
+   "start": 14.06,
+   "end": 14.16
+  },
+  {
+   "word": "approved",
+   "start": 14.16,
+   "end": 14.48
+  },
+  {
+   "word": "the",
+   "start": 14.48,
+   "end": 14.72
+  },
+  {
+   "word": "wrong",
+   "start": 14.72,
+   "end": 14.94
+  },
+  {
+   "word": "answer.",
+   "start": 14.94,
+   "end": 15.42
+  },
+  {
+   "word": "In",
+   "start": 16.16,
+   "end": 16.64
+  },
+  {
+   "word": "one",
+   "start": 16.64,
+   "end": 16.88
+  },
+  {
+   "word": "fixed",
+   "start": 16.88,
+   "end": 17.3
+  },
+  {
+   "word": "answer",
+   "start": 17.3,
+   "end": 17.68
+  },
+  {
+   "word": "test,",
+   "start": 17.68,
+   "end": 18.3
+  },
+  {
+   "word": "across",
+   "start": 18.68,
+   "end": 18.94
+  },
+  {
+   "word": "three",
+   "start": 18.94,
+   "end": 19.4
+  },
+  {
+   "word": "kinds",
+   "start": 19.4,
+   "end": 19.78
+  },
+  {
+   "word": "of",
+   "start": 19.78,
+   "end": 19.98
+  },
+  {
+   "word": "error,",
+   "start": 19.98,
+   "end": 20.18
+  },
+  {
+   "word": "all",
+   "start": 20.84,
+   "end": 21.08
+  },
+  {
+   "word": "90",
+   "start": 21.08,
+   "end": 21.52
+  },
+  {
+   "word": "verdicts",
+   "start": 21.52,
+   "end": 22.24
+  },
+  {
+   "word": "flipped",
+   "start": 22.24,
+   "end": 22.42
+  },
+  {
+   "word": "from",
+   "start": 22.42,
+   "end": 22.78
+  },
+  {
+   "word": "accept",
+   "start": 22.78,
+   "end": 23.14
+  },
+  {
+   "word": "to",
+   "start": 23.14,
+   "end": 23.62
+  },
+  {
+   "word": "reject.",
+   "start": 23.62,
+   "end": 24.0
+  },
+  {
+   "word": "Re",
+   "start": 24.74,
+   "end": 25.32
+  },
+  {
+   "word": "-write",
+   "start": 25.32,
+   "end": 25.5
+  },
+  {
+   "word": "the",
+   "start": 25.5,
+   "end": 25.7
+  },
+  {
+   "word": "printout",
+   "start": 25.7,
+   "end": 26.18
+  },
+  {
+   "word": "to",
+   "start": 26.18,
+   "end": 26.38
+  },
+  {
+   "word": "state",
+   "start": 26.38,
+   "end": 26.64
+  },
+  {
+   "word": "its",
+   "start": 26.64,
+   "end": 26.94
+  },
+  {
+   "word": "limits",
+   "start": 26.94,
+   "end": 27.22
+  },
+  {
+   "word": "and",
+   "start": 27.22,
+   "end": 27.54
+  },
+  {
+   "word": "caps,",
+   "start": 27.54,
+   "end": 27.84
+  },
+  {
+   "word": "and",
+   "start": 28.5,
+   "end": 28.56
+  },
+  {
+   "word": "how",
+   "start": 28.56,
+   "end": 28.72
+  },
+  {
+   "word": "to",
+   "start": 28.72,
+   "end": 28.84
+  },
+  {
+   "word": "handle",
+   "start": 28.84,
+   "end": 29.16
+  },
+  {
+   "word": "them,",
+   "start": 29.16,
+   "end": 29.48
+  },
+  {
+   "word": "and",
+   "start": 29.98,
+   "end": 30.14
+  },
+  {
+   "word": "the",
+   "start": 30.14,
+   "end": 30.26
+  },
+  {
+   "word": "checker",
+   "start": 30.26,
+   "end": 30.66
+  },
+  {
+   "word": "catches",
+   "start": 30.66,
+   "end": 31.02
+  },
+  {
+   "word": "the",
+   "start": 31.02,
+   "end": 31.36
+  },
+  {
+   "word": "error.",
+   "start": 31.36,
+   "end": 31.58
+  },
+  {
+   "word": "Check",
+   "start": 32.56,
+   "end": 32.78
+  },
+  {
+   "word": "what",
+   "start": 32.78,
+   "end": 33.0
+  },
+  {
+   "word": "your",
+   "start": 33.0,
+   "end": 33.12
+  },
+  {
+   "word": "tool",
+   "start": 33.12,
+   "end": 33.4
+  },
+  {
+   "word": "hides,",
+   "start": 33.4,
+   "end": 33.9
+  },
+  {
+   "word": "not",
+   "start": 34.3,
+   "end": 34.5
+  },
+  {
+   "word": "just",
+   "start": 34.5,
+   "end": 34.8
+  },
+  {
+   "word": "what",
+   "start": 34.8,
+   "end": 35.02
+  },
+  {
+   "word": "it",
+   "start": 35.02,
+   "end": 35.12
+  },
+  {
+   "word": "shows.",
+   "start": 35.12,
+   "end": 35.52
+  },
+  {
+   "word": "Follow",
+   "start": 36.4,
+   "end": 36.78
+  },
+  {
+   "word": "for",
+   "start": 36.78,
+   "end": 37.06
+  },
+  {
+   "word": "the",
+   "start": 37.06,
+   "end": 37.16
+  },
+  {
+   "word": "next",
+   "start": 37.16,
+   "end": 37.42
+  },
+  {
+   "word": "paper.",
+   "start": 37.42,
+   "end": 37.88
+  }
+ ]
+}

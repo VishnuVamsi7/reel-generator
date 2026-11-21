@@ -1,0 +1,592 @@
+{
+ "f-0.5.jpg": [
+  [
+   "AI = good guesser · RAG = looks it up",
+   0.956
+  ],
+  [
+   "?",
+   0.844
+  ],
+  [
+   "HO",
+   0.673
+  ],
+  [
+   "Al doesn'tknow things.",
+   0.961
+  ],
+  [
+   "It looks them up. That's RAG.",
+   0.987
+  ]
+ ],
+ "f-11.0.jpg": [
+  [
+   "RAG=Retrieval-Augmented Generation",
+   0.985
+  ],
+  [
+   "works like an open-book exam",
+   0.922
+  ],
+  [
+   "O0",
+   0.733
+  ],
+  [
+   "RAG=Retrieval-Augmented",
+   0.986
+  ],
+  [
+   "Generation",
+   0.991
+  ],
+  [
+   "workslikeanopen-bookexam.",
+   0.993
+  ]
+ ],
+ "f-12.1.jpg": [
+  [
+   "Search docs first→",
+   0.946
+  ],
+  [
+   "find therelevantpages",
+   0.986
+  ],
+  [
+   "O0",
+   0.582
+  ]
+ ],
+ "f-14.4.jpg": [
+  [
+   "Search docsfirst→",
+   0.96
+  ],
+  [
+   "find therelevantpages",
+   0.987
+  ],
+  [
+   "00",
+   0.779
+  ],
+  [
+   "find therelevantpa",
+   0.967
+  ],
+  [
+   "Before answering, it searches",
+   0.977
+  ],
+  [
+   "your PDFs and notes -",
+   0.97
+  ]
+ ],
+ "f-16.8.jpg": [
+  [
+   "Search docsfirst→",
+   0.96
+  ],
+  [
+   "find therelevantpages",
+   0.971
+  ],
+  [
+   "00",
+   0.552
+  ],
+  [
+   "find therelevantpages",
+   0.977
+  ],
+  [
+   "and finds the relevant pages.",
+   0.987
+  ]
+ ],
+ "f-17.8.jpg": [
+  [
+   "Answerfromwhatitfound",
+   0.996
+  ],
+  [
+   "·withsources",
+   0.972
+  ],
+  [
+   "O0",
+   0.815
+  ],
+  [
+   "sources",
+   0.992
+  ],
+  [
+   "Itwritesitsanswerfromwhat",
+   0.996
+  ],
+  [
+   "it found - with sources,",
+   0.942
+  ]
+ ],
+ "f-2.2.jpg": [
+  [
+   "AI = good guesser · RAG = looks it up",
+   0.972
+  ],
+  [
+   "？",
+   0.554
+  ],
+  [
+   "00",
+   0.67
+  ],
+  [
+   "Al doesn't know things.",
+   0.946
+  ],
+  [
+   "It looks them up. That's RAG.",
+   0.995
+  ]
+ ],
+ "f-20.3.jpg": [
+  [
+   "Answerfromwhatitfound",
+   0.996
+  ],
+  [
+   "·withsources",
+   0.974
+  ],
+  [
+   "Itwritesitsanswer",
+   0.997
+  ],
+  [
+   "fromwhatitfound-",
+   0.973
+  ],
+  [
+   "O0",
+   0.575
+  ],
+  [
+   "sources",
+   0.994
+  ],
+  [
+   "Itwritesitsanswerfromwhat",
+   0.996
+  ],
+  [
+   "it found — with sources,",
+   0.968
+  ]
+ ],
+ "f-22.8.jpg": [
+  [
+   "Answerfromwhatitfound",
+   0.996
+  ],
+  [
+   "·withsources",
+   0.973
+  ],
+  [
+   "Itwritesitsanswer",
+   0.997
+  ],
+  [
+   "fromwhatitfound-",
+   0.985
+  ],
+  [
+   "with sources.",
+   0.97
+  ],
+  [
+   "O0",
+   0.54
+  ],
+  [
+   "sources",
+   0.995
+  ],
+  [
+   "so it makes things up far less.",
+   0.919
+  ]
+ ],
+ "f-23.8.jpg": [
+  [
+   "No RAG:guesses from memory",
+   0.945
+  ],
+  [
+   "With RAG:answers from your files",
+   0.961
+  ],
+  [
+   "No RAG",
+   0.93
+  ],
+  [
+   "With RAG",
+   0.926
+  ],
+  [
+   "guesses from memory",
+   0.987
+  ],
+  [
+   "answersfromyour",
+   0.997
+  ],
+  [
+   "files",
+   0.987
+  ],
+  [
+   "00",
+   0.7
+  ]
+ ],
+ "f-26.5.jpg": [
+  [
+   "No RAG:guesses from memory",
+   0.971
+  ],
+  [
+   "With RAG:answers from your files",
+   0.937
+  ],
+  [
+   "No RAG",
+   0.913
+  ],
+  [
+   "WithRAG",
+   0.991
+  ],
+  [
+   "guesses from memory",
+   0.96
+  ],
+  [
+   "answers from your",
+   0.971
+  ],
+  [
+   "files",
+   0.997
+  ],
+  [
+   "00",
+   0.84
+  ],
+  [
+   "No RAG, it guesses from memory.",
+   0.975
+  ],
+  [
+   "WithRAG,itanswers",
+   0.965
+  ],
+  [
+   "from your files.",
+   0.992
+  ]
+ ],
+ "f-29.3.jpg": [
+  [
+   "No RAG:guesses from memory",
+   0.969
+  ],
+  [
+   "With RAG:answersfrom yourfiles",
+   0.962
+  ],
+  [
+   "No RAG",
+   0.908
+  ],
+  [
+   "WithRAG",
+   0.99
+  ],
+  [
+   "guesses from memory",
+   0.967
+  ],
+  [
+   "answersfromyour",
+   0.996
+  ],
+  [
+   "files",
+   0.966
+  ],
+  [
+   "自目目",
+   0.76
+  ],
+  [
+   "with sources",
+   0.987
+  ],
+  [
+   "00",
+   0.825
+  ],
+  [
+   "No RAG, it guesses from memory.",
+   0.979
+  ],
+  [
+   "WithRAG,itanswers",
+   0.964
+  ],
+  [
+   "from your files.",
+   0.962
+  ]
+ ],
+ "f-3.9.jpg": [
+  [
+   "AI = good guesser · RAG = looks it up",
+   0.979
+  ],
+  [
+   "RAG",
+   0.995
+  ],
+  [
+   "00",
+   0.641
+  ],
+  [
+   "Al doesn't know things.",
+   0.95
+  ],
+  [
+   "It looks them up. That's RAG.",
+   0.995
+  ]
+ ],
+ "f-30.3.jpg": [
+  [
+   "chatbotsthatknowtheirown",
+   0.983
+  ],
+  [
+   "business",
+   0.998
+  ],
+  [
+   "O0",
+   0.654
+  ],
+  [
+   "Illustrative example",
+   0.97
+  ]
+ ],
+ "f-31.7.jpg": [
+  [
+   "chatbotsthatknowtheirown",
+   0.975
+  ],
+  [
+   "business",
+   0.998
+  ],
+  [
+   "00",
+   0.74
+  ],
+  [
+   "Illustrativeexample",
+   0.989
+  ],
+  [
+   "What'stherefundwindow?",
+   0.99
+  ],
+  [
+   "30 days—from thereturnspolicy,page4.",
+   0.942
+  ],
+  [
+   "That'showcompanies",
+   0.991
+  ],
+  [
+   "build chatbots",
+   0.98
+  ],
+  [
+   "thatknow theirbusiness.",
+   0.977
+  ]
+ ],
+ "f-33.1.jpg": [
+  [
+   "Chatbotsthatknowtheirown",
+   0.978
+  ],
+  [
+   "business",
+   0.998
+  ],
+  [
+   "00",
+   0.581
+  ],
+  [
+   "Illustrative example",
+   0.958
+  ],
+  [
+   "What'stherefundwindow?",
+   0.991
+  ],
+  [
+   "30 days—from thereturnspolicy,page4.",
+   0.952
+  ],
+  [
+   "That'showcompanies",
+   0.991
+  ],
+  [
+   "build chatbots",
+   0.978
+  ],
+  [
+   "that know theirbusiness.",
+   0.964
+  ]
+ ],
+ "f-34.1.jpg": [
+  [
+   "Follow · one AI idea, simply, every week",
+   0.958
+  ],
+  [
+   "your.ai.toolkit",
+   0.989
+  ],
+  [
+   "Follow",
+   0.987
+  ],
+  [
+   "00",
+   0.511
+  ]
+ ],
+ "f-36.5.jpg": [
+  [
+   "Follow · one AI idea, simply, every week",
+   0.983
+  ],
+  [
+   "your.ai.toolkit",
+   0.991
+  ],
+  [
+   "Follow",
+   0.989
+  ],
+  [
+   "CommentRAG",
+   0.977
+  ],
+  [
+   "Follow—I explain one Al idea",
+   0.916
+  ],
+  [
+   "simply every week.",
+   0.965
+  ]
+ ],
+ "f-38.8.jpg": [
+  [
+   "Follow · one AI idea, simply, every week",
+   0.95
+  ],
+  [
+   "your.ai.toolkit",
+   0.987
+  ],
+  [
+   "Follow",
+   0.995
+  ],
+  [
+   "CommentRAG",
+   0.982
+  ],
+  [
+   "00",
+   0.627
+  ],
+  [
+   "Follow—I explain one Al idea",
+   0.914
+  ],
+  [
+   "simply every week.",
+   0.964
+  ]
+ ],
+ "f-4.9.jpg": [
+  [
+   "RAG=Retrieval-Augmented Generation",
+   0.987
+  ],
+  [
+   "workslikean open-bookexam",
+   0.957
+  ],
+  [
+   "O0",
+   0.654
+  ]
+ ],
+ "f-8.0.jpg": [
+  [
+   "RAG=Retrieval-Augmented Generation",
+   0.985
+  ],
+  [
+   "Workslike anopen-book exam",
+   0.944
+  ],
+  [
+   "OO",
+   0.694
+  ],
+  [
+   "Al'sagoodguesser.RAG-",
+   0.953
+  ],
+  [
+   "Retrieval-Augmented",
+   0.987
+  ],
+  [
+   "Generation-",
+   0.957
+  ]
+ ]
+}

@@ -1,0 +1,95 @@
+{
+  "video": "frontier-p1-reel.mp4",
+  "duration_s": 37.8,
+  "freezedetect": {
+    "noise_db": -60.0,
+    "min_dur_s": 0.6
+  },
+  "thresholds": {
+    "fail_fraction": 0.3,
+    "fail_span_s": 2.0,
+    "longest_shot_s": 8.0
+  },
+  "freeze_spans": [],
+  "dead_air_during_speech_s": 0,
+  "dead_air_spans": [],
+  "beats": [
+    {
+      "name": "Hook \u2014 the flip",
+      "start": 0.0,
+      "end": 7.44,
+      "duration_s": 7.44,
+      "frozen_s": 0,
+      "frozen_during_speech_s": 0,
+      "frozen_fraction": 0.0,
+      "longest_freeze_s": 0.0,
+      "verdict": "PASS",
+      "reasons": []
+    },
+    {
+      "name": "The paper",
+      "start": 7.44,
+      "end": 16.96,
+      "duration_s": 9.52,
+      "frozen_s": 0,
+      "frozen_during_speech_s": 0,
+      "frozen_fraction": 0.0,
+      "longest_freeze_s": 0.0,
+      "verdict": "PASS",
+      "reasons": []
+    },
+    {
+      "name": "Result 1 \u2014 26% of 227",
+      "start": 16.96,
+      "end": 24.18,
+      "duration_s": 7.22,
+      "frozen_s": 0,
+      "frozen_during_speech_s": 0,
+      "frozen_fraction": 0.0,
+      "longest_freeze_s": 0.0,
+      "verdict": "PASS",
+      "reasons": []
+    },
+    {
+      "name": "Result 2 \u2014 667, never once",
+      "start": 24.18,
+      "end": 27.84,
+      "duration_s": 3.66,
+      "frozen_s": 0,
+      "frozen_during_speech_s": 0,
+      "frozen_fraction": 0.0,
+      "longest_freeze_s": 0.0,
+      "verdict": "PASS",
+      "reasons": []
+    },
+    {
+      "name": "Payoff \u2014 cover-up vs setup",
+      "start": 27.84,
+      "end": 36.38,
+      "duration_s": 8.54,
+      "frozen_s": 0,
+      "frozen_during_speech_s": 0,
+      "frozen_fraction": 0.0,
+      "longest_freeze_s": 0.0,
+      "verdict": "PASS",
+      "reasons": []
+    },
+    {
+      "name": "CTA \u2014 Part 2 is next",
+      "start": 36.38,
+      "end": 37.8,
+      "duration_s": 1.42,
+      "frozen_s": 0,
+      "frozen_during_speech_s": 0,
+      "frozen_fraction": 0.0,
+      "longest_freeze_s": 0.0,
+      "verdict": "PASS",
+      "reasons": []
+    }
+  ],
+  "pacing_cv": 0.45,
+  "warnings": [
+    "longest shot The paper 9.52s (>8s) \u2014 consider splitting"
+  ],
+  "verdict": "PASS"
+}

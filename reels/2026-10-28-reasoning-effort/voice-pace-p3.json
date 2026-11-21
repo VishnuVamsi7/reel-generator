@@ -1,0 +1,87 @@
+{
+  "part": "p3",
+  "audio": "voice-test-p3-85.mp3",
+  "transcript": "So what's the fix? Don't pick one effort level? Start low, if the answer fails to check, climb to max, and only then. The paper calls it naive laddering. It matches or beats fixed max effort on every model in benchmark tested, and it costs less. Gpt 5 .6 saw on terminal bench, 83 to 89 % solved, build down 17%. Start cheap, pay for max only when it earns it. Early results, a preprint, not the final word. Follow for one AI idea, simply every week.",
+  "sentences": [
+    {
+      "sentence": "So what's the fix?",
+      "words": 4,
+      "start": 0.0,
+      "end": 1.26,
+      "wpm": 190.5,
+      "matched": 4
+    },
+    {
+      "sentence": "Don't pick one effort level.",
+      "words": 5,
+      "start": 1.82,
+      "end": 3.64,
+      "wpm": 164.8,
+      "matched": 5
+    },
+    {
+      "sentence": "Start low.",
+      "words": 2,
+      "start": 4.02,
+      "end": 4.74,
+      "wpm": 166.7,
+      "matched": 2
+    },
+    {
+      "sentence": "If the answer fails a check, climb to max \u2014 and only then.",
+      "words": 12,
+      "start": null,
+      "end": null,
+      "wpm": null,
+      "matched": 5
+    },
+    {
+      "sentence": "The paper calls it na\u00efve laddering.",
+      "words": 6,
+      "start": null,
+      "end": null,
+      "wpm": null,
+      "matched": 4
+    },
+    {
+      "sentence": "It matches or beats fixed max effort on every model and benchmark tested \u2014 and it costs less.",
+      "words": 17,
+      "start": null,
+      "end": null,
+      "wpm": null,
+      "matched": 11
+    },
+    {
+      "sentence": "GPT-5.6-sol on Terminal-Bench: 83 to 89 percent solved, bill down 17 percent.",
+      "words": 12,
+      "start": null,
+      "end": null,
+      "wpm": null,
+      "matched": 0
+    },
+    {
+      "sentence": "Start cheap, pay for max only when it earns it.",
+      "words": 10,
+      "start": 27.44,
+      "end": 31.16,
+      "wpm": 161.3,
+      "matched": 10
+    },
+    {
+      "sentence": "Early results \u2014 a preprint, not the final word.",
+      "words": 8,
+      "start": 31.62,
+      "end": 35.04,
+      "wpm": 140.4,
+      "matched": 8
+    },
+    {
+      "sentence": "Follow for one AI idea, simply, every week.",
+      "words": 8,
+      "start": 35.78,
+      "end": 39.14,
+      "wpm": 142.9,
+      "matched": 8
+    }
+  ]
+}

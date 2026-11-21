@@ -1,0 +1,400 @@
+{
+ "duration": 36.48,
+ "words": [
+  {
+   "word": "Your",
+   "start": 0.0,
+   "end": 0.32
+  },
+  {
+   "word": "agent",
+   "start": 0.32,
+   "end": 0.68
+  },
+  {
+   "word": "finished",
+   "start": 0.68,
+   "end": 1.08
+  },
+  {
+   "word": "the",
+   "start": 1.08,
+   "end": 1.36
+  },
+  {
+   "word": "job,",
+   "start": 1.36,
+   "end": 1.66
+  },
+  {
+   "word": "but",
+   "start": 2.2,
+   "end": 2.42
+  },
+  {
+   "word": "did",
+   "start": 2.42,
+   "end": 2.54
+  },
+  {
+   "word": "every",
+   "start": 2.54,
+   "end": 2.82
+  },
+  {
+   "word": "step",
+   "start": 2.82,
+   "end": 3.1
+  },
+  {
+   "word": "run?",
+   "start": 3.1,
+   "end": 3.46
+  },
+  {
+   "word": "A",
+   "start": 4.32,
+   "end": 4.46
+  },
+  {
+   "word": "tool",
+   "start": 4.46,
+   "end": 4.7
+  },
+  {
+   "word": "call",
+   "start": 4.7,
+   "end": 5.0
+  },
+  {
+   "word": "can",
+   "start": 5.0,
+   "end": 5.28
+  },
+  {
+   "word": "look",
+   "start": 5.28,
+   "end": 5.46
+  },
+  {
+   "word": "perfect",
+   "start": 5.46,
+   "end": 5.94
+  },
+  {
+   "word": "and",
+   "start": 5.94,
+   "end": 6.24
+  },
+  {
+   "word": "still",
+   "start": 6.24,
+   "end": 6.58
+  },
+  {
+   "word": "fail.",
+   "start": 6.58,
+   "end": 7.04
+  },
+  {
+   "word": "Wrong",
+   "start": 7.78,
+   "end": 7.96
+  },
+  {
+   "word": "argument,",
+   "start": 7.96,
+   "end": 8.44
+  },
+  {
+   "word": "missing",
+   "start": 8.94,
+   "end": 9.12
+  },
+  {
+   "word": "record,",
+   "start": 9.12,
+   "end": 9.58
+  },
+  {
+   "word": "step",
+   "start": 10.02,
+   "end": 10.28
+  },
+  {
+   "word": "out",
+   "start": 10.28,
+   "end": 10.52
+  },
+  {
+   "word": "of",
+   "start": 10.52,
+   "end": 10.64
+  },
+  {
+   "word": "order?",
+   "start": 10.64,
+   "end": 10.9
+  },
+  {
+   "word": "In",
+   "start": 11.68,
+   "end": 11.94
+  },
+  {
+   "word": "one",
+   "start": 11.94,
+   "end": 12.14
+  },
+  {
+   "word": "test",
+   "start": 12.14,
+   "end": 12.5
+  },
+  {
+   "word": "of",
+   "start": 12.5,
+   "end": 12.74
+  },
+  {
+   "word": "200",
+   "start": 12.74,
+   "end": 13.26
+  },
+  {
+   "word": "tasks,",
+   "start": 13.26,
+   "end": 13.88
+  },
+  {
+   "word": "94",
+   "start": 14.4,
+   "end": 15.04
+  },
+  {
+   "word": "in",
+   "start": 15.04,
+   "end": 15.38
+  },
+  {
+   "word": "100",
+   "start": 15.38,
+   "end": 15.8
+  },
+  {
+   "word": "finished,",
+   "start": 15.8,
+   "end": 16.54
+  },
+  {
+   "word": "yet",
+   "start": 16.84,
+   "end": 17.22
+  },
+  {
+   "word": "fewer",
+   "start": 17.22,
+   "end": 17.54
+  },
+  {
+   "word": "than",
+   "start": 17.54,
+   "end": 17.76
+  },
+  {
+   "word": "half",
+   "start": 17.76,
+   "end": 18.14
+  },
+  {
+   "word": "stayed",
+   "start": 18.14,
+   "end": 18.56
+  },
+  {
+   "word": "valid",
+   "start": 18.56,
+   "end": 19.02
+  },
+  {
+   "word": "all",
+   "start": 19.02,
+   "end": 19.32
+  },
+  {
+   "word": "the",
+   "start": 19.32,
+   "end": 19.44
+  },
+  {
+   "word": "way",
+   "start": 19.44,
+   "end": 19.6
+  },
+  {
+   "word": "through.",
+   "start": 19.6,
+   "end": 19.96
+  },
+  {
+   "word": "Success",
+   "start": 20.7,
+   "end": 21.26
+  },
+  {
+   "word": "hid",
+   "start": 21.26,
+   "end": 21.72
+  },
+  {
+   "word": "the",
+   "start": 21.72,
+   "end": 21.9
+  },
+  {
+   "word": "break.",
+   "start": 21.9,
+   "end": 22.22
+  },
+  {
+   "word": "Score",
+   "start": 23.12,
+   "end": 23.46
+  },
+  {
+   "word": "every",
+   "start": 23.46,
+   "end": 23.98
+  },
+  {
+   "word": "prefix,",
+   "start": 23.98,
+   "end": 24.54
+  },
+  {
+   "word": "not",
+   "start": 24.94,
+   "end": 25.16
+  },
+  {
+   "word": "just",
+   "start": 25.16,
+   "end": 25.4
+  },
+  {
+   "word": "the",
+   "start": 25.4,
+   "end": 25.64
+  },
+  {
+   "word": "ending.",
+   "start": 25.64,
+   "end": 26.02
+  },
+  {
+   "word": "Check",
+   "start": 26.72,
+   "end": 26.94
+  },
+  {
+   "word": "the",
+   "start": 26.94,
+   "end": 27.16
+  },
+  {
+   "word": "plan",
+   "start": 27.16,
+   "end": 27.5
+  },
+  {
+   "word": "before",
+   "start": 27.5,
+   "end": 27.92
+  },
+  {
+   "word": "it",
+   "start": 27.92,
+   "end": 28.18
+  },
+  {
+   "word": "runs",
+   "start": 28.18,
+   "end": 28.58
+  },
+  {
+   "word": "and",
+   "start": 28.58,
+   "end": 29.28
+  },
+  {
+   "word": "the",
+   "start": 29.28,
+   "end": 29.42
+  },
+  {
+   "word": "valid",
+   "start": 29.42,
+   "end": 29.78
+  },
+  {
+   "word": "runs",
+   "start": 29.78,
+   "end": 30.2
+  },
+  {
+   "word": "nearly",
+   "start": 30.2,
+   "end": 30.6
+  },
+  {
+   "word": "double.",
+   "start": 30.6,
+   "end": 31.14
+  },
+  {
+   "word": "Same",
+   "start": 31.8,
+   "end": 32.16
+  },
+  {
+   "word": "finish,",
+   "start": 32.16,
+   "end": 32.7
+  },
+  {
+   "word": "clean",
+   "start": 33.12,
+   "end": 33.32
+  },
+  {
+   "word": "path.",
+   "start": 33.32,
+   "end": 33.76
+  },
+  {
+   "word": "Follow",
+   "start": 34.4,
+   "end": 34.92
+  },
+  {
+   "word": "for",
+   "start": 34.92,
+   "end": 35.16
+  },
+  {
+   "word": "the",
+   "start": 35.16,
+   "end": 35.28
+  },
+  {
+   "word": "next",
+   "start": 35.28,
+   "end": 35.52
+  },
+  {
+   "word": "paper.",
+   "start": 35.52,
+   "end": 35.92
+  }
+ ]
+}
